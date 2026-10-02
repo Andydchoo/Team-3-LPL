@@ -1,71 +1,116 @@
 # Team-3-LPL
 
-# 💰 FeeAudit AI
+# RevenueTwin 💰
 
-> **Every dollar. Every account. Every fee. Verified.**
+> **See the revenue you're missing before you miss it.**
 
-FeeAudit is an AI-powered fee auditing platform for wealth management firms that automatically reads financial advisory agreements, determines what each client **should have been charged**, compares it against what they were **actually billed**, and flags potential overcharges, undercharges, missing fees, incorrect breakpoints, and other billing discrepancies.
+RevenueTwin is an AI-powered **revenue intelligence platform for wealth management firms**.
 
----
+It creates a digital twin of an advisory practice's revenue to answer three questions:
 
-## 🎯 The Problem
+1. **What should we be earning?**
+2. **What are we actually earning?**
+3. **Why is there a difference?**
 
-Wealth management firms may manage thousands of client accounts with different:
+## 🔎 FeeAudit
 
-- Fee schedules
-- AUM breakpoints
-- Household discounts
-- Special negotiated rates
-- Fee waivers
-- Billing frequencies
-- Account exclusions
-- Grandfathered agreements
+**FeeAudit** is RevenueTwin's core product.
 
-These rules are often stored inside PDFs and manually configured in billing systems.
+It reads client advisory agreements, calculates what clients should be billed, compares that against actual billing data, and detects:
 
-That creates a simple but expensive problem:
-
-> **What the contract says and what the billing system does can become different.**
+- 💸 Potential underbilling
+- ⚠️ Potential overbilling
+- 📉 Incorrect fee breakpoints
+- 👨‍👩‍👧 Householding errors
+- 🧾 Unbilled accounts
+- 🎟️ Fee waiver errors
 
 ### Example
 
-A client's agreement states:
+```text
+Stevens Family
 
-| Assets | Advisory Fee |
-|---|---:|
-| $0 – $1M | 1.00% |
-| $1M – $2M | 0.90% |
-| $2M+ | 0.75% |
+Household AUM:       $2.2M
+Contract Rate:       0.75%
+Actual Rate:         0.90%
 
-The client's household now contains:
+🚨 Potential Discrepancy: $3,300/year
 
-**$2.2M AUM**
+Cause:
+The household crossed the $2M fee breakpoint,
+but billing remained at 0.90%.
+```
 
-Therefore, the applicable contractual rate is:
-
-**0.75%**
-
-But the billing system still contains:
-
-**0.90%**
-
-FeeAudit detects the discrepancy automatically.
+## ⚙️ How It Works
 
 ```text
-🚨 POTENTIAL BILLING DISCREPANCY
+Fee Agreements + Account Data + Billing Data
+                     ↓
+                RevenueTwin
+                     ↓
+              AI reads rules
+                     ↓
+          Calculate expected fees
+                     ↓
+          Compare with actual fees
+                     ↓
+             Detect differences
+                     ↓
+              Explain why
+                     ↓
+               Human review
+```
 
-Household: Stevens Family
+## ☁️ AWS
 
-Household AUM:       $2,200,000
-Contract Rate:             0.75%
-Billing Rate:              0.90%
+RevenueTwin uses:
 
-Potential annual impact: $3,300
+- **Amazon S3** — store agreements and billing files
+- **Amazon Textract** — extract fee schedules from PDFs
+- **Amazon Bedrock** — understand agreements and explain findings
+- **AWS Lambda** — calculate expected fees
+- **AWS Step Functions** — orchestrate the audit
+- **Amazon DynamoDB** — store findings and audit history
 
-Likely Cause:
-Household crossed the $2M contractual breakpoint,
-but the billing configuration was not updated.
+## 🧠 Core Principle
 
-Status:
-REQUIRES HUMAN REVIEW
+> **AI interprets. Code calculates. Humans approve.**
 
+AI understands the contracts, deterministic code handles the financial math, and humans review consequential findings.
+
+## 🚀 Hackathon MVP
+
+Upload:
+
+```text
+Advisory Agreements
+Accounts.csv
+Billing.csv
+```
+
+Click:
+
+**RUN REVENUE AUDIT**
+
+Receive:
+
+```text
+50 Accounts Analyzed
+48 Verified
+2 Require Review
+
+$17,500
+BILLING DISCREPANCIES IDENTIFIED
+```
+
+## 🔮 Vision
+
+FeeAudit is the first product.
+
+The long-term goal is for **RevenueTwin to become the revenue operating system for wealth management**, moving firms from reactive billing audits to proactive revenue intelligence.
+
+---
+
+### RevenueTwin
+
+**Know what you should earn. Know what you earned. Know why they're different.**
