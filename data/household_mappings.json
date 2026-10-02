@@ -1,0 +1,2152 @@
+[
+  {
+    "household_id": "33d1caed-c0a7-4702-80b5-a7d47ce53f4a",
+    "household_name": "Stevens Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "3b39ed87-65ad-4f12-902b-d9f68e70b7fb",
+    "agreement_id": "00901a87-16eb-4ac5-ae14-4a58e909feda",
+    "total_aum": 2200000.0,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "5356769e-028d-46d5-8e68-bde1abf0222f",
+        "account_label": "Stevens Joint Brokerage",
+        "account_type": "joint",
+        "current_aum": 950000.0,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2023-10-17",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 4",
+      "bps": 75
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "e78bd737-0829-4952-9785-add3f7e07b3c",
+    "household_name": "Whitaker Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "031827f8-f171-46e1-b1d6-4d42acac616e",
+    "agreement_id": "819a0459-3f51-4726-bcd2-76788a0dd894",
+    "total_aum": 1061245.06,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "d64593ee-1c44-420b-832c-d07f5f07f3df",
+        "account_label": "Whitaker Individual",
+        "account_type": "individual",
+        "current_aum": 1061245.06,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2024-01-06",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 3",
+      "bps": 80
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "5449a4cd-4674-49bd-ac83-2bace4427cdb",
+    "household_name": "Nakamura Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "698b4ef4-4daa-474f-ab6f-2c9f0b0611b2",
+    "agreement_id": "3d8b2e01-c8a3-426c-836d-fb27da40bbfb",
+    "total_aum": 4437447.61,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "195ccded-4c99-4e60-bdc2-4c69238a17c1",
+        "account_label": "Nakamura Individual",
+        "account_type": "individual",
+        "current_aum": 3943487.88,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2021-11-27",
+        "closed_date": null
+      },
+      {
+        "account_id": "04344a69-2b5a-4c54-b542-b5db9ab98c92",
+        "account_label": "Nakamura Joint",
+        "account_type": "joint",
+        "current_aum": 405397.65,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2020-07-28",
+        "closed_date": null
+      },
+      {
+        "account_id": "b7017ea8-d3b3-49cf-805e-86bc1748771e",
+        "account_label": "Nakamura Individual",
+        "account_type": "individual",
+        "current_aum": 88562.08,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2023-05-21",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 3",
+      "bps": 65
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "397a531b-14d0-441d-b3fb-4abfa5a13eb6",
+    "household_name": "Patel Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "698b4ef4-4daa-474f-ab6f-2c9f0b0611b2",
+    "agreement_id": "a8168bf6-27ba-40ba-a08b-a274473d4437",
+    "total_aum": 4552517.08,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "94cec92e-79b4-4584-9c44-53b74a4ab57f",
+        "account_label": "Patel Joint",
+        "account_type": "joint",
+        "current_aum": 1329404.66,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2023-06-20",
+        "closed_date": null
+      },
+      {
+        "account_id": "aba6f84c-7dd4-4237-aa98-779b85843783",
+        "account_label": "Patel Trust",
+        "account_type": "trust",
+        "current_aum": 176915.44,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2020-05-22",
+        "closed_date": null
+      },
+      {
+        "account_id": "924487aa-b3ec-4ed1-a033-b419a65167f2",
+        "account_label": "Patel Individual",
+        "account_type": "individual",
+        "current_aum": 215755.19,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2020-06-12",
+        "closed_date": null
+      },
+      {
+        "account_id": "180c8a85-75e2-435a-b865-e2b27163371d",
+        "account_label": "Patel Trust",
+        "account_type": "trust",
+        "current_aum": 2830441.79,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2022-07-17",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 4",
+      "bps": 75
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "309cf328-0029-4867-b008-f20cdbb5dfc0",
+    "household_name": "Kim Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "ddb24622-c9de-4a7d-a4c2-d1ca0f026e10",
+    "agreement_id": "b52bf138-83dd-4df4-9580-336dd6d6ab3a",
+    "total_aum": 5143371.85,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "25f2cb15-c3ef-4a79-80b6-c53bd3b676ee",
+        "account_label": "O'Brien Roth Ira",
+        "account_type": "Roth IRA",
+        "current_aum": 571402.51,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2023-07-24",
+        "closed_date": null
+      },
+      {
+        "account_id": "b1cccd2c-1a76-451f-b2c4-47b32236b31e",
+        "account_label": "O'Brien Individual",
+        "account_type": "individual",
+        "current_aum": 663402.49,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2022-02-16",
+        "closed_date": null
+      },
+      {
+        "account_id": "d6679fd7-9f27-4de6-91d6-1de9d564d3f7",
+        "account_label": "O'Brien Joint",
+        "account_type": "joint",
+        "current_aum": 3908566.85,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2021-03-25",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 5",
+      "bps": 60
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "ba794829-3219-4a8b-97e1-e95853de5155",
+    "household_name": "Johansson Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "031827f8-f171-46e1-b1d6-4d42acac616e",
+    "agreement_id": "e1fa5a0e-2e56-40ea-83e9-171e15306037",
+    "total_aum": 1131522.5,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "9d395957-9cf7-454d-9172-7f0b7b73713d",
+        "account_label": "Johansson Roth Ira",
+        "account_type": "Roth IRA",
+        "current_aum": 126475.44,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2023-03-07",
+        "closed_date": null
+      },
+      {
+        "account_id": "8e6ab81a-4cf5-465c-85c9-98c3944ab37a",
+        "account_label": "Johansson Trust",
+        "account_type": "trust",
+        "current_aum": 362175.47,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2022-03-21",
+        "closed_date": null
+      },
+      {
+        "account_id": "bb44592c-55eb-4425-bdef-e9d9dddbb16a",
+        "account_label": "Johansson Trust",
+        "account_type": "trust",
+        "current_aum": 642871.59,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2020-10-12",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 3",
+      "bps": 80
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "48af5718-079b-4409-be59-fc408975b157",
+    "household_name": "Fernandez Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "f0e88a61-9a2a-4e77-b612-d7a8ac62bd09",
+    "agreement_id": "1e053f7f-e3ea-4dee-af68-a8d60a120815",
+    "total_aum": 12310207.56,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "15498f96-57ab-4298-8731-e58045d4f2a4",
+        "account_label": "Fernandez Individual",
+        "account_type": "individual",
+        "current_aum": 10095262.94,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2020-07-05",
+        "closed_date": null
+      },
+      {
+        "account_id": "9914ac48-97d3-4a65-a372-568a69227ec6",
+        "account_label": "Fernandez Roth Ira",
+        "account_type": "Roth IRA",
+        "current_aum": 2034944.62,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2020-11-23",
+        "closed_date": null
+      },
+      {
+        "account_id": "a15a0ce5-89d5-4a46-bfb9-5d510c48f479",
+        "account_label": "Fernandez 529 College Savings",
+        "account_type": "529",
+        "current_aum": 180000.0,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2022-03-15",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 4",
+      "bps": 70
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "9e11f02d-e26d-4835-8493-0527826e9bdb",
+    "household_name": "Kim Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "f0e88a61-9a2a-4e77-b612-d7a8ac62bd09",
+    "agreement_id": "b26b6925-643d-4998-aee1-6e625bd53327",
+    "total_aum": 992605.79,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "5867513b-6f73-4374-b95e-a75d0bd89a40",
+        "account_label": "Kim Joint",
+        "account_type": "joint",
+        "current_aum": 321290.36,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2020-01-24",
+        "closed_date": null
+      },
+      {
+        "account_id": "10b290ab-5c98-42ce-a518-4594ef761b1c",
+        "account_label": "Kim Ira",
+        "account_type": "IRA",
+        "current_aum": 453915.38,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2021-06-30",
+        "closed_date": null
+      },
+      {
+        "account_id": "9b88f185-5560-4fb7-976d-182239fdbd04",
+        "account_label": "Kim Roth Ira",
+        "account_type": "Roth IRA",
+        "current_aum": 217400.05,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2020-11-19",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 1",
+      "bps": 110
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "53f99775-63ba-4f1c-a26f-1fc8f0f631cb",
+    "household_name": "Abernathy Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "3b39ed87-65ad-4f12-902b-d9f68e70b7fb",
+    "agreement_id": "e59da0f3-2326-459c-812d-97c6532c0bd6",
+    "total_aum": 3185386.64,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "7d327528-389b-45b1-9b9a-ab973a011222",
+        "account_label": "Abernathy Roth Ira",
+        "account_type": "Roth IRA",
+        "current_aum": 606410.82,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2023-07-04",
+        "closed_date": null
+      },
+      {
+        "account_id": "8a7a35dc-662c-4faf-b9a6-d2b036a4789d",
+        "account_label": "Abernathy Joint",
+        "account_type": "joint",
+        "current_aum": 1108970.21,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2020-11-09",
+        "closed_date": null
+      },
+      {
+        "account_id": "403e6631-d2fe-4d0f-ad2b-8b345c23c508",
+        "account_label": "Abernathy Joint",
+        "account_type": "joint",
+        "current_aum": 481399.9,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2022-12-22",
+        "closed_date": null
+      },
+      {
+        "account_id": "55f696a6-79b9-4d7f-92e7-bbe43b4b9d30",
+        "account_label": "Abernathy Trust",
+        "account_type": "trust",
+        "current_aum": 988605.71,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2020-08-17",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 3",
+      "bps": 65
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "ddcf4c6e-7fff-44db-a401-6fadf358e934",
+    "household_name": "Liu Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "ddb24622-c9de-4a7d-a4c2-d1ca0f026e10",
+    "agreement_id": "5c35dbde-872b-4beb-a014-c8a24e768c9b",
+    "total_aum": 1799787.08,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "8cb4d78e-2bcd-4c09-81f3-41f726b7c9dd",
+        "account_label": "Liu Trust",
+        "account_type": "trust",
+        "current_aum": 1799787.08,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2022-09-22",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 3",
+      "bps": 80
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "baf1a868-e61e-486b-abdd-395b0f665bc1",
+    "household_name": "Morrison Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "698b4ef4-4daa-474f-ab6f-2c9f0b0611b2",
+    "agreement_id": "75a0084f-2c16-4516-be8a-e63b821b46dc",
+    "total_aum": 765056.63,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "c3985b25-0117-45c5-8a40-3de3c2d790c5",
+        "account_label": "Morrison Old Trust",
+        "account_type": "trust",
+        "current_aum": 0.0,
+        "is_active": false,
+        "include_in_household_aum": true,
+        "opened_date": "2023-05-27",
+        "closed_date": "2025-03-31"
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 2",
+      "bps": 90
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "249b4fa4-d0f1-4b31-bef8-9df9aba3afc1",
+    "household_name": "Gupta Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "3b39ed87-65ad-4f12-902b-d9f68e70b7fb",
+    "agreement_id": "85cf5b39-59ee-4000-9021-bef918cfc1da",
+    "total_aum": 11697942.83,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "07f05923-e6cf-4dba-a696-f287ea03f86e",
+        "account_label": "Gupta Joint",
+        "account_type": "joint",
+        "current_aum": 11498780.58,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2022-06-16",
+        "closed_date": null
+      },
+      {
+        "account_id": "af3956ec-55cc-4fc9-a727-34542e9ed4f9",
+        "account_label": "Gupta Trust",
+        "account_type": "trust",
+        "current_aum": 199162.25,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2020-05-11",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 4",
+      "bps": 70
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "ed975aa5-649f-477b-9112-95dfaa1bbc6e",
+    "household_name": "Thornton Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "c9ecc0ef-d3c9-4743-9e64-ee4528854ed4",
+    "agreement_id": "181a90cc-655e-4ea1-af1e-1b6acefc53ca",
+    "total_aum": 813961.46,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "7fde4a84-efb1-4d6b-a963-e7ff4c99ef17",
+        "account_label": "Thornton Individual",
+        "account_type": "individual",
+        "current_aum": 728941.78,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2020-03-05",
+        "closed_date": null
+      },
+      {
+        "account_id": "f984d76b-1e9a-4d63-b3bb-f517432531a8",
+        "account_label": "Thornton Trust",
+        "account_type": "trust",
+        "current_aum": 42850.35,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2023-10-02",
+        "closed_date": null
+      },
+      {
+        "account_id": "c4f30233-e1aa-449f-82eb-10367371984b",
+        "account_label": "Thornton Account 3",
+        "account_type": "individual",
+        "current_aum": 42169.33,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2021-06-01",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 3",
+      "bps": 85
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "e5f5d94d-98dc-4b1c-95c2-3ea75b98c030",
+    "household_name": "Bianchi Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "3b39ed87-65ad-4f12-902b-d9f68e70b7fb",
+    "agreement_id": "dd9c9c88-55bf-4eb2-90bf-c7d9aee4b0ff",
+    "total_aum": 606264.59,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "438cef67-bfdb-4ef1-869c-e575b6f3e9d5",
+        "account_label": "Bianchi Individual",
+        "account_type": "individual",
+        "current_aum": 262823.98,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2020-07-12",
+        "closed_date": null
+      },
+      {
+        "account_id": "965f0228-78d8-4abb-9920-46efae4fae4d",
+        "account_label": "Bianchi Individual",
+        "account_type": "individual",
+        "current_aum": 269431.45,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2022-08-14",
+        "closed_date": null
+      },
+      {
+        "account_id": "cf9c94f7-e34f-4d3c-b06f-e3a7fdbf4d11",
+        "account_label": "Bianchi Trust",
+        "account_type": "trust",
+        "current_aum": 74009.16,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2023-08-16",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 2",
+      "bps": 100
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "c0b3419f-964f-4204-aa1a-7955c73cea5e",
+    "household_name": "Delacroix Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "ddb24622-c9de-4a7d-a4c2-d1ca0f026e10",
+    "agreement_id": "9a9e6e4d-9432-4ded-9498-18e66a28ba52",
+    "total_aum": 2032599.77,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "a851ee40-7c8e-4529-99a0-06124399773d",
+        "account_label": "Delacroix Individual",
+        "account_type": "individual",
+        "current_aum": 268752.66,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2021-07-24",
+        "closed_date": null
+      },
+      {
+        "account_id": "d21bec53-1e97-4f81-b4f2-a702431c836a",
+        "account_label": "Delacroix Joint",
+        "account_type": "joint",
+        "current_aum": 1763847.11,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2023-02-01",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 4",
+      "bps": 75
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "50bb61b7-d24c-4c73-b3e6-638ecd4ca359",
+    "household_name": "Huang Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "698b4ef4-4daa-474f-ab6f-2c9f0b0611b2",
+    "agreement_id": "8dd49468-9277-4f52-bf6c-91e09ef17330",
+    "total_aum": 15623174.82,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "76f39753-e812-4812-9764-2aced573168d",
+        "account_label": "Huang Trust",
+        "account_type": "trust",
+        "current_aum": 2082088.89,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2022-09-21",
+        "closed_date": null
+      },
+      {
+        "account_id": "0d796367-5844-42de-9f9e-da0be1aa5daf",
+        "account_label": "Huang Joint",
+        "account_type": "joint",
+        "current_aum": 4658550.03,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2020-12-03",
+        "closed_date": null
+      },
+      {
+        "account_id": "a9868bce-6727-4cbf-ad18-1b59796adb7a",
+        "account_label": "Huang Joint",
+        "account_type": "joint",
+        "current_aum": 7652030.58,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2022-07-20",
+        "closed_date": null
+      },
+      {
+        "account_id": "e1eab9af-f411-4bd8-9858-7a67f715cddc",
+        "account_label": "Huang Joint",
+        "account_type": "joint",
+        "current_aum": 1230505.32,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2023-02-12",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 5",
+      "bps": 60
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "8fd0677f-5320-49c0-aa95-d03a25de75e6",
+    "household_name": "Okafor Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "ddb24622-c9de-4a7d-a4c2-d1ca0f026e10",
+    "agreement_id": "00d63e23-14ff-4934-b887-c930dc03c049",
+    "total_aum": 7606481.5,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "cf0786d7-b8bb-4450-ac3e-b601198b77ab",
+        "account_label": "Okafor Ira",
+        "account_type": "IRA",
+        "current_aum": 1247975.56,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2020-04-27",
+        "closed_date": null
+      },
+      {
+        "account_id": "9fb41303-009f-443d-853b-e09cae245003",
+        "account_label": "Okafor Individual",
+        "account_type": "individual",
+        "current_aum": 467754.85,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2022-12-23",
+        "closed_date": null
+      },
+      {
+        "account_id": "8865dd91-b851-41e4-850c-6afbc1a23198",
+        "account_label": "Okafor Individual",
+        "account_type": "individual",
+        "current_aum": 5801114.65,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2021-01-15",
+        "closed_date": null
+      },
+      {
+        "account_id": "dc7c3e42-489d-40f5-9a86-644ec33af71b",
+        "account_label": "Okafor Individual",
+        "account_type": "individual",
+        "current_aum": 89636.44,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2022-04-06",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 5",
+      "bps": 60
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "f633d6f9-8e4b-4e35-a1f8-eb6874be315c",
+    "household_name": "Petrov Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "031827f8-f171-46e1-b1d6-4d42acac616e",
+    "agreement_id": "e4900bba-d473-4fb7-80b0-d7ae615ab048",
+    "total_aum": 816369.85,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "80133e7f-aba4-44ca-8b04-b0f9a70df722",
+        "account_label": "Petrov Ira",
+        "account_type": "IRA",
+        "current_aum": 816369.85,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2021-06-18",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 3",
+      "bps": 85
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "fbb2671e-1153-4e7b-a939-c96f9916ce15",
+    "household_name": "Sandoval Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "f0e88a61-9a2a-4e77-b612-d7a8ac62bd09",
+    "agreement_id": "8d97baf9-da65-4717-a2a0-6ff9652c4db5",
+    "total_aum": 1669819.62,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "ce1590a9-86b8-4edd-9cfe-a8b0fbc57134",
+        "account_label": "Sandoval Joint",
+        "account_type": "joint",
+        "current_aum": 400745.8,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2020-05-28",
+        "closed_date": null
+      },
+      {
+        "account_id": "e62e1d9e-d01f-40c4-90e6-77d807d57bcc",
+        "account_label": "Sandoval Individual",
+        "account_type": "individual",
+        "current_aum": 1062993.65,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2020-07-23",
+        "closed_date": null
+      },
+      {
+        "account_id": "5105758c-24f0-4c21-bd15-bb9f7ef1c017",
+        "account_label": "Sandoval Individual",
+        "account_type": "individual",
+        "current_aum": 206080.17,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2021-12-15",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 3",
+      "bps": 80
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "3bd214f2-3b1b-4ca7-a727-3ed8a8849280",
+    "household_name": "Andersen Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "ddb24622-c9de-4a7d-a4c2-d1ca0f026e10",
+    "agreement_id": "442c94fd-e047-41bf-8ae1-d647db6019df",
+    "total_aum": 1111677.77,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "706b9f63-bba1-4649-9b32-534cd8ccf0ad",
+        "account_label": "Andersen Roth Ira",
+        "account_type": "Roth IRA",
+        "current_aum": 1111677.77,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2023-09-01",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 2",
+      "bps": 85
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "9de2ed74-1148-4f04-8831-bc7ff0139b17",
+    "household_name": "Yilmaz Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "698b4ef4-4daa-474f-ab6f-2c9f0b0611b2",
+    "agreement_id": "34849a88-a28d-4e7d-af95-e92d93068fbd",
+    "total_aum": 3455292.04,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "a638ada5-5b9d-4ae5-b248-cef9bb43215d",
+        "account_label": "Yilmaz Individual",
+        "account_type": "individual",
+        "current_aum": 2425630.73,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2020-08-07",
+        "closed_date": null
+      },
+      {
+        "account_id": "8c5c9f8d-5392-4ad3-9b0c-b69302a40b58",
+        "account_label": "Yilmaz Roth Ira",
+        "account_type": "Roth IRA",
+        "current_aum": 212702.51,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2021-03-07",
+        "closed_date": null
+      },
+      {
+        "account_id": "2e9753ba-3cf6-41a8-8fae-94dd6ea9848e",
+        "account_label": "Yilmaz Roth Ira",
+        "account_type": "Roth IRA",
+        "current_aum": 353695.18,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2021-06-24",
+        "closed_date": null
+      },
+      {
+        "account_id": "29f78c02-3849-4b40-8fda-71c07fe4647a",
+        "account_label": "Yilmaz Ira",
+        "account_type": "IRA",
+        "current_aum": 463263.62,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2020-04-14",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 3",
+      "bps": 65
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "b9bdb613-6863-4473-9992-3253173b3452",
+    "household_name": "Dubois Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "031827f8-f171-46e1-b1d6-4d42acac616e",
+    "agreement_id": "18e1cfa6-c410-45b6-b58b-c6b08e56df27",
+    "total_aum": 6719687.64,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "589c41b9-f5f7-4f01-97f4-b6df5fc46000",
+        "account_label": "Dubois Individual",
+        "account_type": "individual",
+        "current_aum": 6615819.76,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2022-06-23",
+        "closed_date": null
+      },
+      {
+        "account_id": "aa88da47-b4e4-4412-a38f-694c9731307a",
+        "account_label": "Dubois Ira",
+        "account_type": "IRA",
+        "current_aum": 103867.88,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2020-06-03",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 5",
+      "bps": 60
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "562f768b-55dc-4d7e-a45c-600bf5d916cc",
+    "household_name": "Kowalski Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "ddb24622-c9de-4a7d-a4c2-d1ca0f026e10",
+    "agreement_id": "44486577-8039-4faf-b518-249931420cdf",
+    "total_aum": 1626873.48,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "fbf570f0-73e7-4001-8f3a-7678b71a2151",
+        "account_label": "Kowalski Joint",
+        "account_type": "joint",
+        "current_aum": 52348.86,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2020-03-22",
+        "closed_date": null
+      },
+      {
+        "account_id": "36b45459-56ea-4d67-b408-9457ddc1cc53",
+        "account_label": "Kowalski Trust",
+        "account_type": "trust",
+        "current_aum": 199811.9,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2020-07-29",
+        "closed_date": null
+      },
+      {
+        "account_id": "a67103a9-e161-415d-8549-077c94c0a7e4",
+        "account_label": "Kowalski Joint",
+        "account_type": "joint",
+        "current_aum": 1374712.72,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2023-06-25",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 4",
+      "bps": 70
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "b740db9d-fbe1-485c-a905-e16bb2a492bf",
+    "household_name": "Malone Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "c9ecc0ef-d3c9-4743-9e64-ee4528854ed4",
+    "agreement_id": "c58a2e5b-9545-4ad0-ae73-b87d6b3ecc0f",
+    "total_aum": 2989445.39,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "e88936f1-a2be-4b00-ab5b-0e56959ace30",
+        "account_label": "Malone Roth Ira",
+        "account_type": "Roth IRA",
+        "current_aum": 1586752.27,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2021-11-11",
+        "closed_date": null
+      },
+      {
+        "account_id": "4f7e681c-d28e-4354-af88-d9dc364c86f1",
+        "account_label": "Malone Roth Ira",
+        "account_type": "Roth IRA",
+        "current_aum": 367962.85,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2021-05-23",
+        "closed_date": null
+      },
+      {
+        "account_id": "9bac4ea3-8cb5-4354-8e28-8476f21346a0",
+        "account_label": "Malone Joint",
+        "account_type": "joint",
+        "current_aum": 608095.63,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2020-03-20",
+        "closed_date": null
+      },
+      {
+        "account_id": "04889a22-cea9-4ee4-8360-1cc2842d349e",
+        "account_label": "Malone Trust",
+        "account_type": "trust",
+        "current_aum": 426634.64,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2022-07-31",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 4",
+      "bps": 75
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "9649b290-0ea2-4af1-8ce2-99875538f931",
+    "household_name": "Reeves Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "c9ecc0ef-d3c9-4743-9e64-ee4528854ed4",
+    "agreement_id": "913931ae-9d04-4aae-9958-536b46ce69fb",
+    "total_aum": 445741.18,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "10d5de5f-0fac-42ab-8f13-7d7470389f02",
+        "account_label": "Reeves Individual",
+        "account_type": "individual",
+        "current_aum": 445741.18,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2021-07-25",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 1",
+      "bps": 100
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "4d648ed1-02cb-44bd-b0ac-3802cf7ee704",
+    "household_name": "Tanaka Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "698b4ef4-4daa-474f-ab6f-2c9f0b0611b2",
+    "agreement_id": "c3006168-8a7c-4fc6-af8f-0e356b2f5079",
+    "total_aum": 13845527.42,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "5e85a70b-74a2-4df7-9835-ddc474ab8a48",
+        "account_label": "Tanaka Individual",
+        "account_type": "individual",
+        "current_aum": 6785678.16,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2021-06-27",
+        "closed_date": null
+      },
+      {
+        "account_id": "0c3d1047-c403-471e-b974-658cc325b857",
+        "account_label": "Tanaka Individual",
+        "account_type": "individual",
+        "current_aum": 845687.11,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2021-10-04",
+        "closed_date": null
+      },
+      {
+        "account_id": "1d2a9d4e-f3db-4357-8275-cc201ea7973b",
+        "account_label": "Tanaka Joint",
+        "account_type": "joint",
+        "current_aum": 6156457.84,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2023-03-26",
+        "closed_date": null
+      },
+      {
+        "account_id": "06cc8d70-3a29-4c4e-9086-e21f8725829e",
+        "account_label": "Tanaka Individual",
+        "account_type": "individual",
+        "current_aum": 57704.31,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2022-11-30",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 3",
+      "bps": 65
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "c8905dd4-b773-436c-99a6-745e35188fc9",
+    "household_name": "Vasquez Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "031827f8-f171-46e1-b1d6-4d42acac616e",
+    "agreement_id": "5ec60238-2f4b-4e7e-9dda-f3d5be0d4f9c",
+    "total_aum": 5373288.96,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "4b102b42-17de-4223-8850-d53927aa3618",
+        "account_label": "Vasquez Ira",
+        "account_type": "IRA",
+        "current_aum": 624625.32,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2021-09-07",
+        "closed_date": null
+      },
+      {
+        "account_id": "a26bd2d7-cf4f-455f-aa55-bb24b90802d2",
+        "account_label": "Vasquez Ira",
+        "account_type": "IRA",
+        "current_aum": 826182.9,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2023-11-28",
+        "closed_date": null
+      },
+      {
+        "account_id": "d04559c5-2b4a-40f0-9225-c3dcead456cb",
+        "account_label": "Vasquez Joint",
+        "account_type": "joint",
+        "current_aum": 268178.53,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2022-02-15",
+        "closed_date": null
+      },
+      {
+        "account_id": "cebf1671-e333-48c0-b9ba-6f49dda024f2",
+        "account_label": "Vasquez Ira",
+        "account_type": "IRA",
+        "current_aum": 3654302.21,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2021-09-08",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 4",
+      "bps": 70
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "17fd66b5-fdb4-4db6-b8b4-2dd164d9bcd7",
+    "household_name": "Brennan Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "c9ecc0ef-d3c9-4743-9e64-ee4528854ed4",
+    "agreement_id": "4e39b19b-fa27-450a-9a3d-48a031e78fc2",
+    "total_aum": 1102728.27,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "d336aa8c-7859-46d8-8d2f-b867d6c49c66",
+        "account_label": "Brennan Ira",
+        "account_type": "IRA",
+        "current_aum": 276714.41,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2023-10-15",
+        "closed_date": null
+      },
+      {
+        "account_id": "28f79758-0118-47d0-bce4-c0ba788c95a0",
+        "account_label": "Brennan Individual",
+        "account_type": "individual",
+        "current_aum": 460472.33,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2020-12-13",
+        "closed_date": null
+      },
+      {
+        "account_id": "74a6d57a-9941-4d25-a807-5249182acc83",
+        "account_label": "Brennan Ira",
+        "account_type": "IRA",
+        "current_aum": 365541.53,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2023-06-22",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 2",
+      "bps": 85
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "7067fc65-eb50-4b50-b82f-48b93e89d7dc",
+    "household_name": "Cho Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "c9ecc0ef-d3c9-4743-9e64-ee4528854ed4",
+    "agreement_id": "10969f95-b288-4491-a364-046daa11c3b6",
+    "total_aum": 1073901.66,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "57549394-553d-47c5-a05c-7e44a8223416",
+        "account_label": "Cho Roth Ira",
+        "account_type": "Roth IRA",
+        "current_aum": 118485.49,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2022-08-31",
+        "closed_date": null
+      },
+      {
+        "account_id": "37c6acef-44a1-4bb8-a148-a93a42d6ac6e",
+        "account_label": "Cho Ira",
+        "account_type": "IRA",
+        "current_aum": 955416.17,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2023-07-13",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 3",
+      "bps": 85
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "26acec88-9c58-419f-a288-78951e4584ad",
+    "household_name": "El-Amin Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "f0e88a61-9a2a-4e77-b612-d7a8ac62bd09",
+    "agreement_id": "d7551b8d-9be0-44cc-8f74-2207ff53ae65",
+    "total_aum": 1814303.77,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "6309f7e5-9f47-436d-bad1-f451b53e19e7",
+        "account_label": "El-Amin Individual",
+        "account_type": "individual",
+        "current_aum": 1392659.83,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2020-08-06",
+        "closed_date": null
+      },
+      {
+        "account_id": "6a4d4727-460f-44c8-b4a0-7b260e4ca47f",
+        "account_label": "El-Amin Roth Ira",
+        "account_type": "Roth IRA",
+        "current_aum": 421643.94,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2023-11-26",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 2",
+      "bps": 85
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "3f4eccf7-8b93-413b-af94-e63c9a92ec27",
+    "household_name": "Fischer Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "c9ecc0ef-d3c9-4743-9e64-ee4528854ed4",
+    "agreement_id": "86ab30b8-ffeb-4bcc-8291-cb29ecdd1096",
+    "total_aum": 2430465.88,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "edc6c4e4-ccb2-4f83-9699-a259ebad4ea9",
+        "account_label": "Fischer Roth Ira",
+        "account_type": "Roth IRA",
+        "current_aum": 1487892.45,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2023-05-04",
+        "closed_date": null
+      },
+      {
+        "account_id": "4173cbe2-013b-44c9-835d-b382abb6b312",
+        "account_label": "Fischer Joint",
+        "account_type": "joint",
+        "current_aum": 942573.43,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2024-01-13",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 4",
+      "bps": 75
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "2bfd10af-4b48-42dc-9f96-deb81e4fbc95",
+    "household_name": "Goldstein Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "698b4ef4-4daa-474f-ab6f-2c9f0b0611b2",
+    "agreement_id": "6d737761-c052-47a2-8545-d0a219307cf2",
+    "total_aum": 1202950.62,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "ee82e8da-7c11-4899-8290-fa903c67b8e6",
+        "account_label": "Goldstein Roth Ira",
+        "account_type": "Roth IRA",
+        "current_aum": 203676.62,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2021-05-21",
+        "closed_date": null
+      },
+      {
+        "account_id": "13758ba5-4b78-4c8e-a017-4e93c2d64975",
+        "account_label": "Goldstein Roth Ira",
+        "account_type": "Roth IRA",
+        "current_aum": 411069.93,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2022-09-19",
+        "closed_date": null
+      },
+      {
+        "account_id": "084b1774-b158-4e25-8038-a752927de8a3",
+        "account_label": "Goldstein Ira",
+        "account_type": "IRA",
+        "current_aum": 130993.34,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2021-08-08",
+        "closed_date": null
+      },
+      {
+        "account_id": "16994e17-897a-44d0-9565-984bf1e3615e",
+        "account_label": "Goldstein Individual",
+        "account_type": "individual",
+        "current_aum": 457210.73,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2020-06-14",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 2",
+      "bps": 85
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "0d358c84-56a0-4192-8884-870d630e014c",
+    "household_name": "Hassan Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "3b39ed87-65ad-4f12-902b-d9f68e70b7fb",
+    "agreement_id": "70fad6b4-e988-4c50-9de1-88969e82c9df",
+    "total_aum": 3271262.55,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "d15ee98d-02ca-4a60-acc9-c4ba00d130f4",
+        "account_label": "Hassan Individual",
+        "account_type": "individual",
+        "current_aum": 317044.46,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2022-05-01",
+        "closed_date": null
+      },
+      {
+        "account_id": "026d0ceb-d065-42be-97bb-eceb260ff950",
+        "account_label": "Hassan Individual",
+        "account_type": "individual",
+        "current_aum": 2863168.84,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2023-04-11",
+        "closed_date": null
+      },
+      {
+        "account_id": "8db0a991-077f-4bbc-9202-d08ed1ae8aca",
+        "account_label": "Hassan Trust",
+        "account_type": "trust",
+        "current_aum": 91049.25,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2023-03-25",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 4",
+      "bps": 75
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "7a3e6a26-334c-4167-8124-f9a395b342f3",
+    "household_name": "Ibrahim Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "ddb24622-c9de-4a7d-a4c2-d1ca0f026e10",
+    "agreement_id": "12d714cd-85f1-45ee-8720-9ca102619254",
+    "total_aum": 12449225.72,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "bde4669d-c73c-4328-96c9-0a60a64bf407",
+        "account_label": "Ibrahim Trust",
+        "account_type": "trust",
+        "current_aum": 9190212.83,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2023-01-23",
+        "closed_date": null
+      },
+      {
+        "account_id": "c3c34739-19c6-4ca5-996b-532c8e991a9c",
+        "account_label": "Ibrahim Roth Ira",
+        "account_type": "Roth IRA",
+        "current_aum": 3208803.17,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2021-07-12",
+        "closed_date": null
+      },
+      {
+        "account_id": "a1405705-ce9d-4500-b885-f729dddb5c10",
+        "account_label": "Ibrahim Joint",
+        "account_type": "joint",
+        "current_aum": 50209.72,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2023-10-22",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 3",
+      "bps": 65
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "00a5d386-8f7b-494b-b4eb-20a219d90f1d",
+    "household_name": "Jensen Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "f0e88a61-9a2a-4e77-b612-d7a8ac62bd09",
+    "agreement_id": "a94414b0-b012-4ce8-84c6-510529eeace3",
+    "total_aum": 5317391.49,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "8ffe089f-f8c3-4ee4-8203-5eef30aeb230",
+        "account_label": "Jensen Ira",
+        "account_type": "IRA",
+        "current_aum": 3571624.71,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2023-09-19",
+        "closed_date": null
+      },
+      {
+        "account_id": "d9e799e2-5f2a-4b86-9bcd-ed696b0f8538",
+        "account_label": "Jensen Individual",
+        "account_type": "individual",
+        "current_aum": 635699.49,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2022-08-03",
+        "closed_date": null
+      },
+      {
+        "account_id": "d94c641e-28d9-471d-9d90-54170be32cf5",
+        "account_label": "Jensen Individual",
+        "account_type": "individual",
+        "current_aum": 230941.07,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2022-07-20",
+        "closed_date": null
+      },
+      {
+        "account_id": "46a8c9cc-eff0-4a8b-a1bb-27552b88ea99",
+        "account_label": "Jensen Joint",
+        "account_type": "joint",
+        "current_aum": 879126.22,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2022-05-13",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 5",
+      "bps": 60
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "dd84684f-d1c9-4776-86f0-5bc7657d97af",
+    "household_name": "Kapoor Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "3b39ed87-65ad-4f12-902b-d9f68e70b7fb",
+    "agreement_id": "4df50f84-1a07-4fb1-a668-d0dbc1ec186e",
+    "total_aum": 0,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "5e6b8063-5654-4a3a-b480-6b91b055a376",
+        "account_label": "Kapoor 529",
+        "account_type": "529",
+        "current_aum": 127447.35,
+        "is_active": true,
+        "include_in_household_aum": false,
+        "opened_date": "2023-08-27",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 1",
+      "bps": 125
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "8dfa01ea-e218-4a1f-b8c7-bb7e728cc8b1",
+    "household_name": "Larsen Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "c9ecc0ef-d3c9-4743-9e64-ee4528854ed4",
+    "agreement_id": "3f5e4bd3-f36b-416f-9afc-4f6a945233cb",
+    "total_aum": 1007846.72,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "26574c94-f249-40f6-8689-5c56b9516999",
+        "account_label": "Larsen Individual",
+        "account_type": "individual",
+        "current_aum": 145755.78,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2021-03-22",
+        "closed_date": null
+      },
+      {
+        "account_id": "082766c3-cf0a-4937-ae63-e6245f906922",
+        "account_label": "Larsen Joint",
+        "account_type": "joint",
+        "current_aum": 247558.07,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2023-05-25",
+        "closed_date": null
+      },
+      {
+        "account_id": "ee4f0fa2-1d25-48e9-89c4-aee8b83c25de",
+        "account_label": "Larsen Ira",
+        "account_type": "IRA",
+        "current_aum": 614532.87,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2020-12-01",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 3",
+      "bps": 80
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "ff72b67f-67fe-413e-a83c-e6f06d59ee02",
+    "household_name": "Mendoza Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "031827f8-f171-46e1-b1d6-4d42acac616e",
+    "agreement_id": "1db23647-f46c-4a36-96b0-da87810253b2",
+    "total_aum": 1977534.26,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "5760ed13-5267-432c-b447-90251c85527d",
+        "account_label": "Mendoza Trust",
+        "account_type": "trust",
+        "current_aum": 476588.24,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2021-02-10",
+        "closed_date": null
+      },
+      {
+        "account_id": "2cd721f4-c91c-48aa-9a8b-aa97c953b819",
+        "account_label": "Mendoza Individual",
+        "account_type": "individual",
+        "current_aum": 1127242.4,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2020-07-27",
+        "closed_date": null
+      },
+      {
+        "account_id": "52a8f033-6c45-4517-a750-e475b7e5c102",
+        "account_label": "Mendoza Ira",
+        "account_type": "IRA",
+        "current_aum": 373703.62,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2020-09-04",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 2",
+      "bps": 85
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "dd10bd19-2142-4a49-8f56-00ac9128bb33",
+    "household_name": "Novak Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "f0e88a61-9a2a-4e77-b612-d7a8ac62bd09",
+    "agreement_id": "28f020ad-823b-4a0a-bf2e-644c400f6beb",
+    "total_aum": 11795681.31,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "c4a6a4f2-18ca-4e14-a7fa-51f1eb2f7e56",
+        "account_label": "Novak Ira",
+        "account_type": "IRA",
+        "current_aum": 439830.25,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2022-09-30",
+        "closed_date": null
+      },
+      {
+        "account_id": "e0513745-a4b9-46e1-91ba-78d2a4a649bb",
+        "account_label": "Novak Individual",
+        "account_type": "individual",
+        "current_aum": 11355851.06,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2022-07-30",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 4",
+      "bps": 70
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "9648673b-3299-4e7e-ab0f-18fd582f5ac8",
+    "household_name": "Ortiz Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "3b39ed87-65ad-4f12-902b-d9f68e70b7fb",
+    "agreement_id": "90785bb9-6f61-43fa-bb99-9611b1c6fcf7",
+    "total_aum": 9104719.16,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "6b77c40e-2347-4b1f-be8e-cdaa887a3f73",
+        "account_label": "Ortiz Joint",
+        "account_type": "joint",
+        "current_aum": 3383605.17,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2022-09-17",
+        "closed_date": null
+      },
+      {
+        "account_id": "09beb4e7-5ae0-4385-9b24-20bada54715b",
+        "account_label": "Ortiz Joint",
+        "account_type": "joint",
+        "current_aum": 3573661.17,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2021-10-22",
+        "closed_date": null
+      },
+      {
+        "account_id": "72ec4dc9-1bae-419d-99a3-1210efc04904",
+        "account_label": "Ortiz Trust",
+        "account_type": "trust",
+        "current_aum": 1803320.14,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2022-07-12",
+        "closed_date": null
+      },
+      {
+        "account_id": "e1a705f0-4d1c-4149-8ce6-3c4b5e588213",
+        "account_label": "Ortiz Individual",
+        "account_type": "individual",
+        "current_aum": 344132.68,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2022-02-15",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 4",
+      "bps": 70
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "76a7ca02-b10d-4bcc-8799-e4c66cf66b99",
+    "household_name": "Quinn Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "ddb24622-c9de-4a7d-a4c2-d1ca0f026e10",
+    "agreement_id": "f2c0774d-362a-444d-a5ad-6fb465fa38dc",
+    "total_aum": 315923.85,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "575da70f-6daf-4c14-b048-69e456bb1372",
+        "account_label": "Quinn Joint",
+        "account_type": "joint",
+        "current_aum": 211863.4,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2023-05-05",
+        "closed_date": null
+      },
+      {
+        "account_id": "8c841809-abb9-4097-a9e9-3cef473a15dd",
+        "account_label": "Quinn Roth Ira",
+        "account_type": "Roth IRA",
+        "current_aum": 104060.45,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2021-01-26",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 1",
+      "bps": 100
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "b6f56b88-d18f-4d38-9610-f805caa42b7f",
+    "household_name": "Romero Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "f0e88a61-9a2a-4e77-b612-d7a8ac62bd09",
+    "agreement_id": "7b154395-ea03-4614-bb00-f8a7e5e7dd98",
+    "total_aum": 1688925.38,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "a57246d9-71ba-4aa9-b1b3-630c492bc42f",
+        "account_label": "Romero Ira",
+        "account_type": "IRA",
+        "current_aum": 990821.34,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2020-02-05",
+        "closed_date": null
+      },
+      {
+        "account_id": "ee383a37-428d-41ff-8521-483f0499d1c9",
+        "account_label": "Romero Individual",
+        "account_type": "individual",
+        "current_aum": 376714.86,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2021-09-19",
+        "closed_date": null
+      },
+      {
+        "account_id": "36a5f3c1-d52d-45d0-a6c5-962a13c00b34",
+        "account_label": "Romero Ira",
+        "account_type": "IRA",
+        "current_aum": 321389.18,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2021-12-05",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 4",
+      "bps": 70
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "d9163599-0194-489e-bd09-2c6b99de6d3f",
+    "household_name": "Singh Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "f0e88a61-9a2a-4e77-b612-d7a8ac62bd09",
+    "agreement_id": "96349ccf-ff7f-4b34-894b-3022243ff525",
+    "total_aum": 815547.94,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "0947bbb4-3bb2-4202-9463-3e6413cc07b6",
+        "account_label": "Singh Individual",
+        "account_type": "individual",
+        "current_aum": 815547.94,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2023-01-02",
+        "closed_date": null
+      },
+      {
+        "account_id": "8f728a48-fcb0-43c8-a83a-cf35baec542b",
+        "account_label": "Singh 529",
+        "account_type": "529",
+        "current_aum": 691540.97,
+        "is_active": true,
+        "include_in_household_aum": false,
+        "opened_date": "2022-09-18",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 1",
+      "bps": 110
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "a68370a6-4aef-4c51-824a-e42cec208bfb",
+    "household_name": "Tran Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "c9ecc0ef-d3c9-4743-9e64-ee4528854ed4",
+    "agreement_id": "3cb09d3f-bbb5-4417-aa8c-9c04e4b56b20",
+    "total_aum": 111970.38,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "b4e448cd-9209-4577-b5af-b1ee34cc3cd8",
+        "account_label": "Tran Individual",
+        "account_type": "individual",
+        "current_aum": 65060.13,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2021-07-15",
+        "closed_date": null
+      },
+      {
+        "account_id": "9a2dac3f-16e7-4dea-acb6-4080bfc52016",
+        "account_label": "Tran Individual",
+        "account_type": "individual",
+        "current_aum": 46910.25,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2020-09-15",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 1",
+      "bps": 110
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "fc1e01b6-4ed0-460f-be04-b0f3609c8db4",
+    "household_name": "Ueda Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "031827f8-f171-46e1-b1d6-4d42acac616e",
+    "agreement_id": "5ad08207-2240-4c34-88a5-5fb6d9b6cb7a",
+    "total_aum": 915045.32,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "3c66b0ec-f11d-456e-90aa-29c77c0c4cee",
+        "account_label": "Ueda Joint",
+        "account_type": "joint",
+        "current_aum": 486199.06,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2021-06-01",
+        "closed_date": null
+      },
+      {
+        "account_id": "49cd4798-ff69-4192-9da6-13ff11b1c53b",
+        "account_label": "Ueda Trust",
+        "account_type": "trust",
+        "current_aum": 428846.26,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2022-03-31",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 3",
+      "bps": 85
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "4fb83146-c9de-44f5-97be-b759ecd9636e",
+    "household_name": "Volkov Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "3b39ed87-65ad-4f12-902b-d9f68e70b7fb",
+    "agreement_id": "b40ffa47-1fdd-48f9-a0a8-659ce88a3bae",
+    "total_aum": 1798133.18,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "c9d76dbe-9727-4afd-a40a-a0ad4b2a567f",
+        "account_label": "Volkov Roth Ira",
+        "account_type": "Roth IRA",
+        "current_aum": 1798133.18,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2021-05-23",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 3",
+      "bps": 80
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "a91ecbdd-fb97-4a66-95bf-376ed71c26f3",
+    "household_name": "Walsh Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "698b4ef4-4daa-474f-ab6f-2c9f0b0611b2",
+    "agreement_id": "7ee15afe-d0e8-4dff-8c91-5122020ef66d",
+    "total_aum": 2889146.89,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "a0e7c1ce-4e24-4b27-ac52-572e28b06ee9",
+        "account_label": "Walsh Joint",
+        "account_type": "joint",
+        "current_aum": 2540735.96,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2023-04-20",
+        "closed_date": null
+      },
+      {
+        "account_id": "b9521e33-bf26-4919-ac10-668fa153d6ad",
+        "account_label": "Walsh Other",
+        "account_type": "other",
+        "current_aum": 348410.93,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2023-06-02",
+        "closed_date": null
+      },
+      {
+        "account_id": "282435f0-6b6d-48b5-8f45-aa55233266de",
+        "account_label": "Walsh 529",
+        "account_type": "529",
+        "current_aum": 82205.28,
+        "is_active": true,
+        "include_in_household_aum": false,
+        "opened_date": "2023-07-05",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 4",
+      "bps": 75
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "3308ff50-ad88-49a0-aa6b-4b56fb3f3d6e",
+    "household_name": "Xu Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "c9ecc0ef-d3c9-4743-9e64-ee4528854ed4",
+    "agreement_id": "fb8b3dca-7527-474a-94c9-1ddd5f50e179",
+    "total_aum": 58787.78,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "f392dd4a-f4a6-4406-9029-39cfcfb2626c",
+        "account_label": "Xu Individual",
+        "account_type": "individual",
+        "current_aum": 58787.78,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2023-05-01",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 1",
+      "bps": 100
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "d6b48a7e-c38f-46c8-9af9-4bdca72e5ec2",
+    "household_name": "Yamamoto Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "ddb24622-c9de-4a7d-a4c2-d1ca0f026e10",
+    "agreement_id": "26f51301-48fb-4a8a-992a-06fa703d0635",
+    "total_aum": 1203689.83,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "d75abbcc-9bae-4d27-baef-db05792ef5e0",
+        "account_label": "Yamamoto Trust",
+        "account_type": "trust",
+        "current_aum": 42506.79,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2021-06-25",
+        "closed_date": null
+      },
+      {
+        "account_id": "578014df-8508-4c73-add2-fda3809b5cd9",
+        "account_label": "Yamamoto Roth Ira",
+        "account_type": "Roth IRA",
+        "current_aum": 1161183.04,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2021-02-09",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 3",
+      "bps": 85
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  },
+  {
+    "household_id": "e10b5719-dab3-44df-a028-e2e3995b8fa2",
+    "household_name": "Zhao Family",
+    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
+    "advisor_id": "3b39ed87-65ad-4f12-902b-d9f68e70b7fb",
+    "agreement_id": "88afbcb8-950e-40cc-8495-f9820a21f636",
+    "total_aum": 6093528.48,
+    "aum_as_of": "2025-06-30",
+    "accounts": [
+      {
+        "account_id": "d4c282b3-adf7-4a90-8599-674bf7b77c30",
+        "account_label": "Zhao Roth Ira",
+        "account_type": "Roth IRA",
+        "current_aum": 37444.21,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2021-09-21",
+        "closed_date": null
+      },
+      {
+        "account_id": "e0b0d195-83e5-483b-8636-fcd66b27859f",
+        "account_label": "Zhao Ira",
+        "account_type": "IRA",
+        "current_aum": 4724173.85,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2022-06-18",
+        "closed_date": null
+      },
+      {
+        "account_id": "de82e429-6f2f-46eb-9648-c0923ff5e9f2",
+        "account_label": "Zhao Individual",
+        "account_type": "individual",
+        "current_aum": 1199733.68,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2021-07-11",
+        "closed_date": null
+      },
+      {
+        "account_id": "b3763091-8f71-491c-85c0-43c69387d878",
+        "account_label": "Zhao Ira",
+        "account_type": "IRA",
+        "current_aum": 132176.74,
+        "is_active": true,
+        "include_in_household_aum": true,
+        "opened_date": "2020-03-22",
+        "closed_date": null
+      }
+    ],
+    "tier_qualified": {
+      "tier_label": "Tier 5",
+      "bps": 60
+    },
+    "created_at": "2024-01-15T09:00:00Z",
+    "updated_at": "2025-06-30T18:00:00Z"
+  }
+]

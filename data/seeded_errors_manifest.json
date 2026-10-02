@@ -1,0 +1,67 @@
+{
+  "generated_at": "2026-10-02T13:28:11.990832",
+  "seed": 42,
+  "num_households": 50,
+  "num_accounts": 130,
+  "num_billing_entries": 130,
+  "num_seeded_errors": 8,
+  "total_annual_leakage": 46692.42,
+  "errors": [
+    {
+      "error_id": "ERR-1",
+      "household": "Stevens Family",
+      "error_type": "breakpoint_not_applied",
+      "description": "Household crossed $2M threshold (now $2.2M) qualifying for 75bps Tier 4, but all 3 sub-accounts still billed at 90bps (stale Tier 2 rate). Overcharge: 15bps across $2.2M aggregate.",
+      "annual_dollar_impact": 3300.0
+    },
+    {
+      "error_id": "ERR-2",
+      "household": "Whitaker Family",
+      "error_type": "stale_fee_schedule",
+      "description": "New agreement effective 2025-01-15 specifies 70bps, but billing still uses old rate of 90bps. Two quarters of overcharges.",
+      "annual_dollar_impact": 2122.49
+    },
+    {
+      "error_id": "ERR-3",
+      "household": "Nakamura Family",
+      "error_type": "unbilled_account",
+      "description": "Account 'Nakamura Individual' (individual) with $3,943,487.88 AUM has no billing entry for Q3 2025. Missed revenue: $25,632.67/yr at 65bps.",
+      "annual_dollar_impact": 25632.67
+    },
+    {
+      "error_id": "ERR-4",
+      "household": "Patel Family",
+      "error_type": "expired_waiver_still_applied",
+      "description": "15bps promotional waiver expired 2024-12-31 but billing still charges 60bps instead of 75bps. Undercharge across $4,552,517.08 AUM.",
+      "annual_dollar_impact": 6828.78
+    },
+    {
+      "error_id": "ERR-5",
+      "household": "Fernandez Family",
+      "error_type": "529_included_in_breakpoint",
+      "description": "529 account ($180K) incorrectly included in household AUM aggregation. Inflates total to $12,310,207.56, potentially qualifying for a lower tier than the actual $12,130,207.56 warrants.",
+      "annual_dollar_impact": 1260.0
+    },
+    {
+      "error_id": "ERR-6",
+      "household": "Kim Family",
+      "error_type": "duplicate_billing",
+      "description": "Account 'O'Brien Roth Ira' billed twice in Q3 2025 (Jul 1 and Jul 15). Duplicate fee: $857.10 per quarter.",
+      "annual_dollar_impact": 3428.4
+    },
+    {
+      "error_id": "ERR-7",
+      "household": "Morrison Family",
+      "error_type": "closed_account_still_billed",
+      "description": "Trust account closed 2025-03-31 with $0 AUM, but Q3 2025 billing charged against stale $420,000.00 valuation. Ghost fee: $945.00/quarter.",
+      "annual_dollar_impact": 3780.0
+    },
+    {
+      "error_id": "ERR-8",
+      "household": "Thornton Family",
+      "error_type": "unlinked_household_accounts",
+      "description": "2 of 3 accounts not linked to household in billing system. Billed at standalone rates instead of household-aggregated tier (85bps on $813,961.46). Overcharge from rate differential.",
+      "annual_dollar_impact": 340.08
+    }
+  ]
+}
