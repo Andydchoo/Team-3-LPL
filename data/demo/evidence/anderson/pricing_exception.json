@@ -1,0 +1,16 @@
+{
+  "evidence_id": "anderson_exception",
+  "case_id": "CASE-001",
+  "evidence_type": "pricing_exception",
+  "title": "Anderson temporary pricing exception (synthetic)",
+  "source_path": "evidence/anderson/pricing_exception.json",
+  "content": {
+    "household": "Anderson Household",
+    "annual_rate": 0.0075,
+    "effective_date": "2025-01-01",
+    "expiration_date": "2025-12-31",
+    "authorization_status": "authorized",
+    "reason": "Temporary negotiated pricing arrangement",
+    "synthetic": true
+  }
+}

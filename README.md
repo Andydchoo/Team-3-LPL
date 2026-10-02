@@ -1,71 +1,78 @@
-# Team-3-LPL
+# RevenueTwin — Team-3-LPL
 
-# 💰 FeeAudit AI
+RevenueTwin checks whether advisory agreements and actual billing remain aligned,
+protecting the practice from potential underbilling and clients from potential
+overbilling. Deterministic code calculates financial findings; AI investigates
+evidence; humans choose consequential actions.
 
-> **Every dollar. Every account. Every fee. Verified.**
+This repository combines the original FeeAudit reconciliation code and contributor
+history with the five-owner RevenueAudit requirements. The authoritative product
+specification is [docs/MASTER.md](docs/MASTER.md). The shared integration contract
+is [docs/CONTRACTS.md](docs/CONTRACTS.md), and the work split and handoff process
+are in [docs/TEAM_WORKFLOW.md](docs/TEAM_WORKFLOW.md).
 
-FeeAudit is an AI-powered fee auditing platform for wealth management firms that automatically reads financial advisory agreements, determines what each client **should have been charged**, compares it against what they were **actually billed**, and flags potential overcharges, undercharges, missing fees, incorrect breakpoints, and other billing discrepancies.
+## Working foundation
 
----
+Python 3.11 or newer is sufficient; the engine and financial tests use only the
+standard library. Run these commands from the repository root:
 
-## 🎯 The Problem
+```powershell
+python -m unittest discover -s tests -v
+python -c "import json; from revenue_engine import get_revenue_case; print(json.dumps(get_revenue_case('CASE-001'), indent=2))"
+python -c "import json; from revenue_engine import get_case_evidence; print(json.dumps(get_case_evidence('CASE-001'), indent=2))"
+```
 
-Wealth management firms may manage thousands of client accounts with different:
+CASE-001 is the fictional Anderson Household, evaluated on January 1, 2026:
 
-- Fee schedules
-- AUM breakpoints
-- Household discounts
-- Special negotiated rates
-- Fee waivers
-- Billing frequencies
-- Account exclusions
-- Grandfathered agreements
-
-These rules are often stored inside PDFs and manually configured in billing systems.
-
-That creates a simple but expensive problem:
-
-> **What the contract says and what the billing system does can become different.**
-
-### Example
-
-A client's agreement states:
-
-| Assets | Advisory Fee |
+| Finding | Annual amount |
 |---|---:|
-| $0 – $1M | 1.00% |
-| $1M – $2M | 0.90% |
-| $2M+ | 0.75% |
+| Expected fee: $1.2M at 1.00% | $12,000 |
+| Current billing configuration: $1.2M at 0.75% | $9,000 |
+| Potential underbilling | $3,000 |
 
-The client's household now contains:
+The authorized 0.75% pricing exception ended on December 31, 2025. Three readable
+synthetic evidence documents are stored under `data/demo/evidence/anderson/`.
+Annualized impact is a recurring run-rate estimate, not realized recovery.
 
-**$2.2M AUM**
+`get_revenue_case(case_id)` and `get_case_evidence(case_id)` are implemented for
+CASE-001 with local storage. Streamlit, live Bedrock investigation, S3 retrieval,
+and human review persistence remain work for their respective owners. Their
+interfaces are defined in the shared contract.
 
-Therefore, the applicable contractual rate is:
+## Repository layout
 
-**0.75%**
+| Location | Responsibility |
+|---|---|
+| `revenue_engine/` | Import-safe case tools, Decimal calculations and shared Python types |
+| `contracts/revenuetwin.schema.json` | Shared JSON Schema definitions |
+| `data/demo/` | Curated case inputs and synthetic source evidence |
+| `tests/` | Financial, evidence, date and legacy regression checks |
+| `docs/MASTER.md`, `docs/owners/` | Product requirements and owner prompts |
+| `scripts/`, original `data/*.json` | Legacy FeeAudit bulk reconciliation demo |
 
-But the billing system still contains:
+## Legacy FeeAudit dataset
 
-**0.90%**
+The original 50-household dataset and its eight seeded anomalies remain available.
+The legacy report is a separate volume-pricing demonstration, and its saved
+summary is not the authoritative dashboard source for the curated demo cases.
 
-FeeAudit detects the discrepancy automatically.
+```powershell
+# Explicitly writes data/reconciliation_results.json:
+python scripts/reconciliation_engine.py
 
-```text
-🚨 POTENTIAL BILLING DISCREPANCY
+# Explicitly regenerates the original dataset and changes its UUIDs:
+python scripts/generate_synthetic_data.py
+```
 
-Household: Stevens Family
+Importing `scripts.reconciliation_engine` performs no reads, writes or reporting.
+Its `reconcile(...)` function accepts records and returns the legacy result shape.
+The generator remains an explicit standalone script and is not an application
+import. Do not run it to populate the curated demo cases.
 
-Household AUM:       $2,200,000
-Contract Rate:             0.75%
-Billing Rate:              0.90%
+## Next integration milestone
 
-Potential annual impact: $3,300
-
-Likely Cause:
-Household crossed the $2M contractual breakpoint,
-but the billing configuration was not updated.
-
-Status:
-REQUIRES HUMAN REVIEW
-
+Complete Anderson through Streamlit, live Bedrock tool calls, private S3 evidence,
+and a human-selected review action. Then add Patel, Chen, Ramirez and Morgan.
+Use the minimal architecture in the master specification: Streamlit, one Bedrock
+investigation agent, normal Python tools and private S3 evidence. All demo data
+must be synthetic.

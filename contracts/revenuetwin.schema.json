@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RevenueTwin shared contracts v1",
+  "$ref": "#/$defs/RevenueCase",
+  "$defs": {
+    "Rate": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+    "Amount": { "type": ["number", "null"], "minimum": 0 },
+    "RevenueCase": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "case_id", "household", "anomaly_type", "aum", "expected_rate",
+        "actual_rate", "expected_annual_fee", "actual_annual_fee",
+        "annual_difference", "impact_direction", "evidence_ids", "status",
+        "as_of_date", "calculation_method"
+      ],
+      "properties": {
+        "case_id": { "type": "string", "pattern": "^CASE-[0-9]{3}$" },
+        "household": { "type": "string", "minLength": 1 },
+        "anomaly_type": { "type": "string", "minLength": 1 },
+        "aum": { "type": "number", "minimum": 0 },
+        "expected_rate": { "$ref": "#/$defs/Rate" },
+        "actual_rate": { "$ref": "#/$defs/Rate" },
+        "expected_annual_fee": { "$ref": "#/$defs/Amount" },
+        "actual_annual_fee": { "$ref": "#/$defs/Amount" },
+        "annual_difference": { "$ref": "#/$defs/Amount" },
+        "impact_direction": {
+          "enum": ["potential_underbilling", "potential_overbilling", "no_discrepancy", "review_dependent"]
+        },
+        "evidence_ids": {
+          "type": "array", "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "status": { "enum": ["requires_review", "no_discrepancy"] },
+        "as_of_date": { "type": "string", "format": "date" },
+        "calculation_method": { "enum": ["flat", "volume", "marginal", "review_dependent"] }
+      }
+    },
+    "Evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidence_id", "case_id", "evidence_type", "title", "source_path", "content"],
+      "properties": {
+        "evidence_id": { "type": "string", "minLength": 1 },
+        "case_id": { "type": "string", "pattern": "^CASE-[0-9]{3}$" },
+        "evidence_type": { "type": "string", "minLength": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "source_path": { "type": "string", "minLength": 1 },
+        "content": { "type": "object" }
+      }
+    },
+    "EvidenceList": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/Evidence" }
+    },
+    "Investigation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "case_id", "investigation_status", "likely_cause", "summary",
+        "evidence_strength", "evidence_used", "uncertainties",
+        "recommended_action", "requires_human_review"
+      ],
+      "properties": {
+        "case_id": { "type": "string", "pattern": "^CASE-[0-9]{3}$" },
+        "investigation_status": {
+          "enum": ["supported_explanation", "partial_explanation", "conflicting_evidence", "insufficient_evidence", "investigation_error"]
+        },
+        "likely_cause": { "type": ["string", "null"] },
+        "summary": { "type": "string", "minLength": 1 },
+        "evidence_strength": { "enum": ["high", "medium", "low"] },
+        "evidence_used": {
+          "type": "array",
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["evidence_id", "finding"],
+            "properties": {
+              "evidence_id": { "type": "string", "minLength": 1 },
+              "finding": { "type": "string", "minLength": 1 }
+            }
+          }
+        },
+        "uncertainties": { "type": "array", "items": { "type": "string" } },
+        "recommended_action": { "type": "string", "minLength": 1 },
+        "requires_human_review": { "const": true }
+      }
+    },
+    "ReviewRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["review_id", "case_id", "decision", "actor", "recorded_at"],
+      "properties": {
+        "review_id": { "type": "string", "minLength": 1 },
+        "case_id": { "type": "string", "pattern": "^CASE-[0-9]{3}$" },
+        "decision": { "enum": ["send_for_review", "investigate_further", "dismiss"] },
+        "actor": { "const": "human" },
+        "recorded_at": { "type": "string", "format": "date-time", "pattern": "Z$" }
+      }
+    }
+  }
+}
