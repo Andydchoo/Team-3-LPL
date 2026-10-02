@@ -1,31 +1,10 @@
 [
   {
-    "entry_id": "ca1a874b-72a7-480b-bf3e-f8787c99f4aa",
-    "account_id": "5356769e-028d-46d5-8e68-bde1abf0222f",
-    "household_id": "33d1caed-c0a7-4702-80b5-a7d47ce53f4a",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "3b39ed87-65ad-4f12-902b-d9f68e70b7fb",
-    "billing_period": {
-      "year": 2025,
-      "quarter": 3
-    },
-    "billing_date": "2025-07-01",
-    "aum_billed": 394588.49,
-    "bps_charged": 90,
-    "fee_dollar_amount": 887.82,
-    "billing_method": "in-arrears",
-    "fee_type": "advisory",
-    "status": "posted",
-    "source_system": "ClientWorks",
-    "reconciliation": null,
-    "_injected_error": "ERR-1"
-  },
-  {
-    "entry_id": "1dc7b354-46ff-48b3-915f-1985958dac86",
-    "account_id": "d64593ee-1c44-420b-832c-d07f5f07f3df",
-    "household_id": "e78bd737-0829-4952-9785-add3f7e07b3c",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "031827f8-f171-46e1-b1d6-4d42acac616e",
+    "entry_id": "cf3b0dcb-7de2-4739-9343-6dae0d64cf2d",
+    "account_id": "ce4b9a20-d875-4d8c-8b2d-d34ce455a5bc",
+    "household_id": "30b3fc45-6aa3-46f7-9969-7e65dc04f997",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "b3126ec6-fc0d-4a25-bada-cad575cd2223",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -42,11 +21,11 @@
     "_injected_error": "ERR-2"
   },
   {
-    "entry_id": "ab97b512-4315-4439-a7ca-08adebd197c0",
-    "account_id": "04344a69-2b5a-4c54-b542-b5db9ab98c92",
-    "household_id": "5449a4cd-4674-49bd-ac83-2bace4427cdb",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "698b4ef4-4daa-474f-ab6f-2c9f0b0611b2",
+    "entry_id": "bdfbc423-0fd7-408f-81f7-0f86a2edad5c",
+    "account_id": "3611edef-b69d-4005-9855-5415d4640114",
+    "household_id": "f65120c9-a365-43c5-9b6b-a6a8de14e557",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "2d539b83-19d6-40a0-9b82-ab9eb73e7bb0",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -62,11 +41,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "5863215b-18ce-416a-a159-5c721ff78690",
-    "account_id": "b7017ea8-d3b3-49cf-805e-86bc1748771e",
-    "household_id": "5449a4cd-4674-49bd-ac83-2bace4427cdb",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "698b4ef4-4daa-474f-ab6f-2c9f0b0611b2",
+    "entry_id": "e2670652-31d6-4ed3-8fca-3bad21fc3dc9",
+    "account_id": "64db5c89-c35a-4946-93d4-43f95cd6bc5b",
+    "household_id": "f65120c9-a365-43c5-9b6b-a6a8de14e557",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "2d539b83-19d6-40a0-9b82-ab9eb73e7bb0",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -82,11 +61,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "f31af78b-f1da-4e11-981d-ab2b335fc4ed",
-    "account_id": "94cec92e-79b4-4584-9c44-53b74a4ab57f",
-    "household_id": "397a531b-14d0-441d-b3fb-4abfa5a13eb6",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "698b4ef4-4daa-474f-ab6f-2c9f0b0611b2",
+    "entry_id": "5cac9b05-f1af-4026-9cfe-82fab444198d",
+    "account_id": "aad8f3be-4ba1-4c02-a74a-5b18943191e6",
+    "household_id": "6c6c9db9-0920-479e-b478-6503677e9a82",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "2d539b83-19d6-40a0-9b82-ab9eb73e7bb0",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -103,11 +82,11 @@
     "_injected_error": "ERR-4"
   },
   {
-    "entry_id": "d180047b-f7ce-4b17-9a1d-a8b190a99b8d",
-    "account_id": "aba6f84c-7dd4-4237-aa98-779b85843783",
-    "household_id": "397a531b-14d0-441d-b3fb-4abfa5a13eb6",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "698b4ef4-4daa-474f-ab6f-2c9f0b0611b2",
+    "entry_id": "e0bb5b3e-272d-44b5-84aa-7d91bcf72bd4",
+    "account_id": "05b169f5-2c1f-4b5a-8d00-876707775cd9",
+    "household_id": "6c6c9db9-0920-479e-b478-6503677e9a82",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "2d539b83-19d6-40a0-9b82-ab9eb73e7bb0",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -124,11 +103,11 @@
     "_injected_error": "ERR-4"
   },
   {
-    "entry_id": "046532ab-e195-474e-957f-fcfc9b341b77",
-    "account_id": "924487aa-b3ec-4ed1-a033-b419a65167f2",
-    "household_id": "397a531b-14d0-441d-b3fb-4abfa5a13eb6",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "698b4ef4-4daa-474f-ab6f-2c9f0b0611b2",
+    "entry_id": "f170275d-1038-4034-8c78-3169afb9e86f",
+    "account_id": "c790c42d-2760-4ba5-9e69-46ccac8e5686",
+    "household_id": "6c6c9db9-0920-479e-b478-6503677e9a82",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "2d539b83-19d6-40a0-9b82-ab9eb73e7bb0",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -145,11 +124,11 @@
     "_injected_error": "ERR-4"
   },
   {
-    "entry_id": "e7cf6400-0077-4f18-ab82-c4b6ba0ade79",
-    "account_id": "180c8a85-75e2-435a-b865-e2b27163371d",
-    "household_id": "397a531b-14d0-441d-b3fb-4abfa5a13eb6",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "698b4ef4-4daa-474f-ab6f-2c9f0b0611b2",
+    "entry_id": "78bbcb43-7c59-423d-8f41-f5036c317972",
+    "account_id": "92e88358-32b5-457b-a3b0-69cee82449bb",
+    "household_id": "6c6c9db9-0920-479e-b478-6503677e9a82",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "2d539b83-19d6-40a0-9b82-ab9eb73e7bb0",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -166,11 +145,11 @@
     "_injected_error": "ERR-4"
   },
   {
-    "entry_id": "77b50c6b-3995-46e8-ba14-89004b3cbe79",
-    "account_id": "25f2cb15-c3ef-4a79-80b6-c53bd3b676ee",
-    "household_id": "309cf328-0029-4867-b008-f20cdbb5dfc0",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "ddb24622-c9de-4a7d-a4c2-d1ca0f026e10",
+    "entry_id": "87af2181-9303-4bcf-9da4-09a72eea52db",
+    "account_id": "017d0379-e7cd-4cee-bc19-fd251ce99300",
+    "household_id": "7af04141-f492-42b9-9221-ec178a5ffc58",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "ec940193-11b6-4048-9d0b-9074208ab5bb",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -186,11 +165,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "08b9d97c-dbcf-40e2-82cf-1fbec07ea04d",
-    "account_id": "b1cccd2c-1a76-451f-b2c4-47b32236b31e",
-    "household_id": "309cf328-0029-4867-b008-f20cdbb5dfc0",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "ddb24622-c9de-4a7d-a4c2-d1ca0f026e10",
+    "entry_id": "89f291bd-42c1-450c-8bcf-08cae8ae2e59",
+    "account_id": "8a0140a9-cc58-4a52-9195-b904f1444c2f",
+    "household_id": "7af04141-f492-42b9-9221-ec178a5ffc58",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "ec940193-11b6-4048-9d0b-9074208ab5bb",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -206,11 +185,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "8e8c930d-0d25-44cd-98a0-4c3df63717b3",
-    "account_id": "d6679fd7-9f27-4de6-91d6-1de9d564d3f7",
-    "household_id": "309cf328-0029-4867-b008-f20cdbb5dfc0",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "ddb24622-c9de-4a7d-a4c2-d1ca0f026e10",
+    "entry_id": "1f93867d-863b-4059-ab89-f6b7b7cd65b5",
+    "account_id": "4e1790ea-b393-4142-90e9-3f0dd6196802",
+    "household_id": "7af04141-f492-42b9-9221-ec178a5ffc58",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "ec940193-11b6-4048-9d0b-9074208ab5bb",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -226,11 +205,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "1ebf12ac-17c3-4c09-bd49-c410ae2369da",
-    "account_id": "9d395957-9cf7-454d-9172-7f0b7b73713d",
-    "household_id": "ba794829-3219-4a8b-97e1-e95853de5155",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "031827f8-f171-46e1-b1d6-4d42acac616e",
+    "entry_id": "6e7ed605-2e93-42f6-a39e-a6be02507c97",
+    "account_id": "e96e38fb-74a9-4ba3-bc10-22d600bb6d8d",
+    "household_id": "a9cd816d-4ed1-4927-98e7-39bc11d4c066",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "b3126ec6-fc0d-4a25-bada-cad575cd2223",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -246,11 +225,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "bcfddc48-7994-4324-9b24-491d7a17854e",
-    "account_id": "8e6ab81a-4cf5-465c-85c9-98c3944ab37a",
-    "household_id": "ba794829-3219-4a8b-97e1-e95853de5155",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "031827f8-f171-46e1-b1d6-4d42acac616e",
+    "entry_id": "4565f78a-d66e-4d18-beb2-0212ccc64a0a",
+    "account_id": "35b8cdbd-fc4c-4077-a459-bd01d97e8047",
+    "household_id": "a9cd816d-4ed1-4927-98e7-39bc11d4c066",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "b3126ec6-fc0d-4a25-bada-cad575cd2223",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -266,11 +245,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "6c2ef1ee-2198-4668-b017-a90e4511f950",
-    "account_id": "bb44592c-55eb-4425-bdef-e9d9dddbb16a",
-    "household_id": "ba794829-3219-4a8b-97e1-e95853de5155",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "031827f8-f171-46e1-b1d6-4d42acac616e",
+    "entry_id": "8137cb16-3668-47ec-90a0-ff038fa322e2",
+    "account_id": "20573800-c51f-4de0-a553-9cd9d2ae7609",
+    "household_id": "a9cd816d-4ed1-4927-98e7-39bc11d4c066",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "b3126ec6-fc0d-4a25-bada-cad575cd2223",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -286,11 +265,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "f483ac0a-b374-4fb5-b501-897026f43b4b",
-    "account_id": "15498f96-57ab-4298-8731-e58045d4f2a4",
-    "household_id": "48af5718-079b-4409-be59-fc408975b157",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "f0e88a61-9a2a-4e77-b612-d7a8ac62bd09",
+    "entry_id": "09b35bc2-e7fa-4c7a-a871-8fc44d62ad84",
+    "account_id": "332c811a-ac88-46f2-80dc-993041bf5f63",
+    "household_id": "b8d855d2-eb9f-49a8-bd7e-b7c1033f9c8c",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "9fabe5db-247a-4f12-8b78-0ff671b8a06a",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -307,11 +286,11 @@
     "_injected_error": "ERR-5"
   },
   {
-    "entry_id": "1e9313aa-14c0-4348-b567-3dd7214972e2",
-    "account_id": "9914ac48-97d3-4a65-a372-568a69227ec6",
-    "household_id": "48af5718-079b-4409-be59-fc408975b157",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "f0e88a61-9a2a-4e77-b612-d7a8ac62bd09",
+    "entry_id": "b8d75f70-4f53-4824-9e7a-7263eb728fcd",
+    "account_id": "9f958c2f-457f-443c-b380-958defa2185b",
+    "household_id": "b8d855d2-eb9f-49a8-bd7e-b7c1033f9c8c",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "9fabe5db-247a-4f12-8b78-0ff671b8a06a",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -328,11 +307,11 @@
     "_injected_error": "ERR-5"
   },
   {
-    "entry_id": "2782f9d9-81d5-4261-b124-693f433e6bea",
-    "account_id": "5867513b-6f73-4374-b95e-a75d0bd89a40",
-    "household_id": "9e11f02d-e26d-4835-8493-0527826e9bdb",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "f0e88a61-9a2a-4e77-b612-d7a8ac62bd09",
+    "entry_id": "0b6db1d6-95c8-404b-a78b-33d546ada993",
+    "account_id": "46d19ab8-fedc-435d-b231-af72ec35056c",
+    "household_id": "0d70f7b1-471f-44d0-a737-eb66f06d569d",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "9fabe5db-247a-4f12-8b78-0ff671b8a06a",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -348,11 +327,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "070bd068-6fb3-4e18-ae2c-397f3b266912",
-    "account_id": "10b290ab-5c98-42ce-a518-4594ef761b1c",
-    "household_id": "9e11f02d-e26d-4835-8493-0527826e9bdb",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "f0e88a61-9a2a-4e77-b612-d7a8ac62bd09",
+    "entry_id": "f7efa311-ff75-4d81-a241-85aa38fe3b42",
+    "account_id": "3e584429-8da0-410b-b92f-08453d91d28e",
+    "household_id": "0d70f7b1-471f-44d0-a737-eb66f06d569d",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "9fabe5db-247a-4f12-8b78-0ff671b8a06a",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -368,11 +347,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "7001776b-40da-468b-bf75-5317fb189eac",
-    "account_id": "9b88f185-5560-4fb7-976d-182239fdbd04",
-    "household_id": "9e11f02d-e26d-4835-8493-0527826e9bdb",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "f0e88a61-9a2a-4e77-b612-d7a8ac62bd09",
+    "entry_id": "e5abc3ff-ccda-483b-86a8-72603e6b030e",
+    "account_id": "8da97e60-e29b-4498-884e-2ec876fcab05",
+    "household_id": "0d70f7b1-471f-44d0-a737-eb66f06d569d",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "9fabe5db-247a-4f12-8b78-0ff671b8a06a",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -388,11 +367,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "740e8d25-0535-4bbe-9d72-9391e94a0938",
-    "account_id": "7d327528-389b-45b1-9b9a-ab973a011222",
-    "household_id": "53f99775-63ba-4f1c-a26f-1fc8f0f631cb",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "3b39ed87-65ad-4f12-902b-d9f68e70b7fb",
+    "entry_id": "cb625b18-720c-4ae7-bc2c-375090f70e5f",
+    "account_id": "eda36efc-6f45-448f-b56b-e501b5a722e8",
+    "household_id": "5d1ae406-0b7b-4129-b6c4-559ee6704957",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "57b51b4e-12d0-4e88-9eb8-225de722f1dd",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -408,11 +387,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "c03a2518-1f0d-46b7-a5de-38930a7469bd",
-    "account_id": "8a7a35dc-662c-4faf-b9a6-d2b036a4789d",
-    "household_id": "53f99775-63ba-4f1c-a26f-1fc8f0f631cb",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "3b39ed87-65ad-4f12-902b-d9f68e70b7fb",
+    "entry_id": "345cc773-392f-486d-8d9d-92d5d3843ae2",
+    "account_id": "da44c9e9-0c29-40b3-8e9e-7b131caf1f16",
+    "household_id": "5d1ae406-0b7b-4129-b6c4-559ee6704957",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "57b51b4e-12d0-4e88-9eb8-225de722f1dd",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -428,11 +407,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "42fa3daf-9ab7-4e82-8020-348202798e3c",
-    "account_id": "403e6631-d2fe-4d0f-ad2b-8b345c23c508",
-    "household_id": "53f99775-63ba-4f1c-a26f-1fc8f0f631cb",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "3b39ed87-65ad-4f12-902b-d9f68e70b7fb",
+    "entry_id": "b60ff387-7ac1-44a6-b6c2-4ca2fdf0f42c",
+    "account_id": "f6edf0db-3765-439a-806b-fc436ac2f712",
+    "household_id": "5d1ae406-0b7b-4129-b6c4-559ee6704957",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "57b51b4e-12d0-4e88-9eb8-225de722f1dd",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -448,11 +427,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "b17eb1e8-8804-4ffe-b038-65be8df1ed9f",
-    "account_id": "55f696a6-79b9-4d7f-92e7-bbe43b4b9d30",
-    "household_id": "53f99775-63ba-4f1c-a26f-1fc8f0f631cb",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "3b39ed87-65ad-4f12-902b-d9f68e70b7fb",
+    "entry_id": "1f274a19-58e5-4c5c-aebd-cec30bf4d370",
+    "account_id": "82ae0a6b-d8d8-442a-ab36-ad8d8010b10d",
+    "household_id": "5d1ae406-0b7b-4129-b6c4-559ee6704957",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "57b51b4e-12d0-4e88-9eb8-225de722f1dd",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -468,11 +447,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "cf5c9395-e1f7-4ce9-928e-4629187a833b",
-    "account_id": "8cb4d78e-2bcd-4c09-81f3-41f726b7c9dd",
-    "household_id": "ddcf4c6e-7fff-44db-a401-6fadf358e934",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "ddb24622-c9de-4a7d-a4c2-d1ca0f026e10",
+    "entry_id": "9809af28-4ff1-420b-af63-532d593eb45d",
+    "account_id": "697df3a6-65b3-4e35-9f45-6a869ba0e6e6",
+    "household_id": "06a1da60-6e69-462e-84fd-6b57a4d07f6a",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "ec940193-11b6-4048-9d0b-9074208ab5bb",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -488,11 +467,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "c2892a67-2858-4c24-acde-3183880c7f44",
-    "account_id": "c3985b25-0117-45c5-8a40-3de3c2d790c5",
-    "household_id": "baf1a868-e61e-486b-abdd-395b0f665bc1",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "698b4ef4-4daa-474f-ab6f-2c9f0b0611b2",
+    "entry_id": "eff4c7ec-3570-46b5-8be8-4f5a82bb2149",
+    "account_id": "99b28172-16e9-445a-b9e4-1d30edc86eb8",
+    "household_id": "0c1292b3-2422-41a0-9ef4-41784b732b30",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "2d539b83-19d6-40a0-9b82-ab9eb73e7bb0",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -509,11 +488,11 @@
     "_injected_error": "ERR-7"
   },
   {
-    "entry_id": "078a13bc-ff98-4f7f-bf53-db88127ebea8",
-    "account_id": "07f05923-e6cf-4dba-a696-f287ea03f86e",
-    "household_id": "249b4fa4-d0f1-4b31-bef8-9df9aba3afc1",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "3b39ed87-65ad-4f12-902b-d9f68e70b7fb",
+    "entry_id": "18b0f2d0-c39b-4433-a1e4-41edf9605246",
+    "account_id": "e643dfb4-684d-4060-8801-e1f4b4d1eb86",
+    "household_id": "0bb0bd40-1ae4-423d-8934-56ca6c344fbc",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "57b51b4e-12d0-4e88-9eb8-225de722f1dd",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -529,11 +508,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "f66ce45b-3f7e-4c55-ab35-c91ef9cf0b17",
-    "account_id": "af3956ec-55cc-4fc9-a727-34542e9ed4f9",
-    "household_id": "249b4fa4-d0f1-4b31-bef8-9df9aba3afc1",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "3b39ed87-65ad-4f12-902b-d9f68e70b7fb",
+    "entry_id": "12f2db3e-72e1-4936-bf6a-d8fbc1169366",
+    "account_id": "d64386db-0f2c-48c0-8774-bf9842e8fcc1",
+    "household_id": "0bb0bd40-1ae4-423d-8934-56ca6c344fbc",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "57b51b4e-12d0-4e88-9eb8-225de722f1dd",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -549,11 +528,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "dcca8459-6d4b-4869-95d0-091792ea0599",
-    "account_id": "7fde4a84-efb1-4d6b-a963-e7ff4c99ef17",
-    "household_id": "ed975aa5-649f-477b-9112-95dfaa1bbc6e",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "c9ecc0ef-d3c9-4743-9e64-ee4528854ed4",
+    "entry_id": "93217936-8ae1-4313-8fe0-b348a702dabe",
+    "account_id": "db2ca334-14d8-4837-82b4-38cb8e20c550",
+    "household_id": "d2822a2f-2337-4df7-9113-3a82debc38cc",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "21d11071-358d-47e9-81a8-c5dc05841df8",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -569,11 +548,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "acb7a013-a32a-4ad6-b37c-75d863e214e7",
-    "account_id": "f984d76b-1e9a-4d63-b3bb-f517432531a8",
+    "entry_id": "9c9b3aef-dff5-456a-8f63-66e3d3dc8096",
+    "account_id": "519f801e-c33f-4291-8e73-1e30689515f6",
     "household_id": null,
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "c9ecc0ef-d3c9-4743-9e64-ee4528854ed4",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "21d11071-358d-47e9-81a8-c5dc05841df8",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -590,11 +569,11 @@
     "_injected_error": "ERR-8"
   },
   {
-    "entry_id": "98ad568e-cbe8-4e95-b42e-91af9c12ab7d",
-    "account_id": "438cef67-bfdb-4ef1-869c-e575b6f3e9d5",
-    "household_id": "e5f5d94d-98dc-4b1c-95c2-3ea75b98c030",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "3b39ed87-65ad-4f12-902b-d9f68e70b7fb",
+    "entry_id": "d8947e50-e9de-430d-a820-66722fecdb45",
+    "account_id": "fd5f2964-9395-41be-9e88-111e17d5f886",
+    "household_id": "8d872401-6827-4654-86da-16e0f5399cba",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "57b51b4e-12d0-4e88-9eb8-225de722f1dd",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -610,11 +589,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "db0eaef7-61ca-470f-a402-884bc30b16c5",
-    "account_id": "965f0228-78d8-4abb-9920-46efae4fae4d",
-    "household_id": "e5f5d94d-98dc-4b1c-95c2-3ea75b98c030",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "3b39ed87-65ad-4f12-902b-d9f68e70b7fb",
+    "entry_id": "9f32f82d-b90f-4f70-93c2-2a4da04364d9",
+    "account_id": "aabf14e3-7361-444a-b80e-676aef213f66",
+    "household_id": "8d872401-6827-4654-86da-16e0f5399cba",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "57b51b4e-12d0-4e88-9eb8-225de722f1dd",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -630,11 +609,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "abba03f7-4dc9-4c33-890e-9e90465634e3",
-    "account_id": "cf9c94f7-e34f-4d3c-b06f-e3a7fdbf4d11",
-    "household_id": "e5f5d94d-98dc-4b1c-95c2-3ea75b98c030",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "3b39ed87-65ad-4f12-902b-d9f68e70b7fb",
+    "entry_id": "2a0fa157-8afd-4eb3-9324-758c69e80bb2",
+    "account_id": "c6302bf1-1a54-4794-b633-b8799cb3e9ad",
+    "household_id": "8d872401-6827-4654-86da-16e0f5399cba",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "57b51b4e-12d0-4e88-9eb8-225de722f1dd",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -650,11 +629,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "626adf77-e9a4-47b5-b658-c5421c933ce8",
-    "account_id": "a851ee40-7c8e-4529-99a0-06124399773d",
-    "household_id": "c0b3419f-964f-4204-aa1a-7955c73cea5e",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "ddb24622-c9de-4a7d-a4c2-d1ca0f026e10",
+    "entry_id": "09cbab44-bb90-46e1-b5c4-d08947ff973c",
+    "account_id": "856e2265-d32b-482b-a9bd-9765bc3e3d94",
+    "household_id": "e11d08b9-f9dc-470f-b53a-b5b28e8030da",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "ec940193-11b6-4048-9d0b-9074208ab5bb",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -670,11 +649,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "f3ca847c-e48d-4ec0-a7c9-97f5d9795a64",
-    "account_id": "d21bec53-1e97-4f81-b4f2-a702431c836a",
-    "household_id": "c0b3419f-964f-4204-aa1a-7955c73cea5e",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "ddb24622-c9de-4a7d-a4c2-d1ca0f026e10",
+    "entry_id": "fece6cda-c710-456e-9f15-3e091bb25126",
+    "account_id": "d8fee09d-b01e-48f7-9987-2f0e38bf5c61",
+    "household_id": "e11d08b9-f9dc-470f-b53a-b5b28e8030da",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "ec940193-11b6-4048-9d0b-9074208ab5bb",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -690,11 +669,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "377a51b6-8ead-4ed9-bd08-f1bcb1f8e26c",
-    "account_id": "76f39753-e812-4812-9764-2aced573168d",
-    "household_id": "50bb61b7-d24c-4c73-b3e6-638ecd4ca359",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "698b4ef4-4daa-474f-ab6f-2c9f0b0611b2",
+    "entry_id": "345b9f56-ac82-4e79-b002-694e2595d216",
+    "account_id": "262b95ef-81d5-4fcd-a03e-b9dd35a462a2",
+    "household_id": "596472f2-8cf6-4f67-a76f-c28d9067f618",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "2d539b83-19d6-40a0-9b82-ab9eb73e7bb0",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -710,11 +689,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "17b61e16-5439-4eda-ba03-399476cff2e3",
-    "account_id": "0d796367-5844-42de-9f9e-da0be1aa5daf",
-    "household_id": "50bb61b7-d24c-4c73-b3e6-638ecd4ca359",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "698b4ef4-4daa-474f-ab6f-2c9f0b0611b2",
+    "entry_id": "e60fee5e-9b3e-44dc-a8db-216e93aea649",
+    "account_id": "8b8cc3f9-0e9c-4e20-a41a-1c272b44157c",
+    "household_id": "596472f2-8cf6-4f67-a76f-c28d9067f618",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "2d539b83-19d6-40a0-9b82-ab9eb73e7bb0",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -730,11 +709,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "b0b6615c-2849-48f5-9216-e4a402b86200",
-    "account_id": "a9868bce-6727-4cbf-ad18-1b59796adb7a",
-    "household_id": "50bb61b7-d24c-4c73-b3e6-638ecd4ca359",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "698b4ef4-4daa-474f-ab6f-2c9f0b0611b2",
+    "entry_id": "bbaa2884-29c6-4ba7-bccf-6f7837098279",
+    "account_id": "d4b69831-01ef-472e-afdf-187de24d30e8",
+    "household_id": "596472f2-8cf6-4f67-a76f-c28d9067f618",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "2d539b83-19d6-40a0-9b82-ab9eb73e7bb0",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -750,11 +729,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "1cf54173-9f80-475f-af1b-75263f3f98a2",
-    "account_id": "e1eab9af-f411-4bd8-9858-7a67f715cddc",
-    "household_id": "50bb61b7-d24c-4c73-b3e6-638ecd4ca359",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "698b4ef4-4daa-474f-ab6f-2c9f0b0611b2",
+    "entry_id": "df0d2ec1-46d2-4ec5-8884-d923383408f6",
+    "account_id": "231dcc3f-390c-4e65-b994-a7200b3f9796",
+    "household_id": "596472f2-8cf6-4f67-a76f-c28d9067f618",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "2d539b83-19d6-40a0-9b82-ab9eb73e7bb0",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -770,11 +749,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "e3bea336-fc14-46e3-b2eb-0bd5932ebb2d",
-    "account_id": "cf0786d7-b8bb-4450-ac3e-b601198b77ab",
-    "household_id": "8fd0677f-5320-49c0-aa95-d03a25de75e6",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "ddb24622-c9de-4a7d-a4c2-d1ca0f026e10",
+    "entry_id": "03a06b94-ad7c-483d-abad-9d1f95c46085",
+    "account_id": "a66e8511-8827-4d62-b7c4-9be7891942ce",
+    "household_id": "a5fdf39d-3825-491d-8c2c-082a7f9cb58f",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "ec940193-11b6-4048-9d0b-9074208ab5bb",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -790,11 +769,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "7f4aff72-fa82-4cda-87d2-f10a686b2154",
-    "account_id": "9fb41303-009f-443d-853b-e09cae245003",
-    "household_id": "8fd0677f-5320-49c0-aa95-d03a25de75e6",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "ddb24622-c9de-4a7d-a4c2-d1ca0f026e10",
+    "entry_id": "822907ea-cd48-4c86-92c5-d3d5112bc1ca",
+    "account_id": "f33c79b3-fd30-414b-96d1-c2fa6d4e659f",
+    "household_id": "a5fdf39d-3825-491d-8c2c-082a7f9cb58f",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "ec940193-11b6-4048-9d0b-9074208ab5bb",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -810,11 +789,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "e98498a5-1b94-4c9a-8fdc-a14efe373304",
-    "account_id": "8865dd91-b851-41e4-850c-6afbc1a23198",
-    "household_id": "8fd0677f-5320-49c0-aa95-d03a25de75e6",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "ddb24622-c9de-4a7d-a4c2-d1ca0f026e10",
+    "entry_id": "9b04d5ef-231d-4d07-9bda-eb2a710a1fa8",
+    "account_id": "f1950854-1895-476d-9f99-8443b48f6ad0",
+    "household_id": "a5fdf39d-3825-491d-8c2c-082a7f9cb58f",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "ec940193-11b6-4048-9d0b-9074208ab5bb",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -830,11 +809,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "3633864a-e11d-4bb4-97a1-4afc31f441da",
-    "account_id": "dc7c3e42-489d-40f5-9a86-644ec33af71b",
-    "household_id": "8fd0677f-5320-49c0-aa95-d03a25de75e6",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "ddb24622-c9de-4a7d-a4c2-d1ca0f026e10",
+    "entry_id": "c1a0c943-0c2b-41f5-9b60-e929547408b4",
+    "account_id": "1afce408-608c-4f24-847c-8bf3cf4c1d64",
+    "household_id": "a5fdf39d-3825-491d-8c2c-082a7f9cb58f",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "ec940193-11b6-4048-9d0b-9074208ab5bb",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -850,11 +829,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "0aaeae54-fd08-425d-a31d-ecae5e5314c8",
-    "account_id": "80133e7f-aba4-44ca-8b04-b0f9a70df722",
-    "household_id": "f633d6f9-8e4b-4e35-a1f8-eb6874be315c",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "031827f8-f171-46e1-b1d6-4d42acac616e",
+    "entry_id": "9d877b2a-e67c-4663-8429-9f5ff3e56da0",
+    "account_id": "3642ffd6-a1dd-4a98-af89-10fe65aed800",
+    "household_id": "fa561ea2-1af3-4d04-a789-ccb408760936",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "b3126ec6-fc0d-4a25-bada-cad575cd2223",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -870,11 +849,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "d4062087-5c4c-43da-99c4-829b763f900a",
-    "account_id": "ce1590a9-86b8-4edd-9cfe-a8b0fbc57134",
-    "household_id": "fbb2671e-1153-4e7b-a939-c96f9916ce15",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "f0e88a61-9a2a-4e77-b612-d7a8ac62bd09",
+    "entry_id": "d4981baf-d194-4dde-97d5-4ee65ae68cbc",
+    "account_id": "2b4a402b-99d9-4b84-aca5-8fe75616a20a",
+    "household_id": "3afdcc9b-937a-480b-b423-0d4fc19f53c8",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "9fabe5db-247a-4f12-8b78-0ff671b8a06a",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -890,11 +869,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "5e3c09ac-446b-4486-9763-73cf15287d58",
-    "account_id": "e62e1d9e-d01f-40c4-90e6-77d807d57bcc",
-    "household_id": "fbb2671e-1153-4e7b-a939-c96f9916ce15",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "f0e88a61-9a2a-4e77-b612-d7a8ac62bd09",
+    "entry_id": "cab9be7c-046d-48a4-9b8a-3918f1314548",
+    "account_id": "0d246edf-a2b5-4423-ad67-5c6bed5749fb",
+    "household_id": "3afdcc9b-937a-480b-b423-0d4fc19f53c8",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "9fabe5db-247a-4f12-8b78-0ff671b8a06a",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -910,11 +889,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "7ac574e1-8cb4-4747-9f06-4c7c93ac26e5",
-    "account_id": "5105758c-24f0-4c21-bd15-bb9f7ef1c017",
-    "household_id": "fbb2671e-1153-4e7b-a939-c96f9916ce15",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "f0e88a61-9a2a-4e77-b612-d7a8ac62bd09",
+    "entry_id": "89eb6e69-36b6-4439-adda-7bd8cd51f84e",
+    "account_id": "375aa405-2a4c-4f2a-9650-496d6ca1f3eb",
+    "household_id": "3afdcc9b-937a-480b-b423-0d4fc19f53c8",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "9fabe5db-247a-4f12-8b78-0ff671b8a06a",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -930,11 +909,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "e1598bdd-d243-41f5-b0b0-603eb647c48f",
-    "account_id": "706b9f63-bba1-4649-9b32-534cd8ccf0ad",
-    "household_id": "3bd214f2-3b1b-4ca7-a727-3ed8a8849280",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "ddb24622-c9de-4a7d-a4c2-d1ca0f026e10",
+    "entry_id": "389918af-99d3-4e31-916c-aa8bffe80534",
+    "account_id": "ef7ace6e-f860-4fa1-bc6a-3c54ebde5b09",
+    "household_id": "ed5793b8-fa55-491f-918a-ceefaae37e14",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "ec940193-11b6-4048-9d0b-9074208ab5bb",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -950,11 +929,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "262849d8-1bc1-42bc-a522-08f19e8f6149",
-    "account_id": "a638ada5-5b9d-4ae5-b248-cef9bb43215d",
-    "household_id": "9de2ed74-1148-4f04-8831-bc7ff0139b17",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "698b4ef4-4daa-474f-ab6f-2c9f0b0611b2",
+    "entry_id": "c0f2243d-84d7-4c83-8590-27a4237b09eb",
+    "account_id": "b0c7d49a-bd01-48f5-9d75-c1df5712f7de",
+    "household_id": "65bdc1d5-9b7b-4df5-a4d9-f6003a0554ef",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "2d539b83-19d6-40a0-9b82-ab9eb73e7bb0",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -970,11 +949,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "62040547-276d-4e3b-ab9c-2948ab62b37b",
-    "account_id": "8c5c9f8d-5392-4ad3-9b0c-b69302a40b58",
-    "household_id": "9de2ed74-1148-4f04-8831-bc7ff0139b17",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "698b4ef4-4daa-474f-ab6f-2c9f0b0611b2",
+    "entry_id": "2daf3e48-049d-4a03-a27e-8673fea2e090",
+    "account_id": "2814730f-7430-4950-a4dd-b4f847a36111",
+    "household_id": "65bdc1d5-9b7b-4df5-a4d9-f6003a0554ef",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "2d539b83-19d6-40a0-9b82-ab9eb73e7bb0",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -990,11 +969,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "de11367c-f939-481d-867b-4502b0fa5d64",
-    "account_id": "2e9753ba-3cf6-41a8-8fae-94dd6ea9848e",
-    "household_id": "9de2ed74-1148-4f04-8831-bc7ff0139b17",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "698b4ef4-4daa-474f-ab6f-2c9f0b0611b2",
+    "entry_id": "6702c2b3-9732-4bfc-b39c-00db5e77beba",
+    "account_id": "b6592317-6396-468f-af15-6ea65cf838f4",
+    "household_id": "65bdc1d5-9b7b-4df5-a4d9-f6003a0554ef",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "2d539b83-19d6-40a0-9b82-ab9eb73e7bb0",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1010,11 +989,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "05a64b56-cc74-4616-94ee-724ee4c05021",
-    "account_id": "29f78c02-3849-4b40-8fda-71c07fe4647a",
-    "household_id": "9de2ed74-1148-4f04-8831-bc7ff0139b17",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "698b4ef4-4daa-474f-ab6f-2c9f0b0611b2",
+    "entry_id": "3d7fed55-f18d-48fb-8985-d4fbe8e014a6",
+    "account_id": "da57c81c-2ad2-4f1e-8d5f-004a4ee57dd9",
+    "household_id": "65bdc1d5-9b7b-4df5-a4d9-f6003a0554ef",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "2d539b83-19d6-40a0-9b82-ab9eb73e7bb0",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1030,11 +1009,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "274ee11e-cd66-4cbb-8fb6-04cd56ce40fa",
-    "account_id": "589c41b9-f5f7-4f01-97f4-b6df5fc46000",
-    "household_id": "b9bdb613-6863-4473-9992-3253173b3452",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "031827f8-f171-46e1-b1d6-4d42acac616e",
+    "entry_id": "62c9b478-4b41-43c0-8481-17b1157f97bd",
+    "account_id": "46161177-10d3-4879-b279-3684e40f75ee",
+    "household_id": "2399705e-efc1-48aa-b2c0-547bdb307e1a",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "b3126ec6-fc0d-4a25-bada-cad575cd2223",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1050,11 +1029,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "b8233795-b3d9-4699-90e9-32b55fdc5b7a",
-    "account_id": "aa88da47-b4e4-4412-a38f-694c9731307a",
-    "household_id": "b9bdb613-6863-4473-9992-3253173b3452",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "031827f8-f171-46e1-b1d6-4d42acac616e",
+    "entry_id": "f0e09afd-5dcf-4df0-ab58-a9faee150721",
+    "account_id": "e3f07ee4-17c4-49b9-a709-f74493ae033d",
+    "household_id": "2399705e-efc1-48aa-b2c0-547bdb307e1a",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "b3126ec6-fc0d-4a25-bada-cad575cd2223",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1070,11 +1049,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "90e867e2-57cc-495a-beea-a16e751f0df3",
-    "account_id": "fbf570f0-73e7-4001-8f3a-7678b71a2151",
-    "household_id": "562f768b-55dc-4d7e-a45c-600bf5d916cc",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "ddb24622-c9de-4a7d-a4c2-d1ca0f026e10",
+    "entry_id": "1f294666-c032-43bf-a740-97752ac72172",
+    "account_id": "969ddb64-ce09-4c30-8ff7-6cd96de99b72",
+    "household_id": "cb08f629-211a-43ec-921f-217a9de8f756",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "ec940193-11b6-4048-9d0b-9074208ab5bb",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1090,11 +1069,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "0991a002-eec5-495a-baf2-b9e007bc4aa1",
-    "account_id": "36b45459-56ea-4d67-b408-9457ddc1cc53",
-    "household_id": "562f768b-55dc-4d7e-a45c-600bf5d916cc",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "ddb24622-c9de-4a7d-a4c2-d1ca0f026e10",
+    "entry_id": "bb110b9e-7b41-4248-b391-cdfc3b690b5b",
+    "account_id": "161f2ccd-bd99-4427-8506-e3da01238bfd",
+    "household_id": "cb08f629-211a-43ec-921f-217a9de8f756",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "ec940193-11b6-4048-9d0b-9074208ab5bb",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1110,11 +1089,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "ebdd2a65-6f18-4d76-98eb-d29ec0aa70a6",
-    "account_id": "a67103a9-e161-415d-8549-077c94c0a7e4",
-    "household_id": "562f768b-55dc-4d7e-a45c-600bf5d916cc",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "ddb24622-c9de-4a7d-a4c2-d1ca0f026e10",
+    "entry_id": "23d6a3f3-56fa-4c2f-9144-c94465db619e",
+    "account_id": "ed825309-0eb6-4c5b-b467-15bc66e4d226",
+    "household_id": "cb08f629-211a-43ec-921f-217a9de8f756",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "ec940193-11b6-4048-9d0b-9074208ab5bb",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1130,11 +1109,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "9b6b5f62-056f-4a52-bc27-163e2f8028f3",
-    "account_id": "e88936f1-a2be-4b00-ab5b-0e56959ace30",
-    "household_id": "b740db9d-fbe1-485c-a905-e16bb2a492bf",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "c9ecc0ef-d3c9-4743-9e64-ee4528854ed4",
+    "entry_id": "e75e8f14-e189-44e2-a9aa-d939b0d72594",
+    "account_id": "62a0ba55-25d1-4fce-a275-8c614ac99c49",
+    "household_id": "3aefe4e3-84c3-49d6-ace1-c8051c25dbae",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "21d11071-358d-47e9-81a8-c5dc05841df8",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1150,11 +1129,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "069c7bc4-9b97-4b26-94b0-566951706570",
-    "account_id": "4f7e681c-d28e-4354-af88-d9dc364c86f1",
-    "household_id": "b740db9d-fbe1-485c-a905-e16bb2a492bf",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "c9ecc0ef-d3c9-4743-9e64-ee4528854ed4",
+    "entry_id": "361b9881-604f-42c4-9e8d-89996d411bd2",
+    "account_id": "edc260c0-75de-4dcb-8c47-ca0a5017de13",
+    "household_id": "3aefe4e3-84c3-49d6-ace1-c8051c25dbae",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "21d11071-358d-47e9-81a8-c5dc05841df8",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1170,11 +1149,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "c4745348-0fb6-4c0c-bb2d-9a60b1c72eb4",
-    "account_id": "9bac4ea3-8cb5-4354-8e28-8476f21346a0",
-    "household_id": "b740db9d-fbe1-485c-a905-e16bb2a492bf",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "c9ecc0ef-d3c9-4743-9e64-ee4528854ed4",
+    "entry_id": "f02eb8c3-b691-4e9b-9758-b94c6b35e89c",
+    "account_id": "1a1e4011-f829-41e1-91f0-863b731ad124",
+    "household_id": "3aefe4e3-84c3-49d6-ace1-c8051c25dbae",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "21d11071-358d-47e9-81a8-c5dc05841df8",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1190,11 +1169,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "97eb1b62-10af-46ea-9050-37e900ae18f4",
-    "account_id": "04889a22-cea9-4ee4-8360-1cc2842d349e",
-    "household_id": "b740db9d-fbe1-485c-a905-e16bb2a492bf",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "c9ecc0ef-d3c9-4743-9e64-ee4528854ed4",
+    "entry_id": "cfaf0707-08b2-4b21-9674-0947ccfd8797",
+    "account_id": "bc459067-8336-4c9f-823e-02e21554df12",
+    "household_id": "3aefe4e3-84c3-49d6-ace1-c8051c25dbae",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "21d11071-358d-47e9-81a8-c5dc05841df8",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1210,11 +1189,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "f0080c54-aa53-427f-b675-f73db57ab095",
-    "account_id": "10d5de5f-0fac-42ab-8f13-7d7470389f02",
-    "household_id": "9649b290-0ea2-4af1-8ce2-99875538f931",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "c9ecc0ef-d3c9-4743-9e64-ee4528854ed4",
+    "entry_id": "1595ea05-b172-4a2c-970a-e04ac2913ba8",
+    "account_id": "fa46229d-64ed-4c76-98b4-0176794257ce",
+    "household_id": "2a49b704-a507-4c3c-9759-0ac0ced59a41",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "21d11071-358d-47e9-81a8-c5dc05841df8",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1230,11 +1209,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "1921bc68-4dae-4f19-a3fd-263f804472ee",
-    "account_id": "5e85a70b-74a2-4df7-9835-ddc474ab8a48",
-    "household_id": "4d648ed1-02cb-44bd-b0ac-3802cf7ee704",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "698b4ef4-4daa-474f-ab6f-2c9f0b0611b2",
+    "entry_id": "8a72567c-8f9e-405d-b8c8-a5ce36760ddd",
+    "account_id": "b895d786-59a7-45d1-9bc3-fa3194222344",
+    "household_id": "671f89b7-1442-413f-8463-cc562468d93e",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "2d539b83-19d6-40a0-9b82-ab9eb73e7bb0",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1250,11 +1229,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "f4a7fac8-5a10-43b1-a169-c4f62896a5fd",
-    "account_id": "0c3d1047-c403-471e-b974-658cc325b857",
-    "household_id": "4d648ed1-02cb-44bd-b0ac-3802cf7ee704",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "698b4ef4-4daa-474f-ab6f-2c9f0b0611b2",
+    "entry_id": "acf7f753-5f11-488b-8847-4bcb44750c92",
+    "account_id": "95314701-6005-4d51-b326-9a4a08a5ec5e",
+    "household_id": "671f89b7-1442-413f-8463-cc562468d93e",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "2d539b83-19d6-40a0-9b82-ab9eb73e7bb0",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1270,11 +1249,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "4429f4d7-20b7-484b-af63-8552094dbdc2",
-    "account_id": "1d2a9d4e-f3db-4357-8275-cc201ea7973b",
-    "household_id": "4d648ed1-02cb-44bd-b0ac-3802cf7ee704",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "698b4ef4-4daa-474f-ab6f-2c9f0b0611b2",
+    "entry_id": "c4819985-6c8d-4002-9342-95fd25868d72",
+    "account_id": "2f58b4f5-8012-4bb6-86e8-e5a9609321c3",
+    "household_id": "671f89b7-1442-413f-8463-cc562468d93e",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "2d539b83-19d6-40a0-9b82-ab9eb73e7bb0",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1290,11 +1269,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "d2a6f456-dda8-4db6-94ae-dabd103c08eb",
-    "account_id": "06cc8d70-3a29-4c4e-9086-e21f8725829e",
-    "household_id": "4d648ed1-02cb-44bd-b0ac-3802cf7ee704",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "698b4ef4-4daa-474f-ab6f-2c9f0b0611b2",
+    "entry_id": "16074dec-01dd-4086-a31f-c4905acd38ff",
+    "account_id": "c5ace930-dfc0-4efa-a9d2-8a8ebcc42bd6",
+    "household_id": "671f89b7-1442-413f-8463-cc562468d93e",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "2d539b83-19d6-40a0-9b82-ab9eb73e7bb0",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1310,11 +1289,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "e529aeec-1c36-4fd1-b7ed-34ba9aaa78d7",
-    "account_id": "4b102b42-17de-4223-8850-d53927aa3618",
-    "household_id": "c8905dd4-b773-436c-99a6-745e35188fc9",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "031827f8-f171-46e1-b1d6-4d42acac616e",
+    "entry_id": "05d40a5d-7503-404e-8957-97ed87f87920",
+    "account_id": "6533886e-afed-4c4b-86fd-b8add60bc4f0",
+    "household_id": "43eaf846-fe47-42f5-bfe0-5662715626ec",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "b3126ec6-fc0d-4a25-bada-cad575cd2223",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1330,11 +1309,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "9449142c-6235-43be-95ef-60f85be5ef38",
-    "account_id": "a26bd2d7-cf4f-455f-aa55-bb24b90802d2",
-    "household_id": "c8905dd4-b773-436c-99a6-745e35188fc9",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "031827f8-f171-46e1-b1d6-4d42acac616e",
+    "entry_id": "674ed972-8dd7-4093-abd5-855647d3647e",
+    "account_id": "a99dfe4a-e09e-439b-b3d4-59495e1694e1",
+    "household_id": "43eaf846-fe47-42f5-bfe0-5662715626ec",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "b3126ec6-fc0d-4a25-bada-cad575cd2223",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1350,11 +1329,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "6e179ffe-a708-4403-a336-3b0fee364c0e",
-    "account_id": "d04559c5-2b4a-40f0-9225-c3dcead456cb",
-    "household_id": "c8905dd4-b773-436c-99a6-745e35188fc9",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "031827f8-f171-46e1-b1d6-4d42acac616e",
+    "entry_id": "699357d1-60bd-4875-b79e-2b39a87f2e67",
+    "account_id": "4ae7e53a-9c1b-47b9-acfc-446822422f68",
+    "household_id": "43eaf846-fe47-42f5-bfe0-5662715626ec",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "b3126ec6-fc0d-4a25-bada-cad575cd2223",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1370,11 +1349,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "7c3f3874-91ca-45ef-a84c-2c22ccc7d64d",
-    "account_id": "cebf1671-e333-48c0-b9ba-6f49dda024f2",
-    "household_id": "c8905dd4-b773-436c-99a6-745e35188fc9",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "031827f8-f171-46e1-b1d6-4d42acac616e",
+    "entry_id": "2fd1269b-fc02-4eb7-a90f-1e53c09e6e02",
+    "account_id": "760cd232-5710-478b-83e7-fa9d5fdb347b",
+    "household_id": "43eaf846-fe47-42f5-bfe0-5662715626ec",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "b3126ec6-fc0d-4a25-bada-cad575cd2223",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1390,11 +1369,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "89f8d683-1fee-4e46-af3b-8b9cb71c4dc9",
-    "account_id": "d336aa8c-7859-46d8-8d2f-b867d6c49c66",
-    "household_id": "17fd66b5-fdb4-4db6-b8b4-2dd164d9bcd7",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "c9ecc0ef-d3c9-4743-9e64-ee4528854ed4",
+    "entry_id": "1d7005a0-6fbf-495a-9b9b-752e2e7af3dd",
+    "account_id": "df535138-21d9-494e-baeb-81b13fa109c0",
+    "household_id": "107c4e01-7d05-484e-a8dd-9b87680e9284",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "21d11071-358d-47e9-81a8-c5dc05841df8",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1410,11 +1389,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "599d2db4-f3d6-4daa-9e2e-051c0ec86149",
-    "account_id": "28f79758-0118-47d0-bce4-c0ba788c95a0",
-    "household_id": "17fd66b5-fdb4-4db6-b8b4-2dd164d9bcd7",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "c9ecc0ef-d3c9-4743-9e64-ee4528854ed4",
+    "entry_id": "1dbf272e-176f-4c92-98d5-7641b2a4936e",
+    "account_id": "bd559db9-0ba6-4940-803e-94dbba473245",
+    "household_id": "107c4e01-7d05-484e-a8dd-9b87680e9284",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "21d11071-358d-47e9-81a8-c5dc05841df8",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1430,11 +1409,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "9ad624f4-7300-4efe-b55d-c2466eb4a44c",
-    "account_id": "74a6d57a-9941-4d25-a807-5249182acc83",
-    "household_id": "17fd66b5-fdb4-4db6-b8b4-2dd164d9bcd7",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "c9ecc0ef-d3c9-4743-9e64-ee4528854ed4",
+    "entry_id": "43cc8576-026e-462a-97f5-da0e97f78b2f",
+    "account_id": "b7eebe42-d33f-43df-b1e2-d8ccb8f29ce9",
+    "household_id": "107c4e01-7d05-484e-a8dd-9b87680e9284",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "21d11071-358d-47e9-81a8-c5dc05841df8",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1450,11 +1429,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "a54c7a25-a5e9-4e60-9c58-7a466568e1b6",
-    "account_id": "57549394-553d-47c5-a05c-7e44a8223416",
-    "household_id": "7067fc65-eb50-4b50-b82f-48b93e89d7dc",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "c9ecc0ef-d3c9-4743-9e64-ee4528854ed4",
+    "entry_id": "8d394fbe-7b47-49d8-b4a1-44fe475d7a8c",
+    "account_id": "8eacda79-6d81-4d87-a279-dea393002ef5",
+    "household_id": "e360d70c-fa0b-428f-b4d1-0235d5f1dead",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "21d11071-358d-47e9-81a8-c5dc05841df8",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1470,11 +1449,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "9b409977-1dd7-46cc-a4a6-e1b0967d8cc8",
-    "account_id": "37c6acef-44a1-4bb8-a148-a93a42d6ac6e",
-    "household_id": "7067fc65-eb50-4b50-b82f-48b93e89d7dc",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "c9ecc0ef-d3c9-4743-9e64-ee4528854ed4",
+    "entry_id": "0d054b8c-df97-4bd0-bea3-4723f29300a9",
+    "account_id": "aef48c3a-5a21-406c-8c8b-aa13e79ba01f",
+    "household_id": "e360d70c-fa0b-428f-b4d1-0235d5f1dead",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "21d11071-358d-47e9-81a8-c5dc05841df8",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1490,11 +1469,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "9525a41a-4f9b-4409-ae44-044c6b0ebcac",
-    "account_id": "6309f7e5-9f47-436d-bad1-f451b53e19e7",
-    "household_id": "26acec88-9c58-419f-a288-78951e4584ad",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "f0e88a61-9a2a-4e77-b612-d7a8ac62bd09",
+    "entry_id": "390541d4-8977-49d1-8357-9b6ce83f533f",
+    "account_id": "53bb860f-f4f1-4ba5-9e0f-038b6770dc9d",
+    "household_id": "8d7f2a3f-5889-4c86-b27b-6d392fb8d7e6",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "9fabe5db-247a-4f12-8b78-0ff671b8a06a",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1510,11 +1489,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "6ea29d32-814a-425d-b973-52e431dff3c0",
-    "account_id": "6a4d4727-460f-44c8-b4a0-7b260e4ca47f",
-    "household_id": "26acec88-9c58-419f-a288-78951e4584ad",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "f0e88a61-9a2a-4e77-b612-d7a8ac62bd09",
+    "entry_id": "94ce1c2c-18b5-4dad-bb43-acf4d8c14cf2",
+    "account_id": "a293c9b5-83bc-4daa-8c97-074b778c08d1",
+    "household_id": "8d7f2a3f-5889-4c86-b27b-6d392fb8d7e6",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "9fabe5db-247a-4f12-8b78-0ff671b8a06a",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1530,11 +1509,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "3177ec51-1fd8-413c-9dd8-6a47537a2c2a",
-    "account_id": "edc6c4e4-ccb2-4f83-9699-a259ebad4ea9",
-    "household_id": "3f4eccf7-8b93-413b-af94-e63c9a92ec27",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "c9ecc0ef-d3c9-4743-9e64-ee4528854ed4",
+    "entry_id": "13e55162-46fb-4055-8bc0-b3f64f9201b6",
+    "account_id": "4a43de9e-55b1-4407-a50e-2b423ca56791",
+    "household_id": "ba361f25-f764-485b-9244-54f0de1635fe",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "21d11071-358d-47e9-81a8-c5dc05841df8",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1550,11 +1529,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "e5c7e33b-f7e9-4169-8659-c09722c1102f",
-    "account_id": "4173cbe2-013b-44c9-835d-b382abb6b312",
-    "household_id": "3f4eccf7-8b93-413b-af94-e63c9a92ec27",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "c9ecc0ef-d3c9-4743-9e64-ee4528854ed4",
+    "entry_id": "7e369b90-6b45-45d3-b307-d272a74b1da3",
+    "account_id": "29454875-7f6f-4d79-a9f0-ad052e118e45",
+    "household_id": "ba361f25-f764-485b-9244-54f0de1635fe",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "21d11071-358d-47e9-81a8-c5dc05841df8",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1570,11 +1549,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "0929a95b-efb2-4c14-8c69-f1537a9c0d71",
-    "account_id": "ee82e8da-7c11-4899-8290-fa903c67b8e6",
-    "household_id": "2bfd10af-4b48-42dc-9f96-deb81e4fbc95",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "698b4ef4-4daa-474f-ab6f-2c9f0b0611b2",
+    "entry_id": "dc7bbe4c-ed7e-4b20-9bc2-7b0c9458417f",
+    "account_id": "b5623834-cbaa-47d9-b2f6-1ee01bf88814",
+    "household_id": "47a89e8c-c9ce-4886-85e4-a369f6f2f6ed",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "2d539b83-19d6-40a0-9b82-ab9eb73e7bb0",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1590,11 +1569,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "7e3d5033-35b5-451f-9d74-c934ec537564",
-    "account_id": "13758ba5-4b78-4c8e-a017-4e93c2d64975",
-    "household_id": "2bfd10af-4b48-42dc-9f96-deb81e4fbc95",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "698b4ef4-4daa-474f-ab6f-2c9f0b0611b2",
+    "entry_id": "96eab826-db6e-4581-91dc-64983d03cf43",
+    "account_id": "fe27968b-a437-4e3d-8e09-cfc8a9cbc198",
+    "household_id": "47a89e8c-c9ce-4886-85e4-a369f6f2f6ed",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "2d539b83-19d6-40a0-9b82-ab9eb73e7bb0",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1610,11 +1589,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "e827ceb2-21ac-4d89-80ef-85385199de40",
-    "account_id": "084b1774-b158-4e25-8038-a752927de8a3",
-    "household_id": "2bfd10af-4b48-42dc-9f96-deb81e4fbc95",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "698b4ef4-4daa-474f-ab6f-2c9f0b0611b2",
+    "entry_id": "d4c58f21-da75-4a7e-8073-30a5eb929262",
+    "account_id": "8a53c682-e79b-4a77-88db-8e0e7247f351",
+    "household_id": "47a89e8c-c9ce-4886-85e4-a369f6f2f6ed",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "2d539b83-19d6-40a0-9b82-ab9eb73e7bb0",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1630,11 +1609,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "8e2e3fcc-b20e-41a4-9d6e-197a199568b6",
-    "account_id": "16994e17-897a-44d0-9565-984bf1e3615e",
-    "household_id": "2bfd10af-4b48-42dc-9f96-deb81e4fbc95",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "698b4ef4-4daa-474f-ab6f-2c9f0b0611b2",
+    "entry_id": "2a1d4878-85db-44f9-9475-7cb19ad494c8",
+    "account_id": "dc76746c-84c0-4a4e-a765-bf46bba37cc5",
+    "household_id": "47a89e8c-c9ce-4886-85e4-a369f6f2f6ed",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "2d539b83-19d6-40a0-9b82-ab9eb73e7bb0",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1650,11 +1629,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "44980a5c-6dea-4aa6-b623-66965fbd0d02",
-    "account_id": "d15ee98d-02ca-4a60-acc9-c4ba00d130f4",
-    "household_id": "0d358c84-56a0-4192-8884-870d630e014c",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "3b39ed87-65ad-4f12-902b-d9f68e70b7fb",
+    "entry_id": "6a3392a2-0d33-4857-b2d1-414f2a1a1ec5",
+    "account_id": "56b55b8b-9f18-4b47-81bd-53ea8889cf6e",
+    "household_id": "be777685-eb15-4021-a184-3f425fe91c71",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "57b51b4e-12d0-4e88-9eb8-225de722f1dd",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1670,11 +1649,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "165b1b80-cc36-4540-a607-bd0ad9b21d65",
-    "account_id": "026d0ceb-d065-42be-97bb-eceb260ff950",
-    "household_id": "0d358c84-56a0-4192-8884-870d630e014c",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "3b39ed87-65ad-4f12-902b-d9f68e70b7fb",
+    "entry_id": "805954e7-c013-426e-b726-e5b88c99f50e",
+    "account_id": "a456b48a-152f-412c-a098-5b2ea6c7199c",
+    "household_id": "be777685-eb15-4021-a184-3f425fe91c71",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "57b51b4e-12d0-4e88-9eb8-225de722f1dd",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1690,11 +1669,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "128f09f3-d47f-45ba-929d-60d7c26b5b41",
-    "account_id": "8db0a991-077f-4bbc-9202-d08ed1ae8aca",
-    "household_id": "0d358c84-56a0-4192-8884-870d630e014c",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "3b39ed87-65ad-4f12-902b-d9f68e70b7fb",
+    "entry_id": "4fc3177e-ad8a-45f0-addc-338e2d1b49cb",
+    "account_id": "d59f9185-56f9-4897-9d60-f6b81241a310",
+    "household_id": "be777685-eb15-4021-a184-3f425fe91c71",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "57b51b4e-12d0-4e88-9eb8-225de722f1dd",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1710,11 +1689,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "124b84fd-ab18-4506-ab56-33bf9d934aaa",
-    "account_id": "bde4669d-c73c-4328-96c9-0a60a64bf407",
-    "household_id": "7a3e6a26-334c-4167-8124-f9a395b342f3",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "ddb24622-c9de-4a7d-a4c2-d1ca0f026e10",
+    "entry_id": "0835a6f1-3db8-42b0-ab3f-fa5743e9aea7",
+    "account_id": "e0073094-b49e-49b7-bb73-6ca60d399b1d",
+    "household_id": "9cc67273-5f49-40a3-91e2-31d549bfdba1",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "ec940193-11b6-4048-9d0b-9074208ab5bb",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1730,11 +1709,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "df221ca6-980f-454e-ba39-5132c90ddbab",
-    "account_id": "c3c34739-19c6-4ca5-996b-532c8e991a9c",
-    "household_id": "7a3e6a26-334c-4167-8124-f9a395b342f3",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "ddb24622-c9de-4a7d-a4c2-d1ca0f026e10",
+    "entry_id": "a66ae90e-aeb7-4f5d-8932-00143416503f",
+    "account_id": "e54a31b9-0e5a-4761-b179-b93c6d2b4cf1",
+    "household_id": "9cc67273-5f49-40a3-91e2-31d549bfdba1",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "ec940193-11b6-4048-9d0b-9074208ab5bb",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1750,11 +1729,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "fdb50935-1cdc-4351-b683-4a6a2208b89a",
-    "account_id": "a1405705-ce9d-4500-b885-f729dddb5c10",
-    "household_id": "7a3e6a26-334c-4167-8124-f9a395b342f3",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "ddb24622-c9de-4a7d-a4c2-d1ca0f026e10",
+    "entry_id": "e629f37f-7440-418d-9cb9-13ba2494bac5",
+    "account_id": "04ec2378-9a49-45d3-91e5-1650612d13ed",
+    "household_id": "9cc67273-5f49-40a3-91e2-31d549bfdba1",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "ec940193-11b6-4048-9d0b-9074208ab5bb",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1770,11 +1749,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "3eee72ab-8f79-411a-84e6-10f9da17d267",
-    "account_id": "8ffe089f-f8c3-4ee4-8203-5eef30aeb230",
-    "household_id": "00a5d386-8f7b-494b-b4eb-20a219d90f1d",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "f0e88a61-9a2a-4e77-b612-d7a8ac62bd09",
+    "entry_id": "7dcbb59f-9a1a-4445-8968-c51e5e8b4118",
+    "account_id": "1a154c77-9475-4ed5-8b72-d8e92e70584c",
+    "household_id": "670dac2e-01aa-42c8-9fb1-bd57229d3200",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "9fabe5db-247a-4f12-8b78-0ff671b8a06a",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1790,11 +1769,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "966a29e5-e22d-46fa-911e-27f0f04dadb5",
-    "account_id": "d9e799e2-5f2a-4b86-9bcd-ed696b0f8538",
-    "household_id": "00a5d386-8f7b-494b-b4eb-20a219d90f1d",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "f0e88a61-9a2a-4e77-b612-d7a8ac62bd09",
+    "entry_id": "8d5631d7-4480-4455-807f-ce8853c72692",
+    "account_id": "fd54c2e7-b038-4722-890c-0f57e549f1af",
+    "household_id": "670dac2e-01aa-42c8-9fb1-bd57229d3200",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "9fabe5db-247a-4f12-8b78-0ff671b8a06a",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1810,11 +1789,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "189032fb-4d2f-4337-895e-ef84dbacf3c7",
-    "account_id": "d94c641e-28d9-471d-9d90-54170be32cf5",
-    "household_id": "00a5d386-8f7b-494b-b4eb-20a219d90f1d",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "f0e88a61-9a2a-4e77-b612-d7a8ac62bd09",
+    "entry_id": "6c6bc887-9720-4169-96a3-ea988c7513f5",
+    "account_id": "e13bd059-c9d3-4319-9870-1fa0d668074c",
+    "household_id": "670dac2e-01aa-42c8-9fb1-bd57229d3200",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "9fabe5db-247a-4f12-8b78-0ff671b8a06a",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1830,11 +1809,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "99eb14bf-c216-4628-9960-396e1fe74a41",
-    "account_id": "46a8c9cc-eff0-4a8b-a1bb-27552b88ea99",
-    "household_id": "00a5d386-8f7b-494b-b4eb-20a219d90f1d",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "f0e88a61-9a2a-4e77-b612-d7a8ac62bd09",
+    "entry_id": "18329ea6-8088-47d2-abc5-0b0c0d4bd852",
+    "account_id": "cc6d524a-9ba5-46b2-99a1-19a5f0dc1476",
+    "household_id": "670dac2e-01aa-42c8-9fb1-bd57229d3200",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "9fabe5db-247a-4f12-8b78-0ff671b8a06a",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1850,11 +1829,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "cba7208a-eb8e-48ec-abd8-e57036d4c2ec",
-    "account_id": "5e6b8063-5654-4a3a-b480-6b91b055a376",
-    "household_id": "dd84684f-d1c9-4776-86f0-5bc7657d97af",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "3b39ed87-65ad-4f12-902b-d9f68e70b7fb",
+    "entry_id": "269cbf00-0f47-4e47-945b-0303caca0777",
+    "account_id": "5207f744-6c59-4dd1-af26-8837294d3f65",
+    "household_id": "729a2ca2-6e15-405f-b2d4-3a5b5884385f",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "57b51b4e-12d0-4e88-9eb8-225de722f1dd",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1870,11 +1849,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "daf8b8ef-b1a0-4545-82b7-3c1c2154bfc8",
-    "account_id": "26574c94-f249-40f6-8689-5c56b9516999",
-    "household_id": "8dfa01ea-e218-4a1f-b8c7-bb7e728cc8b1",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "c9ecc0ef-d3c9-4743-9e64-ee4528854ed4",
+    "entry_id": "86bf8938-39f4-49c9-8be6-883ff9000442",
+    "account_id": "0797f8c1-595d-48df-843d-18570dd4fdb8",
+    "household_id": "7a2659d7-dd6f-4bc6-8073-e73d497f2621",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "21d11071-358d-47e9-81a8-c5dc05841df8",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1890,11 +1869,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "61352f9f-535a-4ca5-a771-c9c189570d57",
-    "account_id": "082766c3-cf0a-4937-ae63-e6245f906922",
-    "household_id": "8dfa01ea-e218-4a1f-b8c7-bb7e728cc8b1",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "c9ecc0ef-d3c9-4743-9e64-ee4528854ed4",
+    "entry_id": "279d2756-0973-452b-b4ff-39730cbcbcc1",
+    "account_id": "9e76e8ea-3ac8-4fde-8ef1-74f3aab99150",
+    "household_id": "7a2659d7-dd6f-4bc6-8073-e73d497f2621",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "21d11071-358d-47e9-81a8-c5dc05841df8",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1910,11 +1889,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "517eedf9-e723-4f8a-a309-1dbc4b0b7d93",
-    "account_id": "ee4f0fa2-1d25-48e9-89c4-aee8b83c25de",
-    "household_id": "8dfa01ea-e218-4a1f-b8c7-bb7e728cc8b1",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "c9ecc0ef-d3c9-4743-9e64-ee4528854ed4",
+    "entry_id": "c76eee08-21ff-49c1-b89c-8c2520e1c9cd",
+    "account_id": "1a6716dd-da9a-4ad4-8f81-51f368ffc348",
+    "household_id": "7a2659d7-dd6f-4bc6-8073-e73d497f2621",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "21d11071-358d-47e9-81a8-c5dc05841df8",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1930,11 +1909,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "b3467e2e-06dd-4d84-9272-f3d4c00b6e2b",
-    "account_id": "5760ed13-5267-432c-b447-90251c85527d",
-    "household_id": "ff72b67f-67fe-413e-a83c-e6f06d59ee02",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "031827f8-f171-46e1-b1d6-4d42acac616e",
+    "entry_id": "07c4dd81-f886-443e-b49a-5d7cb11c72d0",
+    "account_id": "5e9a375c-e1e1-47b0-9558-9d2aa04f80e1",
+    "household_id": "2ac7e1e1-fe60-4ba6-89dd-771db0f62705",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "b3126ec6-fc0d-4a25-bada-cad575cd2223",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1950,11 +1929,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "f58a7676-289f-45fa-b1ce-6c254f704bd1",
-    "account_id": "2cd721f4-c91c-48aa-9a8b-aa97c953b819",
-    "household_id": "ff72b67f-67fe-413e-a83c-e6f06d59ee02",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "031827f8-f171-46e1-b1d6-4d42acac616e",
+    "entry_id": "39130cfc-5e04-43ea-ba56-43cda97a26a4",
+    "account_id": "8df9027e-8aa8-46ba-ae87-72da5ba86a6f",
+    "household_id": "2ac7e1e1-fe60-4ba6-89dd-771db0f62705",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "b3126ec6-fc0d-4a25-bada-cad575cd2223",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1970,11 +1949,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "3ebfc742-1d94-4b60-a928-45a455b278df",
-    "account_id": "52a8f033-6c45-4517-a750-e475b7e5c102",
-    "household_id": "ff72b67f-67fe-413e-a83c-e6f06d59ee02",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "031827f8-f171-46e1-b1d6-4d42acac616e",
+    "entry_id": "7fac2e20-3c90-428f-9f2c-f3b403798866",
+    "account_id": "d30d9724-0e2d-4a03-968b-fe0eb0ada7e1",
+    "household_id": "2ac7e1e1-fe60-4ba6-89dd-771db0f62705",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "b3126ec6-fc0d-4a25-bada-cad575cd2223",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -1990,11 +1969,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "a1fd9c1d-6bc2-4ce0-a4d0-e817019263f4",
-    "account_id": "c4a6a4f2-18ca-4e14-a7fa-51f1eb2f7e56",
-    "household_id": "dd10bd19-2142-4a49-8f56-00ac9128bb33",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "f0e88a61-9a2a-4e77-b612-d7a8ac62bd09",
+    "entry_id": "666f9ab7-c8eb-4966-ac13-f4c0e787111f",
+    "account_id": "b24288d5-97f4-4756-8362-a476fe39a5d3",
+    "household_id": "7d38ad53-fc23-4880-97ff-2abdb29177b2",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "9fabe5db-247a-4f12-8b78-0ff671b8a06a",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -2010,11 +1989,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "1be9b338-4196-4df6-b06c-e1253438a234",
-    "account_id": "e0513745-a4b9-46e1-91ba-78d2a4a649bb",
-    "household_id": "dd10bd19-2142-4a49-8f56-00ac9128bb33",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "f0e88a61-9a2a-4e77-b612-d7a8ac62bd09",
+    "entry_id": "893362cc-c026-48b2-81c4-12cacd5399af",
+    "account_id": "0beb5471-211e-4413-91bd-deda838750fe",
+    "household_id": "7d38ad53-fc23-4880-97ff-2abdb29177b2",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "9fabe5db-247a-4f12-8b78-0ff671b8a06a",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -2030,11 +2009,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "80cc47de-5bbd-4011-abc6-a1d9a10555de",
-    "account_id": "6b77c40e-2347-4b1f-be8e-cdaa887a3f73",
-    "household_id": "9648673b-3299-4e7e-ab0f-18fd582f5ac8",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "3b39ed87-65ad-4f12-902b-d9f68e70b7fb",
+    "entry_id": "28bb184e-28fd-4a8a-8147-9828d5aa6fc8",
+    "account_id": "f326bd55-9dec-4caa-8f69-e3d0c583ee58",
+    "household_id": "32414cf0-8b25-4a80-932a-95490afcf9fe",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "57b51b4e-12d0-4e88-9eb8-225de722f1dd",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -2050,11 +2029,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "ec08007c-26b4-4ff7-859b-2c441a2b05b1",
-    "account_id": "09beb4e7-5ae0-4385-9b24-20bada54715b",
-    "household_id": "9648673b-3299-4e7e-ab0f-18fd582f5ac8",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "3b39ed87-65ad-4f12-902b-d9f68e70b7fb",
+    "entry_id": "5414280a-caf0-4be4-8262-14460eb19d63",
+    "account_id": "247f72d1-51dd-4c4f-90d8-de95a58fa656",
+    "household_id": "32414cf0-8b25-4a80-932a-95490afcf9fe",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "57b51b4e-12d0-4e88-9eb8-225de722f1dd",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -2070,11 +2049,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "d7e56ea6-5551-4925-8f1e-691afb64bad3",
-    "account_id": "72ec4dc9-1bae-419d-99a3-1210efc04904",
-    "household_id": "9648673b-3299-4e7e-ab0f-18fd582f5ac8",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "3b39ed87-65ad-4f12-902b-d9f68e70b7fb",
+    "entry_id": "d2e1c6d9-d0f7-4627-bdf9-a213928d6397",
+    "account_id": "99bef533-2c56-40d5-ba90-60455e2c9c51",
+    "household_id": "32414cf0-8b25-4a80-932a-95490afcf9fe",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "57b51b4e-12d0-4e88-9eb8-225de722f1dd",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -2090,11 +2069,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "2b9b4008-606a-4c32-98a6-81fa7cf1b87b",
-    "account_id": "e1a705f0-4d1c-4149-8ce6-3c4b5e588213",
-    "household_id": "9648673b-3299-4e7e-ab0f-18fd582f5ac8",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "3b39ed87-65ad-4f12-902b-d9f68e70b7fb",
+    "entry_id": "36dbf8d7-8215-4d94-bb14-8cf8736fca4e",
+    "account_id": "5977abce-e649-4d7b-8989-c44250479794",
+    "household_id": "32414cf0-8b25-4a80-932a-95490afcf9fe",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "57b51b4e-12d0-4e88-9eb8-225de722f1dd",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -2110,11 +2089,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "995da4ab-cbc7-4bd1-88f3-84a682cd1793",
-    "account_id": "575da70f-6daf-4c14-b048-69e456bb1372",
-    "household_id": "76a7ca02-b10d-4bcc-8799-e4c66cf66b99",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "ddb24622-c9de-4a7d-a4c2-d1ca0f026e10",
+    "entry_id": "f2e5f0e6-ac8d-4a98-9fa5-fcd766565da1",
+    "account_id": "57ddf91d-47ab-4b64-b994-dd0886cdab96",
+    "household_id": "372c75a2-0b7a-48ed-b7e6-a587c48b03f8",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "ec940193-11b6-4048-9d0b-9074208ab5bb",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -2130,11 +2109,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "843ea369-6e10-4ee8-b496-eb2063bd8721",
-    "account_id": "8c841809-abb9-4097-a9e9-3cef473a15dd",
-    "household_id": "76a7ca02-b10d-4bcc-8799-e4c66cf66b99",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "ddb24622-c9de-4a7d-a4c2-d1ca0f026e10",
+    "entry_id": "0cff8f7d-ca99-4cba-b176-221b42cbeec3",
+    "account_id": "2d495fd3-de34-4bc2-9159-5f1f98bfcedd",
+    "household_id": "372c75a2-0b7a-48ed-b7e6-a587c48b03f8",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "ec940193-11b6-4048-9d0b-9074208ab5bb",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -2150,11 +2129,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "82d2e66d-0f39-4d6d-8a6e-7829d34b75b1",
-    "account_id": "a57246d9-71ba-4aa9-b1b3-630c492bc42f",
-    "household_id": "b6f56b88-d18f-4d38-9610-f805caa42b7f",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "f0e88a61-9a2a-4e77-b612-d7a8ac62bd09",
+    "entry_id": "dffc4e3d-85c2-443e-8e55-fbac1c26ff7f",
+    "account_id": "26d17502-0958-4ac5-a964-927a835550e5",
+    "household_id": "0626789a-2d0d-4b4d-8e5d-8afdee00d92f",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "9fabe5db-247a-4f12-8b78-0ff671b8a06a",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -2170,11 +2149,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "2eaea736-8a23-4ac8-b09e-d3a99600bf88",
-    "account_id": "ee383a37-428d-41ff-8521-483f0499d1c9",
-    "household_id": "b6f56b88-d18f-4d38-9610-f805caa42b7f",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "f0e88a61-9a2a-4e77-b612-d7a8ac62bd09",
+    "entry_id": "688a55e3-ee0b-4c56-97df-fee5c7183a09",
+    "account_id": "3570e5d5-bf3b-4055-af2d-e9972a4876dc",
+    "household_id": "0626789a-2d0d-4b4d-8e5d-8afdee00d92f",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "9fabe5db-247a-4f12-8b78-0ff671b8a06a",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -2190,11 +2169,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "ad282dd4-bcb5-4be5-9190-e6caec2071f1",
-    "account_id": "36a5f3c1-d52d-45d0-a6c5-962a13c00b34",
-    "household_id": "b6f56b88-d18f-4d38-9610-f805caa42b7f",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "f0e88a61-9a2a-4e77-b612-d7a8ac62bd09",
+    "entry_id": "72d6b1e4-3f91-4728-9219-8553d0cf4a5f",
+    "account_id": "37d4327d-6b7b-49b5-901f-24ef636ae1ab",
+    "household_id": "0626789a-2d0d-4b4d-8e5d-8afdee00d92f",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "9fabe5db-247a-4f12-8b78-0ff671b8a06a",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -2210,11 +2189,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "0318ad00-bf01-4693-86f4-5e835217b69a",
-    "account_id": "0947bbb4-3bb2-4202-9463-3e6413cc07b6",
-    "household_id": "d9163599-0194-489e-bd09-2c6b99de6d3f",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "f0e88a61-9a2a-4e77-b612-d7a8ac62bd09",
+    "entry_id": "8c19ee25-8e85-429a-85bb-3402c75f19a0",
+    "account_id": "425c243c-549b-48fe-9b17-f8cc1d11e6b7",
+    "household_id": "6dec854b-f18a-43f1-9e8f-afdcc66a5fb9",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "9fabe5db-247a-4f12-8b78-0ff671b8a06a",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -2230,11 +2209,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "9c879f0e-6d5d-42af-aa50-8c3d770cfa93",
-    "account_id": "8f728a48-fcb0-43c8-a83a-cf35baec542b",
-    "household_id": "d9163599-0194-489e-bd09-2c6b99de6d3f",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "f0e88a61-9a2a-4e77-b612-d7a8ac62bd09",
+    "entry_id": "0b651d13-59ec-42de-bd02-e789a7623188",
+    "account_id": "9389a428-dfe4-4119-9b49-1a99d4a5bcc4",
+    "household_id": "6dec854b-f18a-43f1-9e8f-afdcc66a5fb9",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "9fabe5db-247a-4f12-8b78-0ff671b8a06a",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -2250,11 +2229,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "70b07715-2b29-4785-9c13-b1d3f00db835",
-    "account_id": "b4e448cd-9209-4577-b5af-b1ee34cc3cd8",
-    "household_id": "a68370a6-4aef-4c51-824a-e42cec208bfb",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "c9ecc0ef-d3c9-4743-9e64-ee4528854ed4",
+    "entry_id": "32c033b7-a02b-4758-9fc9-9f44de198a3a",
+    "account_id": "75882970-20c9-49ad-9c33-201429ac329d",
+    "household_id": "021551df-8642-478b-9491-79989e802f9d",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "21d11071-358d-47e9-81a8-c5dc05841df8",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -2270,11 +2249,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "fb18fc46-b271-4f3e-93fd-374bb5172419",
-    "account_id": "9a2dac3f-16e7-4dea-acb6-4080bfc52016",
-    "household_id": "a68370a6-4aef-4c51-824a-e42cec208bfb",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "c9ecc0ef-d3c9-4743-9e64-ee4528854ed4",
+    "entry_id": "0e6a6798-c5e0-4c33-b9e4-1f3b13831097",
+    "account_id": "14aa08d1-befa-45b6-bbe5-30f4a174497a",
+    "household_id": "021551df-8642-478b-9491-79989e802f9d",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "21d11071-358d-47e9-81a8-c5dc05841df8",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -2290,11 +2269,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "2f7d5362-1771-4275-b058-609bf64ed155",
-    "account_id": "3c66b0ec-f11d-456e-90aa-29c77c0c4cee",
-    "household_id": "fc1e01b6-4ed0-460f-be04-b0f3609c8db4",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "031827f8-f171-46e1-b1d6-4d42acac616e",
+    "entry_id": "9f31caa0-1248-4eec-92eb-556922fb19f6",
+    "account_id": "2b2bfd7d-b1c3-471c-b3e7-e043f8adbe10",
+    "household_id": "1295841a-fe6f-409b-961f-8f17ef1011a2",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "b3126ec6-fc0d-4a25-bada-cad575cd2223",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -2310,11 +2289,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "13a38f2a-96cd-40b5-9305-cefd67369855",
-    "account_id": "49cd4798-ff69-4192-9da6-13ff11b1c53b",
-    "household_id": "fc1e01b6-4ed0-460f-be04-b0f3609c8db4",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "031827f8-f171-46e1-b1d6-4d42acac616e",
+    "entry_id": "4febd14b-e55d-47f0-9bfc-04380b84ab81",
+    "account_id": "9d1f2f98-759b-4489-83df-5de743802a54",
+    "household_id": "1295841a-fe6f-409b-961f-8f17ef1011a2",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "b3126ec6-fc0d-4a25-bada-cad575cd2223",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -2330,11 +2309,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "9d6e799d-92a7-4ddf-84fb-823b1ccc4ff6",
-    "account_id": "c9d76dbe-9727-4afd-a40a-a0ad4b2a567f",
-    "household_id": "4fb83146-c9de-44f5-97be-b759ecd9636e",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "3b39ed87-65ad-4f12-902b-d9f68e70b7fb",
+    "entry_id": "d8aab1fe-ee1b-438a-b9f5-c14d173635c0",
+    "account_id": "7c93a41a-8c5e-43d3-ac54-e7520c4201af",
+    "household_id": "ac02fbbe-a778-4dfc-9d74-8cf8769ea55f",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "57b51b4e-12d0-4e88-9eb8-225de722f1dd",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -2350,11 +2329,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "0596519c-944c-42d4-af0c-cb8782291d5a",
-    "account_id": "a0e7c1ce-4e24-4b27-ac52-572e28b06ee9",
-    "household_id": "a91ecbdd-fb97-4a66-95bf-376ed71c26f3",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "698b4ef4-4daa-474f-ab6f-2c9f0b0611b2",
+    "entry_id": "d914217a-a844-4b9d-9e2f-2c6568f92801",
+    "account_id": "710c472b-da6e-4076-9df2-b8b4f32405c6",
+    "household_id": "6e1dca99-37e6-4ca5-9cd1-1bf5bcf633d9",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "2d539b83-19d6-40a0-9b82-ab9eb73e7bb0",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -2370,11 +2349,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "4a23471d-4abd-411d-b86d-26687a78a480",
-    "account_id": "b9521e33-bf26-4919-ac10-668fa153d6ad",
-    "household_id": "a91ecbdd-fb97-4a66-95bf-376ed71c26f3",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "698b4ef4-4daa-474f-ab6f-2c9f0b0611b2",
+    "entry_id": "0e6bfdbe-3db6-490d-8ed4-bd9057f3b244",
+    "account_id": "3c3ceead-1e3a-49c8-b5fd-013d37bb40f5",
+    "household_id": "6e1dca99-37e6-4ca5-9cd1-1bf5bcf633d9",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "2d539b83-19d6-40a0-9b82-ab9eb73e7bb0",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -2390,11 +2369,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "e9eb0c58-83f0-4237-9a1c-252fc7415cb6",
-    "account_id": "282435f0-6b6d-48b5-8f45-aa55233266de",
-    "household_id": "a91ecbdd-fb97-4a66-95bf-376ed71c26f3",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "698b4ef4-4daa-474f-ab6f-2c9f0b0611b2",
+    "entry_id": "1e38b218-a179-4b08-83f4-03eb1e0fa097",
+    "account_id": "57cb1141-57bf-48b0-b94b-7b601cfd6966",
+    "household_id": "6e1dca99-37e6-4ca5-9cd1-1bf5bcf633d9",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "2d539b83-19d6-40a0-9b82-ab9eb73e7bb0",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -2410,11 +2389,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "9f5fea75-1270-4de1-9d6f-a8cf91030433",
-    "account_id": "f392dd4a-f4a6-4406-9029-39cfcfb2626c",
-    "household_id": "3308ff50-ad88-49a0-aa6b-4b56fb3f3d6e",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "c9ecc0ef-d3c9-4743-9e64-ee4528854ed4",
+    "entry_id": "4752021f-ec3a-412f-9a9b-4267fcd20bd2",
+    "account_id": "6fb46483-527a-40e0-ac92-07a76b239459",
+    "household_id": "7eb5b6d5-d053-4476-88e9-72bc954b86e7",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "21d11071-358d-47e9-81a8-c5dc05841df8",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -2430,11 +2409,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "49c34618-3044-4617-885e-898ab7c8f5f1",
-    "account_id": "d75abbcc-9bae-4d27-baef-db05792ef5e0",
-    "household_id": "d6b48a7e-c38f-46c8-9af9-4bdca72e5ec2",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "ddb24622-c9de-4a7d-a4c2-d1ca0f026e10",
+    "entry_id": "b14dc33e-02f7-47ac-a35d-aa849e3d7f56",
+    "account_id": "d6b77fea-66f5-475c-9ad0-e81fec38f03e",
+    "household_id": "5d87d188-24d5-4e54-a26c-666b3d737e9b",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "ec940193-11b6-4048-9d0b-9074208ab5bb",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -2450,11 +2429,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "5310640c-1f11-45ba-be2c-e837ec34a123",
-    "account_id": "578014df-8508-4c73-add2-fda3809b5cd9",
-    "household_id": "d6b48a7e-c38f-46c8-9af9-4bdca72e5ec2",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "ddb24622-c9de-4a7d-a4c2-d1ca0f026e10",
+    "entry_id": "b8826344-c58b-44c9-9c1d-569cda7a5c6e",
+    "account_id": "3846a22d-dcbb-45a9-8270-37a53b56d204",
+    "household_id": "5d87d188-24d5-4e54-a26c-666b3d737e9b",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "ec940193-11b6-4048-9d0b-9074208ab5bb",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -2470,11 +2449,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "c8f0403e-65e5-43ef-9659-9a2174e145e9",
-    "account_id": "d4c282b3-adf7-4a90-8599-674bf7b77c30",
-    "household_id": "e10b5719-dab3-44df-a028-e2e3995b8fa2",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "3b39ed87-65ad-4f12-902b-d9f68e70b7fb",
+    "entry_id": "e194dc8c-2994-47db-8fd4-a1a0a99582f6",
+    "account_id": "a6b36f28-ad3f-4c27-bb4e-6b9a01550870",
+    "household_id": "2da820d0-764b-4e25-a4fa-fa1676e748d2",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "57b51b4e-12d0-4e88-9eb8-225de722f1dd",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -2490,11 +2469,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "b2a462ae-baf3-4bc7-bebe-f0d43d6b61d7",
-    "account_id": "e0b0d195-83e5-483b-8636-fcd66b27859f",
-    "household_id": "e10b5719-dab3-44df-a028-e2e3995b8fa2",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "3b39ed87-65ad-4f12-902b-d9f68e70b7fb",
+    "entry_id": "15008139-7871-4203-89d9-4d434ab155e6",
+    "account_id": "069a0207-71ad-41e0-ae6a-d547810dc59c",
+    "household_id": "2da820d0-764b-4e25-a4fa-fa1676e748d2",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "57b51b4e-12d0-4e88-9eb8-225de722f1dd",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -2510,11 +2489,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "05b965a8-ae28-4170-b0c8-fe04940f2fb2",
-    "account_id": "de82e429-6f2f-46eb-9648-c0923ff5e9f2",
-    "household_id": "e10b5719-dab3-44df-a028-e2e3995b8fa2",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "3b39ed87-65ad-4f12-902b-d9f68e70b7fb",
+    "entry_id": "7a67d9f4-9223-4ab2-b76e-6c8687ef5886",
+    "account_id": "d5a94d6d-8234-4b1f-bb13-a0d3ccb0fd50",
+    "household_id": "2da820d0-764b-4e25-a4fa-fa1676e748d2",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "57b51b4e-12d0-4e88-9eb8-225de722f1dd",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -2530,11 +2509,11 @@
     "reconciliation": null
   },
   {
-    "entry_id": "bc426f6c-c4cf-4538-a0a6-dce8bc870f36",
-    "account_id": "b3763091-8f71-491c-85c0-43c69387d878",
-    "household_id": "e10b5719-dab3-44df-a028-e2e3995b8fa2",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "3b39ed87-65ad-4f12-902b-d9f68e70b7fb",
+    "entry_id": "e6fb3c21-cc4b-4edc-b493-693167e7328a",
+    "account_id": "532f6fc8-6b7d-451a-8075-09cb9b897bf2",
+    "household_id": "2da820d0-764b-4e25-a4fa-fa1676e748d2",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "57b51b4e-12d0-4e88-9eb8-225de722f1dd",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -2550,11 +2529,74 @@
     "reconciliation": null
   },
   {
-    "entry_id": "c9f77036-0825-43a3-94f5-87772e692d46",
-    "account_id": "a15a0ce5-89d5-4a46-bfb9-5d510c48f479",
-    "household_id": "48af5718-079b-4409-be59-fc408975b157",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "f0e88a61-9a2a-4e77-b612-d7a8ac62bd09",
+    "entry_id": "5607eefa-609f-48ac-933f-80566795c393",
+    "account_id": "94ebcf82-9826-4675-aa9a-cc726c7bc7e5",
+    "household_id": "cfb1912d-96dc-40c0-82fd-99b4e4fa9ba7",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "57b51b4e-12d0-4e88-9eb8-225de722f1dd",
+    "billing_period": {
+      "year": 2025,
+      "quarter": 3
+    },
+    "billing_date": "2025-07-01",
+    "aum_billed": 950000.0,
+    "bps_charged": 90,
+    "fee_dollar_amount": 2137.5,
+    "billing_method": "in-arrears",
+    "fee_type": "advisory",
+    "status": "posted",
+    "source_system": "ClientWorks",
+    "reconciliation": null,
+    "_injected_error": "ERR-1"
+  },
+  {
+    "entry_id": "b67756a5-5f1b-43b0-b3f2-fa138c15e45e",
+    "account_id": "00f8c978-e637-4d49-af38-eedc5ee211ab",
+    "household_id": "cfb1912d-96dc-40c0-82fd-99b4e4fa9ba7",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "57b51b4e-12d0-4e88-9eb8-225de722f1dd",
+    "billing_period": {
+      "year": 2025,
+      "quarter": 3
+    },
+    "billing_date": "2025-07-01",
+    "aum_billed": 750000.0,
+    "bps_charged": 90,
+    "fee_dollar_amount": 1687.5,
+    "billing_method": "in-arrears",
+    "fee_type": "advisory",
+    "status": "posted",
+    "source_system": "ClientWorks",
+    "reconciliation": null,
+    "_injected_error": "ERR-1"
+  },
+  {
+    "entry_id": "96ed4ff8-2236-41b9-a5f0-8f5358116d6a",
+    "account_id": "7f12ed18-f86c-4d97-aca7-46082943720c",
+    "household_id": "cfb1912d-96dc-40c0-82fd-99b4e4fa9ba7",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "57b51b4e-12d0-4e88-9eb8-225de722f1dd",
+    "billing_period": {
+      "year": 2025,
+      "quarter": 3
+    },
+    "billing_date": "2025-07-01",
+    "aum_billed": 500000.0,
+    "bps_charged": 90,
+    "fee_dollar_amount": 1125.0,
+    "billing_method": "in-arrears",
+    "fee_type": "advisory",
+    "status": "posted",
+    "source_system": "ClientWorks",
+    "reconciliation": null,
+    "_injected_error": "ERR-1"
+  },
+  {
+    "entry_id": "2012a5a5-8cc1-44d8-b167-ee713970ea1e",
+    "account_id": "40cee414-5578-4bb8-92bf-45679ed18d73",
+    "household_id": "b8d855d2-eb9f-49a8-bd7e-b7c1033f9c8c",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "9fabe5db-247a-4f12-8b78-0ff671b8a06a",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -2571,11 +2613,11 @@
     "_injected_error": "ERR-5"
   },
   {
-    "entry_id": "75f972d0-59f9-476e-bb24-9afad56925e2",
-    "account_id": "25f2cb15-c3ef-4a79-80b6-c53bd3b676ee",
-    "household_id": "309cf328-0029-4867-b008-f20cdbb5dfc0",
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "ddb24622-c9de-4a7d-a4c2-d1ca0f026e10",
+    "entry_id": "46fa6e5c-58d0-4441-95ee-bb97d635de7e",
+    "account_id": "017d0379-e7cd-4cee-bc19-fd251ce99300",
+    "household_id": "7af04141-f492-42b9-9221-ec178a5ffc58",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "ec940193-11b6-4048-9d0b-9074208ab5bb",
     "billing_period": {
       "year": 2025,
       "quarter": 3
@@ -2592,11 +2634,11 @@
     "_injected_error": "ERR-6"
   },
   {
-    "entry_id": "17c017dd-0372-407e-88aa-46f60cd643c4",
-    "account_id": "c4f30233-e1aa-449f-82eb-10367371984b",
+    "entry_id": "9af66ce6-0a53-479b-95e6-93ba6092a95d",
+    "account_id": "b8fe7ebe-65b7-4524-954d-f7debdb66fb8",
     "household_id": null,
-    "practice_id": "48143a65-6ad2-4793-80cd-324ecbc1f9c0",
-    "advisor_id": "c9ecc0ef-d3c9-4743-9e64-ee4528854ed4",
+    "practice_id": "81ea677c-4a1d-40d8-b1db-5361c2bfac41",
+    "advisor_id": "21d11071-358d-47e9-81a8-c5dc05841df8",
     "billing_period": {
       "year": 2025,
       "quarter": 3

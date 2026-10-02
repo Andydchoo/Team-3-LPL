@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-02T13:28:11.990832",
+  "generated_at": "2026-10-02T13:36:39.583942",
   "seed": 42,
   "num_households": 50,
-  "num_accounts": 130,
-  "num_billing_entries": 130,
+  "num_accounts": 132,
+  "num_billing_entries": 132,
   "num_seeded_errors": 8,
   "total_annual_leakage": 46692.42,
   "errors": [

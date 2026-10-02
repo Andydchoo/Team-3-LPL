@@ -243,31 +243,69 @@ err1_hh["total_aum"] = 2_200_000.00
 err1_tiers = FEE_SCHEDULES["standard"]
 err1_hh["tier_qualified"] = {"tier_label": "Tier 4", "bps": 75}
 
-# Fix sub-account AUMs to total 2.2M
-err1_hh["accounts"][0]["current_aum"] = 950_000.00
-err1_hh["accounts"][0]["account_label"] = "Stevens Joint Brokerage"
-err1_hh["accounts"][0]["account_type"] = "joint"
-if len(err1_hh["accounts"]) >= 2:
-    err1_hh["accounts"][1]["current_aum"] = 750_000.00
-    err1_hh["accounts"][1]["account_label"] = "Stevens IRA"
-    err1_hh["accounts"][1]["account_type"] = "IRA"
-if len(err1_hh["accounts"]) >= 3:
-    err1_hh["accounts"][2]["current_aum"] = 500_000.00
-    err1_hh["accounts"][2]["account_label"] = "Stevens Roth IRA"
-    err1_hh["accounts"][2]["account_type"] = "Roth IRA"
-# Trim to 3 accounts
-err1_hh["accounts"] = err1_hh["accounts"][:3]
+# Ensure Stevens has exactly 3 sub-accounts totaling 2.2M
+stevens_accounts = [
+    {
+        "account_id": err1_hh["accounts"][0]["account_id"] if len(err1_hh["accounts"]) > 0 else uid(),
+        "account_label": "Stevens Joint Brokerage",
+        "account_type": "joint",
+        "current_aum": 950_000.00,
+        "is_active": True,
+        "include_in_household_aum": True,
+        "opened_date": "2020-03-15",
+        "closed_date": None,
+    },
+    {
+        "account_id": err1_hh["accounts"][1]["account_id"] if len(err1_hh["accounts"]) > 1 else uid(),
+        "account_label": "Stevens IRA",
+        "account_type": "IRA",
+        "current_aum": 750_000.00,
+        "is_active": True,
+        "include_in_household_aum": True,
+        "opened_date": "2020-06-01",
+        "closed_date": None,
+    },
+    {
+        "account_id": err1_hh["accounts"][2]["account_id"] if len(err1_hh["accounts"]) > 2 else uid(),
+        "account_label": "Stevens Roth IRA",
+        "account_type": "Roth IRA",
+        "current_aum": 500_000.00,
+        "is_active": True,
+        "include_in_household_aum": True,
+        "opened_date": "2021-01-10",
+        "closed_date": None,
+    },
+]
+
+# Remove old billing entries for this household and replace accounts
+billing_entries = [e for e in billing_entries if e["household_id"] != err1_hh["household_id"]]
+err1_hh["accounts"] = stevens_accounts
 
 # Ensure the agreement uses the standard schedule
 agreements[0]["fee_tiers"] = err1_tiers
 agreements[0]["household_name"] = "Stevens Family"
 
-# The ERROR: billing entries still charge 90bps (Tier 2 — the rate when they were under $1M)
-for entry in billing_entries:
-    if entry["household_id"] == err1_hh["household_id"]:
-        entry["bps_charged"] = 90  # WRONG — should be 75
-        entry["fee_dollar_amount"] = quarterly_fee(entry["aum_billed"], 90)
-        entry["_injected_error"] = "ERR-1"
+# The ERROR: create billing entries at 90bps (Tier 2 — the rate when they were under $1M)
+# Correct rate should be 75bps (Tier 4) based on $2.2M aggregate AUM
+for acct in stevens_accounts:
+    billing_entries.append({
+        "entry_id": uid(),
+        "account_id": acct["account_id"],
+        "household_id": err1_hh["household_id"],
+        "practice_id": PRACTICE_ID,
+        "advisor_id": err1_hh["advisor_id"],
+        "billing_period": BILLING_PERIOD,
+        "billing_date": BILLING_DATE,
+        "aum_billed": acct["current_aum"],
+        "bps_charged": 90,  # WRONG — should be 75
+        "fee_dollar_amount": quarterly_fee(acct["current_aum"], 90),
+        "billing_method": "in-arrears",
+        "fee_type": "advisory",
+        "status": "posted",
+        "source_system": "ClientWorks",
+        "reconciliation": None,
+        "_injected_error": "ERR-1",
+    })
 
 err1_impact = round((90 - 75) / 10_000 * 2_200_000, 2)  # $3,300/yr
 seeded_errors.append(error_manifest(
