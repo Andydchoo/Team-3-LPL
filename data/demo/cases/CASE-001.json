@@ -1,0 +1,13 @@
+{
+  "case_id": "CASE-001",
+  "household": "Anderson Household",
+  "anomaly_type": "expired_pricing_exception",
+  "aum": 1200000,
+  "as_of_date": "2026-01-01",
+  "calculation_method": "flat",
+  "evidence_paths": [
+    "evidence/anderson/agreement.json",
+    "evidence/anderson/pricing_exception.json",
+    "evidence/anderson/billing.json"
+  ]
+}

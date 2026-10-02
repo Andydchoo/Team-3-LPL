@@ -1,7 +1,13 @@
 ﻿# Data Model: FeeAudit / RevenueTwin
 
-Three canonical schemas that drive the reconciliation engine, UI, and AI pipeline.
-All IDs are UUIDs. All bps values are integers (basis points). All dollar amounts are floats rounded to 2 decimal places.
+These are the legacy FeeAudit record schemas used by the bulk reconciliation
+script. The curated RevenueTwin case/evidence interfaces are defined in
+[docs/CONTRACTS.md](docs/CONTRACTS.md) and
+[contracts/revenuetwin.schema.json](contracts/revenuetwin.schema.json).
+
+Legacy record IDs are UUIDs and bps values are integers. Legacy dollar amounts
+are floats rounded to 2 decimal places. The new curated engine uses Decimal
+arithmetic and stable human-readable case/evidence IDs before JSON serialization.
 
 ---
 

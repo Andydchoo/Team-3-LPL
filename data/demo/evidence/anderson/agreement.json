@@ -1,0 +1,15 @@
+{
+  "evidence_id": "anderson_agreement",
+  "case_id": "CASE-001",
+  "evidence_type": "advisory_agreement",
+  "title": "Anderson active advisory agreement (synthetic)",
+  "source_path": "evidence/anderson/agreement.json",
+  "content": {
+    "household": "Anderson Household",
+    "annual_rate": 0.01,
+    "effective_date": "2024-01-01",
+    "expiration_date": null,
+    "pricing_method": "flat",
+    "synthetic": true
+  }
+}

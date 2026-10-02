@@ -1,0 +1,16 @@
+{
+  "evidence_id": "anderson_billing",
+  "case_id": "CASE-001",
+  "evidence_type": "billing_configuration",
+  "title": "Anderson current billing configuration (synthetic)",
+  "source_path": "evidence/anderson/billing.json",
+  "content": {
+    "household": "Anderson Household",
+    "annual_rate": 0.0075,
+    "billable_aum": 1200000,
+    "billing_frequency": "quarterly",
+    "effective_date": "2025-01-01",
+    "status": "active",
+    "synthetic": true
+  }
+}
