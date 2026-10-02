@@ -1,15 +1,34 @@
-# RevenueTwin — Team-3-LPL
+# RevenueTwin 💰
+
+> **See the revenue you're missing before you miss it.**
 
 RevenueTwin checks whether advisory agreements and actual billing remain aligned,
 protecting the practice from potential underbilling and clients from potential
 overbilling. Deterministic code calculates financial findings; AI investigates
 evidence; humans choose consequential actions.
 
+Its digital revenue twin helps an advisory practice answer three questions:
+
+1. **What should we be earning?**
+2. **What are we actually earning?**
+3. **Why is there a difference?**
+
 This repository combines the original FeeAudit reconciliation code and contributor
 history with the five-owner RevenueAudit requirements. The authoritative product
 specification is [docs/MASTER.md](docs/MASTER.md). The shared integration contract
 is [docs/CONTRACTS.md](docs/CONTRACTS.md), and the work split and handoff process
 are in [docs/TEAM_WORKFLOW.md](docs/TEAM_WORKFLOW.md).
+
+## FeeAudit
+
+**FeeAudit** is RevenueTwin's core fee-audit component. Its audit scope includes:
+
+- Potential underbilling and overbilling
+- Incorrect fee breakpoints and householding errors
+- Unbilled accounts and fee waiver errors
+
+The current implementation is the deterministic foundation described below.
+AI investigation and the complete user workflow are the next integration work.
 
 ## Working foundation
 
@@ -56,6 +75,11 @@ The original 50-household dataset and its eight seeded anomalies remain availabl
 The legacy report is a separate volume-pricing demonstration, and its saved
 summary is not the authoritative dashboard source for the curated demo cases.
 
+The original Stevens example uses **volume pricing**: $2.2M household AUM
+qualifies for 0.75% on all assets, while billing applies 0.90%. The annualized
+potential overbilling is $3,300. This is separate from Anderson and from Chen's
+planned marginal-tier example.
+
 ```powershell
 # Explicitly writes data/reconciliation_results.json:
 python scripts/reconciliation_engine.py
@@ -69,6 +93,17 @@ Its `reconcile(...)` function accepts records and returns the legacy result shap
 The generator remains an explicit standalone script and is not an application
 import. Do not run it to populate the curated demo cases.
 
+## AWS integration plan
+
+The first live workflow uses **Amazon Bedrock** for evidence investigation and
+**private Amazon S3** for synthetic documents, with deterministic Python tools
+called by the application. These integrations are planned; the current foundation
+runs locally.
+
+Amazon Textract, AWS Lambda, AWS Step Functions and Amazon DynamoDB are future
+options. Add them only after the Anderson workflow works and a concrete need
+justifies them, as specified in `docs/MASTER.md`.
+
 ## Next integration milestone
 
 Complete Anderson through Streamlit, live Bedrock tool calls, private S3 evidence,
@@ -76,3 +111,11 @@ and a human-selected review action. Then add Patel, Chen, Ramirez and Morgan.
 Use the minimal architecture in the master specification: Streamlit, one Bedrock
 investigation agent, normal Python tools and private S3 evidence. All demo data
 must be synthetic.
+
+## Vision
+
+FeeAudit is the first product. The long-term goal is for RevenueTwin to become
+the revenue operating system for wealth management, moving firms from reactive
+billing audits to proactive revenue intelligence with human governance.
+
+**Know what you should earn. Know what you earned. Know why they're different.**
