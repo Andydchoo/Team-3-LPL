@@ -11,8 +11,8 @@ definitions are in `contracts/revenuetwin.schema.json`.
 |---|---|---|---|
 | `get_revenue_case(case_id)` | RevenueCase dictionary | Engine | CASE-001 implemented |
 | `get_case_evidence(case_id)` | Ordered list of Evidence dictionaries | Engine contract; AWS storage adapter | CASE-001 local tools and private S3 adapter implemented; live S3 reads validated |
-| `investigate_case(case_id)` | Investigation dictionary | AI / Bedrock | Anderson agent integrated with validating AWS adapter; live tool-use validation pending |
-| `record_review(case_id, decision)` | ReviewRecord dictionary | AWS / integration | Private S3 persistence implemented; live write pending |
+| `investigate_case(case_id)` | Investigation dictionary | AI / Bedrock | Anderson agent and validating AWS adapter passed two live S3-backed investigations |
+| `record_review(case_id, decision)` | ReviewRecord dictionary | AWS / integration | Human-selected decision saved to private S3 and read back successfully |
 
 Import the implemented tools from `revenue_engine`. Case lookups raise `KeyError`
 for unknown IDs. Source read failures raise `OSError`; malformed records or
@@ -113,7 +113,9 @@ private bucket. The UTC timestamp ends in `Z`, as required by the schema.
 Confirmation is returned only after S3 acknowledges the write; failure leaves
 the UI without a confirmed decision and allows retry. Starting another review
 does not delete or revoke a previously persisted record. Live write permissions
-and end-to-end review confirmation still require event-account validation.
+and Streamlit review confirmation passed event-account validation with the
+coordinator's `investigate_further` choice; the read-back matched the UI record
+and validated against ReviewRecord.
 
 ## JSON Schema use
 

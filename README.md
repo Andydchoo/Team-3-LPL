@@ -28,7 +28,7 @@ are in [docs/TEAM_WORKFLOW.md](docs/TEAM_WORKFLOW.md).
 - Unbilled accounts and fee waiver errors
 
 The deterministic foundation, frontend and Anderson investigation agent are
-connected. Live validation of the complete user workflow remains the next gate.
+connected. Anderson's live AWS workflow is validated on the integration feature branch.
 
 ## Working foundation
 
@@ -58,9 +58,11 @@ CASE-001 with local storage. The frontend calls its services through
 `ui.services`, which connects the AWS adapters in explicit AWS mode. The pulled Streamlit
 frontend works locally; AWS adapters and review storage are prepared with offline
 tests. Event identity, private S3 evidence and a real Bedrock text response have
-now passed live validation. The AI owner's Anderson package is integrated with
-S3-backed tools and paced Bedrock clients; its live tool loop and full human-review
-workflow still require validation. Their interfaces are defined in the shared contract.
+now passed live validation. The AI owner's Anderson package uses S3-backed tools
+and paced Bedrock clients. Two live Streamlit investigations passed, followed by
+a human-selected review saved and read back from S3. The shared contract defines
+their interfaces, and [the validation record](docs/validation/aws-anderson-2026-10-03.json)
+documents the tested feature-branch code.
 
 Run the frontend without credentials:
 
@@ -123,10 +125,10 @@ settings.
 
 The first live workflow uses **Amazon Bedrock** for evidence investigation and
 **private Amazon S3** for synthetic documents, with deterministic Python tools
-called by the application. The first AWS milestone is prepared locally; live
-identity, bucket privacy/evidence access and a real Nova Lite response have passed
-the access preflight. The agent's tool loop and human-review UI flow still need
-live validation before the full integration is considered ready.
+called by the application. Identity, bucket privacy/evidence access, real Nova
+Lite tool calls, structured output and Streamlit human-review persistence have
+passed live validation. Review and merge `codex/aws-integration` into stable main
+and rehearse the visible demo before judging.
 
 Amazon Textract, AWS Lambda, AWS Step Functions and Amazon DynamoDB are future
 options. Add them only after the Anderson workflow works and a concrete need
@@ -134,8 +136,8 @@ justifies them, as specified in `docs/MASTER.md`.
 
 ## Next integration milestone
 
-Complete Anderson through Streamlit, live Bedrock tool calls, private S3 evidence,
-and a human-selected review action. Then add Patel, Chen, Ramirez and Morgan.
+Review and merge the validated Anderson integration, then coordinate Patel, Chen,
+Ramirez and Morgan with their owners.
 Use the minimal architecture in the master specification: Streamlit, one Bedrock
 investigation agent, normal Python tools and private S3 evidence. All demo data
 must be synthetic.

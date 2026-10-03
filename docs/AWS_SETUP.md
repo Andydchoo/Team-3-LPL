@@ -236,8 +236,14 @@ Offline service and Streamlit tests cover these handoffs and failure states.
 
 The SDK is installed locally and offline tests use botocore Stubber to validate
 API requests without contacting AWS. The complete suite currently passes 82
-tests, including Streamlit AppTest coverage with stubbed service responses.
-The coordinator's refreshed session passed the access preflight with `ready: true`:
+tests, including Streamlit AppTest coverage of service failures and retries.
+The refreshed event profile passed both access preflight and the live Anderson
+workflow on October 3, 2026. The workflow check drove the real Streamlit app
+with AppTest and real S3/Bedrock calls; tool wrappers recorded calls without
+replacing their results. Two investigations passed, followed by one persisted
+review using the coordinator's selected `investigate_further` decision.
+The [validation record](validation/aws-anderson-2026-10-03.json) identifies the
+tested code commit and the exact S3 review key.
 
 | Check | Verified result |
 |---|---|
@@ -248,6 +254,10 @@ The coordinator's refreshed session passed the access preflight with `ready: tru
 | Evidence | All three Anderson documents uploaded and read back |
 | Engine on S3 evidence | Expected $12,000; actual $9,000; difference $3,000 |
 | Bedrock | `amazon.nova-lite-v1:0` returned text through a real Converse request |
+| Agent tools | Both live investigations called `get_revenue_case` and `get_case_evidence` against private S3 |
+| Structured investigation | Both returned `supported_explanation`, cited all three documents and required human review |
+| Streamlit | Finding, three source documents, structured result and S3 review confirmation rendered without application exceptions |
+| Human review | `investigate_further` saved to S3, read back matching the UI record, AES256 encrypted and valid against the shared ReviewRecord schema |
 
 Repeat the access check using the profile/resource settings above:
 
@@ -256,10 +266,10 @@ Repeat the access check using the profile/resource settings above:
 ```
 
 Credentials remain outside the repository and must be refreshed when they expire.
-The agent's S3 routing, pacing and required read-only tool registration pass
-offline tests. Live agent validation from the coordinator's automation process
-currently receives `ExpiredToken` from its saved named profile, despite the
-successful terminal preflight. Resolve the credential-source difference before
-the remaining live checks. The live two-tool flow, human-review write/read-back,
-and complete UI workflow remain pending. Passing the access preflight alone
-does not complete the AWS owner task.
+The earlier `ExpiredToken` blocker was resolved by refreshing the profile.
+The Anderson AWS integration gate now passes on `codex/aws-integration`.
+Error and retry behavior is covered offline; live checks used the existing event
+role, and the scoped IAM document remains unapplied. The coordinator still needs
+to review and merge the feature branch, verify stable main, and rehearse the
+visible demo with working credentials before judging. Secondary cases remain
+separate owner work.
