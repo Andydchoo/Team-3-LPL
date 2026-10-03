@@ -10,9 +10,9 @@ definitions are in `contracts/revenuetwin.schema.json`.
 | Interface | Return value | Owner | Current status |
 |---|---|---|---|
 | `get_revenue_case(case_id)` | RevenueCase dictionary | Engine | CASE-001 implemented |
-| `get_case_evidence(case_id)` | Ordered list of Evidence dictionaries | Engine contract; AWS storage adapter | CASE-001 local evidence implemented |
-| `investigate_case(case_id)` | Investigation dictionary | AI / Bedrock | Contract only |
-| `record_review(case_id, decision)` | ReviewRecord dictionary | AWS / integration | Contract only |
+| `get_case_evidence(case_id)` | Ordered list of Evidence dictionaries | Engine contract; AWS storage adapter | CASE-001 local tools and private S3 adapter implemented; live S3 reads validated |
+| `investigate_case(case_id)` | Investigation dictionary | AI / Bedrock | UI mock and validating AWS handoff adapter; live agent pending |
+| `record_review(case_id, decision)` | ReviewRecord dictionary | AWS / integration | Private S3 persistence implemented; live write pending |
 
 Import the implemented tools from `revenue_engine`. Case lookups raise `KeyError`
 for unknown IDs. Source read failures raise `OSError`; malformed records or
@@ -23,6 +23,21 @@ mutations cannot alter the files or subsequent calls.
 
 The AI is given only the two read-only tools. The application calls record_review
 after a human action. No AI tool may record reviews or modify financial records.
+
+For live AWS integration, import the two read-only names from
+`integration.case_tools`. The S3-backed case adapter delegates to the existing
+engine using the same source evidence returned by the evidence tool. The schemas
+and one-argument signatures are unchanged. See `AWS_SETUP.md` for configuration
+and the live preflight; no AWS credential values belong in the repository.
+
+`ui.services` selects the backend explicitly with `REVENUE_BACKEND=local` (the
+default) or `aws`. Local mode uses the existing demo fixtures, mock investigation
+and session-only reviews. AWS mode supports CASE-001 only and uses private S3
+for both case evidence and human review writes. Missing services and failed AWS
+requests never fall back to mock success. The live adapter expects the AI owner
+to export `investigation.investigate_case`, validates its response shape, case ID
+and evidence references, and returns `investigation_error` on failure. The AI
+owner must wire both read-only tools to `integration.case_tools`.
 
 ## Financial case semantics
 
@@ -92,8 +107,13 @@ references before rendering. No financial arithmetic is delegated to the model.
 Review decisions are `send_for_review`, `investigate_further` and `dismiss`.
 The application supplies the decision and records a unique `review_id`, the case
 ID, `actor: "human"` and a UTC ISO timestamp in `recorded_at`. These are workflow
-decisions; they neither authorize nor execute a fee change. Persistence remains
-the AWS/integration owner's next deliverable.
+decisions; they neither authorize nor execute a fee change. AWS mode writes one
+encrypted JSON record at `reviews/CASE-001/<review_id>.json` in the verified
+private bucket. The UTC timestamp ends in `Z`, as required by the schema.
+Confirmation is returned only after S3 acknowledges the write; failure leaves
+the UI without a confirmed decision and allows retry. Starting another review
+does not delete or revoke a previously persisted record. Live write permissions
+and end-to-end review confirmation still require event-account validation.
 
 ## JSON Schema use
 

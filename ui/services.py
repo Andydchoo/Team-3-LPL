@@ -11,9 +11,18 @@ from datetime import datetime, timezone
 from typing import Any
 from uuid import uuid4
 
+from integration.service_boundary import (
+    IntegrationUnavailable, backend_mode, integration_error_message, require_live_case,
+)
+
 
 def get_revenue_case(case_id: str) -> dict[str, Any]:
     """Load a deterministic case, using the real engine for CASE-001."""
+    if backend_mode() == "aws":
+        require_live_case(case_id)
+        from integration.case_tools import get_revenue_case as aws_get_revenue_case
+
+        return aws_get_revenue_case(case_id)
     if case_id == "CASE-001":
         from revenue_engine import get_revenue_case as engine_get_revenue_case
 
@@ -67,6 +76,11 @@ def get_revenue_case(case_id: str) -> dict[str, Any]:
 
 def get_case_evidence(case_id: str) -> list[dict[str, Any]]:
     """Return evidence through the engine/storage boundary."""
+    if backend_mode() == "aws":
+        require_live_case(case_id)
+        from integration.case_tools import get_case_evidence as aws_get_case_evidence
+
+        return aws_get_case_evidence(case_id)
     if case_id == "CASE-001":
         from revenue_engine import get_case_evidence as engine_get_case_evidence
 
@@ -195,17 +209,16 @@ def get_case_evidence(case_id: str) -> list[dict[str, Any]]:
 
 
 def investigate_case(case_id: str) -> dict[str, Any]:
-    """Return a contract-shaped investigation until AI integration is connected.
+    """Use the explicit backend; AWS errors never become mock explanations."""
+    if backend_mode() == "aws":
+        require_live_case(case_id)
+        from integration.investigation_adapter import investigate_case as live_investigate_case
 
-    An eventual ``investigation`` package can provide a live implementation
-    without requiring changes in the Streamlit presentation layer.
-    """
-    try:
-        from investigation import investigate_case as live_investigate_case
-    except ImportError:
-        live_investigate_case = None
-    if live_investigate_case is not None:
         return live_investigate_case(case_id)
+    return _mock_investigate_case(case_id)
+
+
+def _mock_investigate_case(case_id: str) -> dict[str, Any]:
 
     investigations: dict[str, dict[str, Any]] = {
         "CASE-001": {
@@ -315,15 +328,16 @@ def investigate_case(case_id: str) -> dict[str, Any]:
 
 
 def record_review(case_id: str, decision: str) -> dict[str, Any]:
-    """Return a session-only review until AWS persistence is connected."""
-    try:
+    """Persist in AWS mode; keep the explicitly local demo session-only."""
+    if backend_mode() == "aws":
+        require_live_case(case_id)
         from integration import record_review as live_record_review
-    except ImportError:
-        live_record_review = None
-    if live_record_review is not None:
-        return live_record_review(case_id, decision)
 
-    timestamp = datetime.now(timezone.utc).isoformat(timespec="seconds")
+        return live_record_review(case_id, decision)
+    if decision not in {"send_for_review", "investigate_further", "dismiss"}:
+        raise IntegrationUnavailable("Choose Send for Review, Investigate Further or Dismiss.")
+    get_revenue_case(case_id)
+    timestamp = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
     return {
         "review_id": f"REV-{uuid4().hex[:8].upper()}",
         "case_id": case_id,

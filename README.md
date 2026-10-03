@@ -54,9 +54,25 @@ synthetic evidence documents are stored under `data/demo/evidence/anderson/`.
 Annualized impact is a recurring run-rate estimate, not realized recovery.
 
 `get_revenue_case(case_id)` and `get_case_evidence(case_id)` are implemented for
-CASE-001 with local storage. Streamlit, live Bedrock investigation, S3 retrieval,
-and human review persistence remain work for their respective owners. Their
-interfaces are defined in the shared contract.
+CASE-001 with local storage. The frontend calls its services through
+`ui.services`, which connects the AWS adapters in explicit AWS mode. The pulled Streamlit
+frontend works locally; AWS adapters and review storage are prepared with offline
+tests. Event identity, private S3 evidence and a real Bedrock text response have
+now passed live validation. The AI owner's live investigation package and full
+human-review workflow remain pending. Their interfaces are defined in the shared contract.
+
+Run the frontend without credentials:
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt -r requirements-aws.txt
+$env:REVENUE_BACKEND = 'local'
+.\.venv\Scripts\python.exe -m streamlit run app.py
+```
+
+Local mode labels its mock investigation and session-only reviews. Use
+`REVENUE_BACKEND=aws` only with the profile/resource settings and handoff described
+in [docs/AWS_SETUP.md](docs/AWS_SETUP.md). AWS mode supports Anderson and never
+replaces failed requests with mock success.
 
 ## Repository layout
 
@@ -64,6 +80,8 @@ interfaces are defined in the shared contract.
 |---|---|
 | `revenue_engine/` | Import-safe case tools, Decimal calculations and shared Python types |
 | `contracts/revenuetwin.schema.json` | Shared JSON Schema definitions |
+| `app.py`, `ui/` | Streamlit frontend and explicit local/AWS service boundary |
+| `integration/`, `infra/` | AWS configuration, private S3 evidence/reviews, AI handoff validation and IAM templates |
 | `data/demo/` | Curated case inputs and synthetic source evidence |
 | `tests/` | Financial, evidence, date and legacy regression checks |
 | `docs/MASTER.md`, `docs/owners/` | Product requirements and owner prompts |
@@ -95,10 +113,18 @@ import. Do not run it to populate the curated demo cases.
 
 ## AWS integration plan
 
+The AWS owner's setup commands, private evidence adapter and live preflight are
+available in [docs/AWS_SETUP.md](docs/AWS_SETUP.md). Install `requirements-aws.txt`
+in `.venv` for AWS checks and the complete offline integration test suite.
+Live access requires the event's temporary credentials and assigned bucket/model
+settings.
+
 The first live workflow uses **Amazon Bedrock** for evidence investigation and
 **private Amazon S3** for synthetic documents, with deterministic Python tools
-called by the application. These integrations are planned; the current foundation
-runs locally.
+called by the application. The first AWS milestone is prepared locally; live
+identity, bucket privacy/evidence access and a real Nova Lite response have passed
+the access preflight. The agent's tool loop and human-review UI flow still need
+live validation before the full integration is considered ready.
 
 Amazon Textract, AWS Lambda, AWS Step Functions and Amazon DynamoDB are future
 options. Add them only after the Anderson workflow works and a concrete need

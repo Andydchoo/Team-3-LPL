@@ -23,3 +23,19 @@ This is the merge boundary for the other owners:
 
 Do not edit the presentation code to connect a service. The mock implementations
 are deliberately isolated in this module until those integrations are ready.
+
+## Backend selection
+
+`REVENUE_BACKEND=local` is the default. CASE-001 uses the real local engine;
+investigation and review remain explicitly labeled mocks. Installing an agent
+package does not implicitly turn on live calls.
+
+`REVENUE_BACKEND=aws` selects private-S3 case/evidence adapters, the validating
+AI-owner handoff and private-S3 review writes for CASE-001. It never falls back to
+mock success. Secondary cases remain local fixtures. See `docs/AWS_SETUP.md` for
+profile/resource settings and live validation.
+
+Integration adds only mode labels, source evidence visibility and clean error/
+retry handling to `app.py`. Layout and the frontend owner's mock case content
+are retained. Session-only review timestamps now follow the shared `Z` format;
+starting another review does not revoke any stored AWS record.

@@ -1,0 +1,29 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ReadAndersonEvidence",
+      "Effect": "Allow",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::YOUR_BUCKET/evidence/anderson/*"
+    },
+    {
+      "Sid": "RecordHumanReview",
+      "Effect": "Allow",
+      "Action": "s3:PutObject",
+      "Resource": "arn:aws:s3:::YOUR_BUCKET/reviews/CASE-001/*"
+    },
+    {
+      "Sid": "VerifyEvidenceBucketPrivacy",
+      "Effect": "Allow",
+      "Action": ["s3:GetBucketLocation", "s3:GetBucketPublicAccessBlock", "s3:GetBucketOwnershipControls", "s3:GetBucketPolicyStatus"],
+      "Resource": "arn:aws:s3:::YOUR_BUCKET"
+    },
+    {
+      "Sid": "InvokeAssignedBedrockModel",
+      "Effect": "Allow",
+      "Action": "bedrock:InvokeModel",
+      "Resource": ["YOUR_MODEL_OR_INFERENCE_PROFILE_ARN"]
+    }
+  ]
+}

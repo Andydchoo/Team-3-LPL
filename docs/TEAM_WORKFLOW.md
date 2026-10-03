@@ -8,8 +8,8 @@ sixth teammate. MASTER.md sets product scope and CONTRACTS.md sets interfaces.
 |---|---|---|
 | Revenue engine | `revenue_engine/`, `data/demo/cases/`, evidence content, financial tests, shared contracts | CASE-001 foundation available |
 | AI / Bedrock | Planned `investigation/`; investigate_case, two tool integrations, response validation | Use the two local CASE-001 tools immediately |
-| Frontend | Planned `app.py` and `ui/`; dashboard, evidence viewer, human controls | Shared shapes and CASE-001 data; clearly marked mocks for unfinished services |
-| AWS / integration | Planned `integration/`; credentials/config, S3 storage adapter, review persistence, integration tests | Validate Bedrock and private S3 access immediately |
+| Frontend | `app.py` and `ui/`; dashboard, evidence viewer, human controls | Pulled frontend works in local demo mode; services select local or AWS explicitly |
+| AWS / integration | `integration/`, `infra/`; credentials/config, S3 storage adapter, review persistence, integration tests | Live identity, private S3 evidence and Bedrock text response passed; agent/review workflow pending |
 | Business / pitch | Planned `docs/pitch/`; product story, synthetic impact narrative, acquisition thesis, rehearsal | Agreed financial example and honest capability status |
 
 The engine owns evidence contents; AWS owns storage/access. The frontend calls
@@ -55,8 +55,14 @@ live Bedrock result. Use the first live gate before expanding AWS architecture.
 
 Foundation: implemented in this branch; run the README test command to verify.
 CASE-001 uses a fixed January 1, 2026 evaluation date and three local synthetic
-evidence documents. AI, frontend, S3 and human review persistence are contracts
-and assigned work.
+evidence documents. The frontend contribution is merged into main and pulled into
+this checkout. AWS setup, S3 adapters, review storage and frontend service/error
+connections are implemented locally with offline tests. The first AWS access
+milestone has passed in the event account: identity, us-east-1, private S3 evidence
+and a real Nova Lite response. The AI owner's full investigation package is not
+yet integrated, and live human-review persistence is pending. The full vertical
+slice gate remains open. See AWS_SETUP.md for validated resources, handoff
+commands and the remaining live checks.
 
 The legacy dataset and report remain a separate regression demo. Follow-up engine
 work includes volume/marginal pricing, curated secondary cases and corrected
