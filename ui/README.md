@@ -14,9 +14,9 @@ This is the merge boundary for the other owners:
 
 - Revenue engine: keep `RevenueCase` and `Evidence` shapes compatible with
   `revenue_engine/contracts.py` and `docs/CONTRACTS.md`.
-- AI / Bedrock: replace the body of `investigate_case` or add an adapter that
-  returns the documented `Investigation` shape. Do not add review writes to the
-  AI path.
+- AI / Bedrock: `investigate_case` calls live Bedrock for CASE-001 and CASE-005
+  when the `investigation` package is present. Other cases still use mocks.
+  Do not add review writes to the AI path.
 - AWS / integration: replace `record_review` with persistence and, if needed,
   replace `get_case_evidence` with the private-S3 adapter. Keep relative
   `source_path` values and evidence IDs stable.

@@ -1,0 +1,16 @@
+{
+  "evidence_id": "morgan_internal_note",
+  "case_id": "CASE-005",
+  "evidence_type": "internal_note",
+  "title": "Morgan advisor discussion note (synthetic)",
+  "source_path": "evidence/morgan/internal_note.json",
+  "content": {
+    "household": "Morgan Household",
+    "note": "Advisor discussed extending preferred pricing with client.",
+    "authorization_status": "discussion_only",
+    "finalized": false,
+    "effective_date": null,
+    "expiration_date": null,
+    "synthetic": true
+  }
+}
