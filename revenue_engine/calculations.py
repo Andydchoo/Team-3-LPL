@@ -1,7 +1,7 @@
 """Pure financial functions; annual rates are fractions, e.g. 0.01 = 1%."""
 
 from decimal import Decimal, InvalidOperation, ROUND_HALF_UP
-from typing import TypedDict
+from typing import Iterable, TypedDict
 
 from .contracts import ImpactDirection
 
@@ -50,6 +50,52 @@ def calculate_expected_fee(aum, annual_rate, *, excluded_assets=0) -> Decimal:
 def calculate_actual_fee(aum, annual_rate) -> Decimal:
     """Annualize a flat billing configuration when no posted fee is available."""
     return calculate_expected_fee(aum, annual_rate)
+
+
+def calculate_marginal_fee(aum, tiers: Iterable[tuple[object, object, object]]) -> Decimal:
+    """Calculate an annual fee across ordered marginal AUM tiers.
+
+    Each tier is ``(lower_bound, upper_bound, annual_rate)``. Bounds are in
+    dollars; the lower bound is inclusive and the upper bound is exclusive.
+    The final tier may use ``None`` for an uncapped upper bound.
+    """
+    assets = decimal_value(aum)
+    if assets < 0:
+        raise ValueError("AUM must be nonnegative")
+
+    normalized = []
+    for tier in tiers:
+        try:
+            lower_raw, upper_raw, rate_raw = tier
+        except (TypeError, ValueError) as exc:
+            raise ValueError("Each fee tier must contain lower, upper and rate") from exc
+        lower = decimal_value(lower_raw)
+        upper = None if upper_raw is None else decimal_value(upper_raw)
+        rate = decimal_value(rate_raw)
+        if lower < 0 or (upper is not None and upper <= lower):
+            raise ValueError("Fee tier bounds must be ordered and nonnegative")
+        if not Decimal(0) <= rate <= Decimal(1):
+            raise ValueError("Annual rate must be a fraction between 0 and 1")
+        normalized.append((lower, upper, rate))
+
+    if not normalized:
+        raise ValueError("At least one fee tier is required")
+    normalized.sort(key=lambda tier: tier[0])
+
+    total = Decimal(0)
+    covered_to = Decimal(0)
+    for lower, upper, rate in normalized:
+        if lower != covered_to:
+            raise ValueError("Fee tiers must cover AUM continuously without overlaps")
+        cap = assets if upper is None else min(assets, upper)
+        if cap > lower:
+            total += (cap - lower) * rate
+        covered_to = upper if upper is not None else assets
+        if covered_to >= assets:
+            break
+    if covered_to < assets:
+        raise ValueError("Fee tiers do not cover the supplied AUM")
+    return money(total)
 
 
 def annualize_impact(period_amount, billing_frequency: str) -> Decimal:
