@@ -1,5 +1,2 @@
-<<<<<<< HEAD
 boto3>=1.35.0
-=======
 streamlit>=1.40,<2
->>>>>>> origin/main
