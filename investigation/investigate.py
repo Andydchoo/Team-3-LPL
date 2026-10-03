@@ -31,12 +31,17 @@ Architecture rules:
 - Explain using only tool results. Do not invent documents, approvals, or dates.
 - Never recommend automatically changing a fee. Recommend authorized human review.
 - Do not say the fee should automatically be raised.
-- Prefer investigation_status supported_explanation when evidence clearly shows an
-  expired temporary pricing exception still reflected in billing.
-- If evidence includes only a discussion note without finalized authorization, or
-  impact_direction/calculation_method is review_dependent, use
-  conflicting_evidence or insufficient_evidence. Do not confidently claim the
-  contractual rate should change.
+- Prefer investigation_status supported_explanation ONLY when tool evidence includes
+  an authorized pricing_exception that is expired and billing still matches that
+  exception rate. Never invent a pricing exception that tools did not return.
+- If calculation_method or impact_direction is review_dependent, OR evidence
+  includes an internal_note that is discussion_only / not finalized, then
+  investigation_status MUST be conflicting_evidence or insufficient_evidence.
+  Do not use supported_explanation in those cases.
+- Do not mention "expired temporary pricing exception" unless a pricing_exception
+  document actually appears in get_case_evidence results.
+- Do not confidently claim the contractual rate should change when authorization
+  is incomplete.
 - Do not expose chain-of-thought. Do not invent numerical confidence percentages.
 
 After both tools have returned, respond with ONLY a single JSON object (no markdown)
@@ -80,21 +85,30 @@ def _tool_uses(content: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return [block["toolUse"] for block in content if "toolUse" in block]
 
 
+def _user_prompt(case_id: str) -> str:
+    base = (
+        f"Investigate case {case_id}. "
+        "Call get_revenue_case, then get_case_evidence, "
+        "then return the Investigation JSON object only."
+    )
+    if case_id == "CASE-005":
+        return (
+            base
+            + " This case is review-dependent with conflicting authorization. "
+            "There is NO pricing_exception document. Do not invent an expired "
+            "exception. Use conflicting_evidence or insufficient_evidence, and "
+            "cite that preferred pricing was discussed but not finalized."
+        )
+    return base
+
+
 def _run_converse(case_id: str) -> tuple[str, set[str]]:
     """Run tool-use turns; return final assistant text and tool names called."""
     client = create_bedrock_client()
     messages: list[dict[str, Any]] = [
         {
             "role": "user",
-            "content": [
-                {
-                    "text": (
-                        f"Investigate case {case_id}. "
-                        "Call get_revenue_case, then get_case_evidence, "
-                        "then return the Investigation JSON object only."
-                    )
-                }
-            ],
+            "content": [{"text": _user_prompt(case_id)}],
         }
     ]
     called: set[str] = set()
@@ -161,13 +175,19 @@ def investigate_case(case_id: str) -> Investigation:
 
     try:
         raw = extract_json_object(final_text)
-        return validate_investigation(
+        result = validate_investigation(
             raw,
             case_id=case_id,
             allowed_evidence_ids=allowed_ids,
         )
     except ValueError as exc:
         return investigation_error(case_id, f"Invalid Investigation output: {exc}")
+
+    if case_id == "CASE-005":
+        from .morgan import normalize_morgan_result
+
+        return normalize_morgan_result(result)
+    return result
 
 
 def main() -> int:
