@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import unittest
 
-from investigation.morgan import evaluate_morgan
+from investigation.morgan import evaluate_morgan, normalize_morgan_result
 from revenue_engine import get_case_evidence, get_revenue_case
 
 
@@ -75,6 +75,26 @@ class MorganCheckTests(unittest.TestCase):
             )
         )
         self.assertTrue(any("confidently" in item for item in failures))
+
+    def test_rejects_anderson_bleed_language(self):
+        failures = evaluate_morgan(
+            self._base(
+                likely_cause="Expired temporary pricing exception still reflected in billing"
+            )
+        )
+        self.assertTrue(any("Anderson-style" in item for item in failures))
+
+    def test_normalize_fixes_anderson_bleed_and_overconfidence(self):
+        fixed = normalize_morgan_result(
+            self._base(
+                investigation_status="supported_explanation",
+                likely_cause="Expired temporary pricing exception still reflected in billing",
+                summary="Expired temporary pricing exception still reflected in billing.",
+            )
+        )
+        self.assertEqual(evaluate_morgan(fixed), [])
+        self.assertIn(fixed["investigation_status"], {"conflicting_evidence", "insufficient_evidence"})
+        self.assertNotIn("expired", (fixed.get("likely_cause") or "").lower())
 
 
 if __name__ == "__main__":
