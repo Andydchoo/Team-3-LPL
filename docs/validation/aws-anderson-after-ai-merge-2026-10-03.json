@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "aws_branch_parent": "c76805b",
+  "incoming_main": "db21ee460ef9ea025c89981e0000c1213fb9c671",
+  "method": "Real Streamlit app driven by AppTest with real S3 and Bedrock calls; tool results were not mocked",
+  "case_id": "CASE-001",
+  "backend": "aws",
+  "region": "us-east-1",
+  "model_id": "amazon.nova-lite-v1:0",
+  "tools": [
+    {
+      "name": "get_revenue_case",
+      "case_id": "CASE-001",
+      "source": "private_s3",
+      "finding": {
+        "expected_annual_fee": 12000.0,
+        "actual_annual_fee": 9000.0,
+        "annual_difference": 3000.0
+      }
+    },
+    {
+      "name": "get_case_evidence",
+      "case_id": "CASE-001",
+      "source": "private_s3",
+      "evidence_ids": [
+        "anderson_agreement",
+        "anderson_exception",
+        "anderson_billing"
+      ]
+    }
+  ],
+  "offline_tests_passed": 90,
+  "account": "514878621897",
+  "bucket": "revenuetwin-514878621897-evidence",
+  "investigation_status": "supported_explanation",
+  "evidence_used_count": 3,
+  "requires_human_review": true,
+  "prior_review_key": "reviews/CASE-001/REV-05679EDC5B8C4C27BC6AA749D1CA4127.json",
+  "prior_review_read_back": true,
+  "review_writes_this_check": 0,
+  "finding_and_three_documents_rendered": true,
+  "application_exceptions": 0,
+  "service_errors": 0,
+  "checked_at_utc": "2026-10-03T06:11:58Z"
+}

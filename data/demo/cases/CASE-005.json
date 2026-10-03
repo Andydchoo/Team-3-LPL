@@ -1,0 +1,13 @@
+{
+  "case_id": "CASE-005",
+  "household": "Morgan Household",
+  "anomaly_type": "conflicting_evidence",
+  "aum": 1000000,
+  "as_of_date": "2026-01-01",
+  "calculation_method": "review_dependent",
+  "evidence_paths": [
+    "evidence/morgan/agreement.json",
+    "evidence/morgan/billing.json",
+    "evidence/morgan/internal_note.json"
+  ]
+}

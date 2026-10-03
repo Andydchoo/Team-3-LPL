@@ -50,6 +50,21 @@ class StreamlitIntegrationTests(unittest.TestCase):
         self.assertTrue(any("demo session only" in item.value for item in app.caption))
         self.assert_finding_and_evidence_remain(app)
 
+    def test_merged_morgan_fixture_and_local_explanation_render_together(self):
+        app = AppTest.from_file(str(APP), default_timeout=15).run()
+        app.button(key="side_CASE-005").click().run()
+        self.assertFalse(app.exception)
+        self.assertEqual(len(app.get("json")), 3)
+        click_label(app, "Investigate with RevenueTwin")
+        result = app.session_state["investigation"]
+        self.assertEqual(result["case_id"], "CASE-005")
+        self.assertEqual(result["investigation_status"], "conflicting_evidence")
+        self.assertIn("morgan_internal_note", {item["evidence_id"] for item in result["evidence_used"]})
+        click_label(app, "Send for Review")
+        self.assertEqual(app.session_state["review"]["case_id"], "CASE-005")
+        self.assertFalse(app.exception)
+        self.assertTrue(any("demo session only" in item.value for item in app.caption))
+
     def test_aws_error_preserves_finding_evidence_and_retry(self):
         result = investigation_fixture()
         error = ClientError({"Error": {"Code": "ThrottlingException", "Message": "never-echo-this"}}, "Converse")

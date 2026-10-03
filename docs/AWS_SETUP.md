@@ -235,7 +235,7 @@ Offline service and Streamlit tests cover these handoffs and failure states.
 ## Current validation status
 
 The SDK is installed locally and offline tests use botocore Stubber to validate
-API requests without contacting AWS. The complete suite currently passes 82
+API requests without contacting AWS. The complete suite currently passes 90
 tests, including Streamlit AppTest coverage of service failures and retries.
 The refreshed event profile passed both access preflight and the live Anderson
 workflow on October 3, 2026. The workflow check drove the real Streamlit app
@@ -244,6 +244,14 @@ replacing their results. Two investigations passed, followed by one persisted
 review using the coordinator's selected `investigate_further` decision.
 The [validation record](validation/aws-anderson-2026-10-03.json) identifies the
 tested code commit and the exact S3 review key.
+
+After merging the AI owner's latest main changes, another real Streamlit Anderson
+investigation passed with the updated prompt and both S3-backed tools. The prior
+human review was read back unchanged; this check created no new review decision.
+See the [post-merge check](validation/aws-anderson-after-ai-merge-2026-10-03.json).
+The new Morgan engine, evidence and reliability code are retained for local
+development; its UI investigation remains an explicitly labeled mock in local
+mode. Morgan has not been promoted to the Anderson AWS path or IAM scope.
 
 | Check | Verified result |
 |---|---|

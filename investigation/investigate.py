@@ -33,6 +33,10 @@ Architecture rules:
 - Do not say the fee should automatically be raised.
 - Prefer investigation_status supported_explanation when evidence clearly shows an
   expired temporary pricing exception still reflected in billing.
+- If evidence includes only a discussion note without finalized authorization, or
+  impact_direction/calculation_method is review_dependent, use
+  conflicting_evidence or insufficient_evidence. Do not confidently claim the
+  contractual rate should change.
 - Do not expose chain-of-thought. Do not invent numerical confidence percentages.
 
 After both tools have returned, respond with ONLY a single JSON object (no markdown)
@@ -51,6 +55,7 @@ matching this shape:
 
 requires_human_review must always be true.
 evidence_used.evidence_id values must come from get_case_evidence.
+recommended_action must explicitly include the phrase "authorized human review".
 """
 
 

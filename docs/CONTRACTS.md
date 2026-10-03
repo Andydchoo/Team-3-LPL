@@ -9,8 +9,8 @@ definitions are in `contracts/revenuetwin.schema.json`.
 
 | Interface | Return value | Owner | Current status |
 |---|---|---|---|
-| `get_revenue_case(case_id)` | RevenueCase dictionary | Engine | CASE-001 implemented |
-| `get_case_evidence(case_id)` | Ordered list of Evidence dictionaries | Engine contract; AWS storage adapter | CASE-001 local tools and private S3 adapter implemented; live S3 reads validated |
+| `get_revenue_case(case_id)` | RevenueCase dictionary | Engine | CASE-001 flat and CASE-005 review-dependent local fixtures implemented |
+| `get_case_evidence(case_id)` | Ordered list of Evidence dictionaries | Engine contract; AWS storage adapter | CASE-001 private S3 reads validated; CASE-005 local evidence available |
 | `investigate_case(case_id)` | Investigation dictionary | AI / Bedrock | Anderson agent and validating AWS adapter passed two live S3-backed investigations |
 | `record_review(case_id, decision)` | ReviewRecord dictionary | AWS / integration | Human-selected decision saved to private S3 and read back successfully |
 
@@ -65,8 +65,9 @@ read-only agent tools now delegate to `integration.case_tools` in AWS mode.
 ## Pricing and uncertainty reserved for subsequent cases
 
 `calculation_method` distinguishes flat, volume, marginal and review-dependent
-pricing. CASE-001 implements flat pricing only; declaring another method raises
-ValueError until that method is implemented and tested.
+pricing. CASE-001 implements flat pricing, and the incoming Morgan contribution
+adds a review-dependent path for CASE-005. Other pricing methods still raise
+ValueError until implemented and tested.
 
 Chen requires marginal pricing: $1M at 1.00% plus $1M at 0.75% = $17,500.
 For a multi-tier case, `expected_rate` represents the effective blended rate
@@ -79,10 +80,11 @@ there is no inferred universal account-type policy for the curated engine.
 
 For Morgan, uncertain contractual financial values may be null, with
 `impact_direction` and `calculation_method` set to `review_dependent`. Do not
-invent an AUM or turn a discussion note into an authorization. Final Morgan and
-Ramirez fixture details must be resolved before those cases are implemented.
-CASE-002 through CASE-005 are reserved for Patel, Chen, Ramirez and Morgan;
-they are not yet implemented.
+invent an AUM or turn a discussion note into an authorization. The AI owner's
+merged Morgan fixture declares $1M of synthetic AUM and retains null annual fee
+and impact values. This fixture assumption still needs engine-owner signoff
+before promotion to AWS. CASE-002 through CASE-004 remain reserved for Patel,
+Chen and Ramirez; their curated engine paths are not yet implemented.
 
 ## Evidence contract
 

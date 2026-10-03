@@ -69,8 +69,11 @@ See AWS_SETUP.md and `validation/aws-anderson-2026-10-03.json` for the evidence.
 The AWS feature branch retains the authorship of the AI owner's four Anderson
 commits (one-tool smoke, two-tool smoke, structured investigation, and reliability
 checks). AWS changes connect those tools to private S3 and add bounded, paced
-clients. Later Morgan fixtures and engine changes from the AI branch are deferred
-until their assumptions are coordinated with the engine owner and shared scope.
+clients. The AI owner's later Morgan fixtures, review-dependent engine path,
+prompt guidance and reliability checks are now retained by merging main. Local
+UI reads use those fixtures, with mock investigations remaining explicitly local.
+Morgan's synthetic $1M AUM assumption still needs engine-owner signoff, and its
+AWS storage/live review flow remains outside the validated Anderson scope.
 
 The legacy dataset and report remain a separate regression demo. Follow-up engine
 work includes volume/marginal pricing, curated secondary cases and corrected

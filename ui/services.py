@@ -17,13 +17,13 @@ from integration.service_boundary import (
 
 
 def get_revenue_case(case_id: str) -> dict[str, Any]:
-    """Load a deterministic case, using the real engine for CASE-001."""
+    """Load a deterministic case through the selected storage backend."""
     if backend_mode() == "aws":
         require_live_case(case_id)
         from integration.case_tools import get_revenue_case as aws_get_revenue_case
 
         return aws_get_revenue_case(case_id)
-    if case_id == "CASE-001":
+    if case_id in {"CASE-001", "CASE-005"}:
         from revenue_engine import get_revenue_case as engine_get_revenue_case
 
         return engine_get_revenue_case(case_id)
@@ -59,15 +59,6 @@ def get_revenue_case(case_id: str) -> dict[str, Any]:
             "status": "requires_review", "as_of_date": "2026-01-01",
             "calculation_method": "review_dependent",
         },
-        "CASE-005": {
-            "case_id": "CASE-005", "household": "Morgan Household",
-            "anomaly_type": "conflicting_evidence", "aum": 0.0,
-            "expected_rate": None, "actual_rate": 0.0075,
-            "expected_annual_fee": None, "actual_annual_fee": None,
-            "annual_difference": None, "impact_direction": "review_dependent",
-            "evidence_ids": [], "status": "requires_review",
-            "as_of_date": "2026-01-01", "calculation_method": "review_dependent",
-        },
     }
     if case_id not in cases:
         raise KeyError(case_id)
@@ -81,7 +72,7 @@ def get_case_evidence(case_id: str) -> list[dict[str, Any]]:
         from integration.case_tools import get_case_evidence as aws_get_case_evidence
 
         return aws_get_case_evidence(case_id)
-    if case_id == "CASE-001":
+    if case_id in {"CASE-001", "CASE-005"}:
         from revenue_engine import get_case_evidence as engine_get_case_evidence
 
         return engine_get_case_evidence(case_id)
@@ -176,34 +167,6 @@ def get_case_evidence(case_id: str) -> list[dict[str, Any]]:
                 },
             },
         ],
-        "CASE-005": [
-            {
-                "evidence_id": "morgan_lpl_feed",
-                "case_id": "CASE-005",
-                "evidence_type": "advisory_agreement",
-                "title": "LPL Custodial Feed Master",
-                "source_path": "evidence/morgan/lpl_feed.json",
-                "content": {
-                    "household": "Morgan Household",
-                    "annual_rate": 0.0075,
-                    "billable_aum": 2_100_000.0,
-                    "status": "active custody",
-                },
-            },
-            {
-                "evidence_id": "morgan_external_custody",
-                "case_id": "CASE-005",
-                "evidence_type": "billing_configuration",
-                "title": "External Custody Feed (Schwab Institutional)",
-                "source_path": "evidence/morgan/external_custody.json",
-                "content": {
-                    "household": "Morgan Household",
-                    "annual_rate": 0.0075,
-                    "billable_aum": 1_350_000.0,
-                    "status": "unlinked tax-ID / duplicate registration",
-                },
-            },
-        ],
     }
     return mock_evidence.get(case_id, [])
 
@@ -295,18 +258,21 @@ def _mock_investigate_case(case_id: str) -> dict[str, Any]:
         "CASE-005": {
             "case_id": "CASE-005",
             "investigation_status": "conflicting_evidence",
-            "likely_cause": "Multi-Custodian Asset Attribution & Tax-ID Mismatch",
+            "likely_cause": "Preferred pricing discussion lacks finalized authorization",
             "summary": (
-                "Conflicting custodian records between LPL custody ($2.1M) and Schwab custody ($1.35M) show discordant trust registration "
-                "details and unlinked Tax IDs. Deterministic automated calculation is paused pending human compliance verification."
+                "The agreement records 1.00% while billing records 0.75%. The "
+                "advisor note documents a discussion about extending preferred "
+                "pricing, without finalized authorization. Financial impact "
+                "remains review-dependent."
             ),
             "evidence_strength": "medium",
             "evidence_used": [
-                {"evidence_id": "morgan_lpl_feed", "finding": "LPL records show $2.1M AUM in Primary Living Trust."},
-                {"evidence_id": "morgan_external_custody", "finding": "Schwab feed indicates $1.35M in Revocable Trust with unlinked tax identifiers."},
+                {"evidence_id": "morgan_agreement", "finding": "Agreement records a 1.00% annual rate."},
+                {"evidence_id": "morgan_billing", "finding": "Billing records a 0.75% annual rate."},
+                {"evidence_id": "morgan_internal_note", "finding": "Discussion-only note is not finalized authorization."},
             ],
-            "uncertainties": ["Multi-custodian tax aggregation requires manual compliance verification."],
-            "recommended_action": "Route case to senior operations officer to verify cross-custodial trust aggregation before billing run.",
+            "uncertainties": ["Finalized authorization for preferred pricing is unavailable."],
+            "recommended_action": "Route the case to authorized human review before any pricing decision.",
             "requires_human_review": True,
         },
     }

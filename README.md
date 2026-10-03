@@ -54,7 +54,9 @@ synthetic evidence documents are stored under `data/demo/evidence/anderson/`.
 Annualized impact is a recurring run-rate estimate, not realized recovery.
 
 `get_revenue_case(case_id)` and `get_case_evidence(case_id)` are implemented for
-CASE-001 with local storage. The frontend calls its services through
+Anderson (CASE-001) and the incoming local Morgan fixture (CASE-005). Morgan's
+financial impact remains review-dependent; live AWS validation covers Anderson.
+The frontend calls its services through
 `ui.services`, which connects the AWS adapters in explicit AWS mode. The pulled Streamlit
 frontend works locally; AWS adapters and review storage are prepared with offline
 tests. Event identity, private S3 evidence and a real Bedrock text response have

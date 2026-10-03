@@ -30,6 +30,40 @@ def investigation_fixture():
 
 
 class ServiceBoundaryTests(unittest.TestCase):
+    def test_local_morgan_uses_new_engine_evidence_without_implicit_aws_calls(self):
+        agent = Mock()
+        with patch.dict(os.environ, {"REVENUE_BACKEND": "local"}), \
+             patch.dict("sys.modules", {"investigation": SimpleNamespace(investigate_case=agent)}), \
+             patch("integration.case_tools.get_revenue_case") as aws_case, \
+             patch("integration.case_tools.get_case_evidence") as aws_evidence:
+            case = services.get_revenue_case("CASE-005")
+            evidence = services.get_case_evidence("CASE-005")
+            result = services.investigate_case("CASE-005")
+        self.assertEqual(case, get_revenue_case("CASE-005"))
+        self.assertEqual(evidence, get_case_evidence("CASE-005"))
+        self.assertIsNone(case["annual_difference"])
+        self.assertEqual(result["investigation_status"], "conflicting_evidence")
+        self.assertEqual(validate_investigation(result, "CASE-005", evidence), result)
+        self.assertEqual({item["evidence_id"] for item in result["evidence_used"]},
+                         {item["evidence_id"] for item in evidence})
+        agent.assert_not_called()
+        aws_case.assert_not_called()
+        aws_evidence.assert_not_called()
+
+    def test_morgan_is_not_promoted_to_aws_by_merging_its_local_fixture(self):
+        with patch.dict(os.environ, {"REVENUE_BACKEND": "aws"}), \
+             patch("integration.case_tools.get_revenue_case") as aws_case, \
+             patch("integration.case_tools.get_case_evidence") as aws_evidence, \
+             patch("integration.investigation_adapter.investigate_case") as agent, \
+             patch("integration.record_review") as review:
+            for function in (services.get_revenue_case, services.get_case_evidence, services.investigate_case):
+                with self.assertRaises(IntegrationUnavailable):
+                    function("CASE-005")
+            with self.assertRaises(IntegrationUnavailable):
+                services.record_review("CASE-005", "send_for_review")
+        for operation in (aws_case, aws_evidence, agent, review):
+            operation.assert_not_called()
+
     def test_local_mode_stays_local_even_when_an_agent_exists(self):
         agent = Mock()
         with patch.dict(os.environ, {}, clear=True), patch.dict("sys.modules", {
