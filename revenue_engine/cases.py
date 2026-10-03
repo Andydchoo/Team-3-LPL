@@ -11,7 +11,10 @@ from .calculations import (
 from .contracts import Evidence, RevenueCase
 
 DEMO_DIR = Path(__file__).resolve().parent.parent / "data" / "demo"
-CASE_FILES = {"CASE-001": DEMO_DIR / "cases" / "CASE-001.json"}
+CASE_FILES = {
+    "CASE-001": DEMO_DIR / "cases" / "CASE-001.json",
+    "CASE-005": DEMO_DIR / "cases" / "CASE-005.json",
+}
 
 
 def _load_json(path: Path):
@@ -61,29 +64,93 @@ def _load_evidence(definition: dict) -> list[Evidence]:
     return records
 
 
-def _build_revenue_case(definition: dict, evidence: list[Evidence]) -> RevenueCase:
-    """Compute a flat case from authoritative synthetic records and an explicit date.
-
-    Only an explicitly authorized, dated pricing exception overrides an agreement.
-    Missing, conflicting or unsupported records raise ValueError for human review.
-    """
-    if definition["calculation_method"] != "flat":
-        raise ValueError("This milestone supports flat pricing only")
-    as_of = date.fromisoformat(definition["as_of_date"])
-    by_type = {}
-    seen_ids = set()
+def _index_evidence(definition: dict, evidence: list[Evidence]) -> dict[str, dict]:
+    by_type: dict[str, dict] = {}
+    seen_ids: set[str] = set()
     for record in evidence:
         _validate_evidence(record, definition)
         if record["evidence_id"] in seen_ids:
             raise ValueError("Evidence IDs must be unique within a case")
         seen_ids.add(record["evidence_id"])
-        if record["evidence_type"] not in {
-            "advisory_agreement", "billing_configuration", "pricing_exception",
-        }:
-            raise ValueError("Unsupported evidence requires human review")
         if record["evidence_type"] in by_type:
             raise ValueError("Conflicting evidence types require human review")
         by_type[record["evidence_type"]] = record["content"]
+    return by_type
+
+
+def _build_review_dependent_case(
+    definition: dict, evidence: list[Evidence]
+) -> RevenueCase:
+    """Return a review-dependent finding when authorization evidence conflicts.
+
+    Observed agreement/billing rates may be surfaced, but fee impact stays null
+    until an authorized human resolves the conflict. Discussion notes are never
+    treated as pricing authorization.
+    """
+    by_type = _index_evidence(definition, evidence)
+    allowed = {
+        "advisory_agreement",
+        "billing_configuration",
+        "internal_note",
+        "pricing_exception",
+    }
+    if any(evidence_type not in allowed for evidence_type in by_type):
+        raise ValueError("Unsupported evidence requires human review")
+    if "advisory_agreement" not in by_type or "billing_configuration" not in by_type:
+        raise ValueError("Agreement and billing evidence are required")
+
+    agreement = by_type["advisory_agreement"]
+    billing = by_type["billing_configuration"]
+    note = by_type.get("internal_note")
+    exception = by_type.get("pricing_exception")
+    if exception and exception.get("authorization_status") == "authorized":
+        raise ValueError("Authorized exception is not review-dependent in this path")
+    if note is None:
+        raise ValueError("Review-dependent Morgan-style cases require an internal note")
+    if note.get("authorization_status") == "authorized" or note.get("finalized") is True:
+        raise ValueError("Finalized note authorization requires a different case path")
+
+    return {
+        "case_id": definition["case_id"],
+        "household": definition["household"],
+        "anomaly_type": definition["anomaly_type"],
+        "aum": float(decimal_value(definition["aum"])),
+        "expected_rate": float(decimal_value(agreement["annual_rate"])),
+        "actual_rate": float(decimal_value(billing["annual_rate"])),
+        "expected_annual_fee": None,
+        "actual_annual_fee": None,
+        "annual_difference": None,
+        "impact_direction": "review_dependent",
+        "evidence_ids": [record["evidence_id"] for record in evidence],
+        "status": "requires_review",
+        "as_of_date": definition["as_of_date"],
+        "calculation_method": "review_dependent",
+    }
+
+
+def _build_revenue_case(definition: dict, evidence: list[Evidence]) -> RevenueCase:
+    """Compute a case from authoritative synthetic records and an explicit date.
+
+    Only an explicitly authorized, dated pricing exception overrides an agreement.
+    Missing, conflicting or unsupported records raise ValueError for human review.
+    """
+    method = definition["calculation_method"]
+    if method == "review_dependent":
+        return _build_review_dependent_case(definition, evidence)
+    if method != "flat":
+        raise ValueError("This milestone supports flat or review_dependent pricing only")
+    as_of = date.fromisoformat(definition["as_of_date"])
+    by_type = _index_evidence(definition, evidence)
+    if any(
+        evidence_type
+        not in {
+            "advisory_agreement",
+            "billing_configuration",
+            "pricing_exception",
+        }
+        for evidence_type in by_type
+    ):
+        raise ValueError("Unsupported evidence requires human review")
     if "advisory_agreement" not in by_type or "billing_configuration" not in by_type:
         raise ValueError("Agreement and billing evidence are required")
     agreement = by_type["advisory_agreement"]

@@ -1,0 +1,16 @@
+{
+  "evidence_id": "morgan_billing",
+  "case_id": "CASE-005",
+  "evidence_type": "billing_configuration",
+  "title": "Morgan current billing configuration (synthetic)",
+  "source_path": "evidence/morgan/billing.json",
+  "content": {
+    "household": "Morgan Household",
+    "annual_rate": 0.0075,
+    "billable_aum": 1000000,
+    "billing_frequency": "quarterly",
+    "effective_date": "2025-06-01",
+    "status": "active",
+    "synthetic": true
+  }
+}
