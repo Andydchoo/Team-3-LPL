@@ -7,6 +7,7 @@ from pathlib import Path
 from revenue_engine import get_case_evidence, get_revenue_case
 from revenue_engine.calculations import (
     annualize_impact, calculate_actual_fee, calculate_expected_fee,
+    calculate_marginal_fee,
     compare_expected_vs_actual,
 )
 from revenue_engine.cases import build_revenue_case
@@ -43,6 +44,24 @@ class FinancialCalculationTests(unittest.TestCase):
         full = calculate_expected_fee(1000000, "0.008")
         excluded = calculate_expected_fee(1000000, "0.008", excluded_assets=250000)
         self.assertEqual(full - excluded, Decimal("2000.00"))
+
+    def test_chen_marginal_breakpoint_calculation(self):
+        result = calculate_marginal_fee(2_000_000, [
+            (0, 1_000_000, "0.01"),
+            (1_000_000, None, "0.0075"),
+        ])
+        self.assertEqual(result, Decimal("17500.00"))
+
+    def test_chen_marginal_fee_only_charges_reached_tiers(self):
+        result = calculate_marginal_fee(800_000, [
+            (0, 1_000_000, "0.01"),
+            (1_000_000, None, "0.0075"),
+        ])
+        self.assertEqual(result, Decimal("8000.00"))
+
+    def test_marginal_tiers_must_cover_aum_without_gaps(self):
+        with self.assertRaises(ValueError):
+            calculate_marginal_fee(2_000_000, [(0, 1_000_000, "0.01")])
 
     def test_annualization_uses_billing_frequency(self):
         for amount, frequency in [(2250, "quarterly"), (750, "monthly"), (9000, "annual")]:
