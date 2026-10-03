@@ -1,0 +1,16 @@
+{
+  "evidence_id": "patel_amendment",
+  "case_id": "CASE-002",
+  "evidence_type": "advisory_agreement",
+  "title": "Patel executed fee schedule amendment (synthetic)",
+  "source_path": "evidence/patel/amendment.json",
+  "content": {
+    "household": "Patel Household",
+    "annual_rate": 0.008,
+    "effective_date": "2025-10-15",
+    "expiration_date": null,
+    "pricing_method": "flat",
+    "clause": "Amended advisory rate of 0.80% on household assets.",
+    "synthetic": true
+  }
+}

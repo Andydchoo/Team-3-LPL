@@ -1,0 +1,28 @@
+{
+  "evidence_id": "chen_tier_schedule",
+  "case_id": "CASE-003",
+  "evidence_type": "advisory_agreement",
+  "title": "Chen marginal tier schedule (synthetic)",
+  "source_path": "evidence/chen/schedule_b.json",
+  "content": {
+    "household": "Chen Household",
+    "annual_rate": 0.00875,
+    "effective_date": "2024-06-01",
+    "expiration_date": null,
+    "pricing_method": "marginal",
+    "tiers": [
+      {
+        "lower": 0,
+        "upper": 1000000,
+        "annual_rate": 0.01
+      },
+      {
+        "lower": 1000000,
+        "upper": null,
+        "annual_rate": 0.0075
+      }
+    ],
+    "note": "annual_rate is informational; tiers govern.",
+    "synthetic": true
+  }
+}

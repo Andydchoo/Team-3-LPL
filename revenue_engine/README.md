@@ -22,8 +22,13 @@ the AWS owner may change storage without changing those shapes.
 - `CASE-001` / Anderson: implemented end to end with local synthetic evidence.
 - Flat pricing: implemented.
 - Marginal-tier calculation helper: implemented and tested for the Chen model.
-- CASE-002 through CASE-005 fixtures: intentionally reserved until their
-  evidence and ambiguity decisions are agreed in `docs/CONTRACTS.md`.
+- `CASE-002` Patel (flat, client overbilling), `CASE-003` Chen (marginal tiers,
+  $17,500 expected) and `CASE-004` Ramirez (explicit `excluded_assets` in the
+  agreement): implemented with local synthetic evidence. Regenerate fixtures
+  with `python scripts/build_secondary_cases.py`.
+- `CASE-005` Morgan: review-dependent; no fee impact is computed.
+- Assumption to confirm: Ramirez household AUM is a synthetic $1.0M, so
+  expected $6,000 vs billed $8,000 (the $2,000 difference is the 529 exclusion).
 
 The frontend adapter in `ui/services.py` is the merge point. Do not import
 Streamlit or AWS code into this package.

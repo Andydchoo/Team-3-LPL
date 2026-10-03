@@ -2,17 +2,21 @@
 
 import json
 from datetime import date
+from decimal import Decimal
 from pathlib import Path
 
 from .calculations import (
-    calculate_actual_fee, calculate_expected_fee, compare_expected_vs_actual,
-    decimal_value,
+    calculate_actual_fee, calculate_expected_fee, calculate_marginal_fee,
+    compare_expected_vs_actual, decimal_value,
 )
 from .contracts import Evidence, RevenueCase
 
 DEMO_DIR = Path(__file__).resolve().parent.parent / "data" / "demo"
 CASE_FILES = {
     "CASE-001": DEMO_DIR / "cases" / "CASE-001.json",
+    "CASE-002": DEMO_DIR / "cases" / "CASE-002.json",
+    "CASE-003": DEMO_DIR / "cases" / "CASE-003.json",
+    "CASE-004": DEMO_DIR / "cases" / "CASE-004.json",
     "CASE-005": DEMO_DIR / "cases" / "CASE-005.json",
 }
 
@@ -137,8 +141,8 @@ def _build_revenue_case(definition: dict, evidence: list[Evidence]) -> RevenueCa
     method = definition["calculation_method"]
     if method == "review_dependent":
         return _build_review_dependent_case(definition, evidence)
-    if method != "flat":
-        raise ValueError("This milestone supports flat or review_dependent pricing only")
+    if method not in {"flat", "marginal"}:
+        raise ValueError("Supported pricing is flat, marginal or review_dependent")
     as_of = date.fromisoformat(definition["as_of_date"])
     by_type = _index_evidence(definition, evidence)
     if any(
@@ -155,8 +159,8 @@ def _build_revenue_case(definition: dict, evidence: list[Evidence]) -> RevenueCa
         raise ValueError("Agreement and billing evidence are required")
     agreement = by_type["advisory_agreement"]
     billing = by_type["billing_configuration"]
-    if agreement["pricing_method"] != "flat":
-        raise ValueError("The agreement does not specify supported flat pricing")
+    if agreement["pricing_method"] != method:
+        raise ValueError("The agreement pricing method does not match the case")
     if date.fromisoformat(agreement["effective_date"]) > as_of:
         raise ValueError("Agreement is not yet effective on the evaluation date")
     expires = agreement.get("expiration_date")
@@ -166,7 +170,11 @@ def _build_revenue_case(definition: dict, evidence: list[Evidence]) -> RevenueCa
         raise ValueError("Billing configuration is not active on the evaluation date")
 
     expected_rate = decimal_value(agreement["annual_rate"])
+    # Exclusion from billing must be explicit in the agreement; never inferred.
+    excluded_assets = decimal_value(agreement.get("excluded_assets", 0))
     exception = by_type.get("pricing_exception")
+    if exception and method == "marginal":
+        raise ValueError("Exceptions to marginal pricing require human review")
     if exception:
         start = date.fromisoformat(exception["effective_date"])
         end = date.fromisoformat(exception["expiration_date"])
@@ -177,7 +185,21 @@ def _build_revenue_case(definition: dict, evidence: list[Evidence]) -> RevenueCa
         if start <= as_of <= end:
             expected_rate = decimal_value(exception["annual_rate"])
 
-    expected_fee = calculate_expected_fee(definition["aum"], expected_rate)
+    if method == "marginal":
+        billable = decimal_value(definition["aum"]) - excluded_assets
+        tiers = [
+            (tier["lower"], tier["upper"], tier["annual_rate"])
+            for tier in agreement["tiers"]
+        ]
+        expected_fee = calculate_marginal_fee(billable, tiers)
+        # Effective blended rate on billable AUM; the evidence keeps the schedule.
+        expected_rate = (
+            Decimal(0) if billable == 0 else expected_fee / billable
+        )
+    else:
+        expected_fee = calculate_expected_fee(
+            definition["aum"], expected_rate, excluded_assets=excluded_assets
+        )
     actual_rate = decimal_value(billing["annual_rate"])
     actual_fee = calculate_actual_fee(billing["billable_aum"], actual_rate)
     comparison = compare_expected_vs_actual(expected_fee, actual_fee)
@@ -196,7 +218,7 @@ def _build_revenue_case(definition: dict, evidence: list[Evidence]) -> RevenueCa
         "evidence_ids": [record["evidence_id"] for record in evidence],
         "status": "requires_review" if has_difference else "no_discrepancy",
         "as_of_date": definition["as_of_date"],
-        "calculation_method": "flat",
+        "calculation_method": method,
     }
 
 

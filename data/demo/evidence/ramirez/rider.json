@@ -1,0 +1,17 @@
+{
+  "evidence_id": "ramirez_exclusion_rider",
+  "case_id": "CASE-004",
+  "evidence_type": "advisory_agreement",
+  "title": "Ramirez agreement with asset exclusion (synthetic)",
+  "source_path": "evidence/ramirez/rider.json",
+  "content": {
+    "household": "Ramirez Household",
+    "annual_rate": 0.008,
+    "effective_date": "2024-09-01",
+    "expiration_date": null,
+    "pricing_method": "flat",
+    "excluded_assets": 250000,
+    "exclusion_note": "Account 529-RAM (College Savings) excluded from billable AUM",
+    "synthetic": true
+  }
+}

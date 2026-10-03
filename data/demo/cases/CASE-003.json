@@ -1,0 +1,12 @@
+{
+  "case_id": "CASE-003",
+  "household": "Chen Household",
+  "anomaly_type": "household_breakpoint",
+  "aum": 2000000,
+  "as_of_date": "2026-01-01",
+  "calculation_method": "marginal",
+  "evidence_paths": [
+    "evidence/chen/schedule_b.json",
+    "evidence/chen/billing.json"
+  ]
+}

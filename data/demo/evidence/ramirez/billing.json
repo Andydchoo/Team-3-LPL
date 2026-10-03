@@ -1,0 +1,17 @@
+{
+  "evidence_id": "ramirez_custodian_billing",
+  "case_id": "CASE-004",
+  "evidence_type": "billing_configuration",
+  "title": "Ramirez current billing configuration (synthetic)",
+  "source_path": "evidence/ramirez/billing.json",
+  "content": {
+    "household": "Ramirez Household",
+    "annual_rate": 0.008,
+    "billable_aum": 1000000,
+    "billing_frequency": "quarterly",
+    "effective_date": "2024-09-01",
+    "status": "active",
+    "note": "529 account still marked billable",
+    "synthetic": true
+  }
+}

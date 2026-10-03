@@ -1,0 +1,17 @@
+{
+  "evidence_id": "patel_custodian_billing",
+  "case_id": "CASE-002",
+  "evidence_type": "billing_configuration",
+  "title": "Patel current billing configuration (synthetic)",
+  "source_path": "evidence/patel/custodian_billing.json",
+  "content": {
+    "household": "Patel Household",
+    "annual_rate": 0.01,
+    "billable_aum": 800000,
+    "billing_frequency": "quarterly",
+    "effective_date": "2024-01-01",
+    "status": "active",
+    "note": "Legacy 1.00% schedule still configured",
+    "synthetic": true
+  }
+}

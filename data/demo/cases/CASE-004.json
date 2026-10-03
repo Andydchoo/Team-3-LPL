@@ -1,0 +1,12 @@
+{
+  "case_id": "CASE-004",
+  "household": "Ramirez Household",
+  "anomaly_type": "asset_exclusion",
+  "aum": 1000000,
+  "as_of_date": "2026-01-01",
+  "calculation_method": "flat",
+  "evidence_paths": [
+    "evidence/ramirez/rider.json",
+    "evidence/ramirez/billing.json"
+  ]
+}

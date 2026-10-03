@@ -1,0 +1,17 @@
+{
+  "evidence_id": "chen_custodian_billing",
+  "case_id": "CASE-003",
+  "evidence_type": "billing_configuration",
+  "title": "Chen current billing configuration (synthetic)",
+  "source_path": "evidence/chen/billing.json",
+  "content": {
+    "household": "Chen Household",
+    "annual_rate": 0.01,
+    "billable_aum": 2000000,
+    "billing_frequency": "quarterly",
+    "effective_date": "2024-06-01",
+    "status": "active",
+    "note": "Related accounts billed flat 1.00%; not householded",
+    "synthetic": true
+  }
+}

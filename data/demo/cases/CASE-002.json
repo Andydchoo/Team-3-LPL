@@ -1,0 +1,12 @@
+{
+  "case_id": "CASE-002",
+  "household": "Patel Household",
+  "anomaly_type": "agreement_amendment",
+  "aum": 800000,
+  "as_of_date": "2026-01-01",
+  "calculation_method": "flat",
+  "evidence_paths": [
+    "evidence/patel/amendment.json",
+    "evidence/patel/custodian_billing.json"
+  ]
+}

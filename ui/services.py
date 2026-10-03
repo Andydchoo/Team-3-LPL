@@ -13,148 +13,17 @@ from uuid import uuid4
 
 
 def get_revenue_case(case_id: str) -> dict[str, Any]:
-    """Load a deterministic case; engine-backed cases are preferred when available."""
-    if case_id in {"CASE-001", "CASE-005"}:
-        from revenue_engine import get_revenue_case as engine_get_revenue_case
+    """Load a deterministic case from the revenue engine (CASE-001 to CASE-005)."""
+    from revenue_engine import get_revenue_case as engine_get_revenue_case
 
-        return engine_get_revenue_case(case_id)
-
-    cases = {
-        "CASE-002": {
-            "case_id": "CASE-002", "household": "Patel Household",
-            "anomaly_type": "agreement_amendment", "aum": 800_000.0,
-            "expected_rate": 0.008, "actual_rate": 0.01,
-            "expected_annual_fee": 6_400.0, "actual_annual_fee": 8_000.0,
-            "annual_difference": 1_600.0,
-            "impact_direction": "potential_overbilling", "evidence_ids": [],
-            "status": "requires_review", "as_of_date": "2026-01-01",
-            "calculation_method": "flat",
-        },
-        "CASE-003": {
-            "case_id": "CASE-003", "household": "Chen Household",
-            "anomaly_type": "household_breakpoint", "aum": 2_000_000.0,
-            "expected_rate": 0.00875, "actual_rate": 0.01,
-            "expected_annual_fee": 17_500.0, "actual_annual_fee": 20_000.0,
-            "annual_difference": 2_500.0,
-            "impact_direction": "potential_overbilling", "evidence_ids": [],
-            "status": "requires_review", "as_of_date": "2026-01-01",
-            "calculation_method": "marginal",
-        },
-        "CASE-004": {
-            "case_id": "CASE-004", "household": "Ramirez Household",
-            "anomaly_type": "asset_exclusion", "aum": 250_000.0,
-            "expected_rate": 0.008, "actual_rate": 0.008,
-            "expected_annual_fee": 0.0, "actual_annual_fee": 2_000.0,
-            "annual_difference": 2_000.0,
-            "impact_direction": "potential_overbilling", "evidence_ids": [],
-            "status": "requires_review", "as_of_date": "2026-01-01",
-            "calculation_method": "review_dependent",
-        },
-    }
-    if case_id not in cases:
-        raise KeyError(case_id)
-    return cases[case_id]
+    return engine_get_revenue_case(case_id)
 
 
 def get_case_evidence(case_id: str) -> list[dict[str, Any]]:
     """Return evidence through the engine/storage boundary."""
-    if case_id in {"CASE-001", "CASE-005"}:
-        from revenue_engine import get_case_evidence as engine_get_case_evidence
+    from revenue_engine import get_case_evidence as engine_get_case_evidence
 
-        return engine_get_case_evidence(case_id)
-
-    mock_evidence: dict[str, list[dict[str, Any]]] = {
-        "CASE-002": [
-            {
-                "evidence_id": "patel_amendment",
-                "case_id": "CASE-002",
-                "evidence_type": "advisory_agreement",
-                "title": "Executed Advisory Fee Schedule Rider (Bilateral Amendment)",
-                "source_path": "evidence/patel/amendment.json",
-                "content": {
-                    "household": "Patel Household",
-                    "annual_rate": 0.0080,
-                    "effective_date": "2025-10-15",
-                    "expiration_date": None,
-                    "pricing_method": "flat",
-                    "clause": "Private Wealth Tier: Reduced rate of 80 bps upon account aggregate exceeding $750,000",
-                },
-            },
-            {
-                "evidence_id": "patel_custodian_billing",
-                "case_id": "CASE-002",
-                "evidence_type": "billing_configuration",
-                "title": "Custodian Fee Master Billing Profile",
-                "source_path": "evidence/patel/custodian_billing.json",
-                "content": {
-                    "household": "Patel Household",
-                    "annual_rate": 0.0100,
-                    "billable_aum": 800_000.0,
-                    "effective_date": "2024-01-01",
-                    "status": "active (stale schedule)",
-                },
-            },
-        ],
-        "CASE-003": [
-            {
-                "evidence_id": "chen_tier_schedule",
-                "case_id": "CASE-003",
-                "evidence_type": "advisory_agreement",
-                "title": "Advisory Agreement Schedule B - Tiered Breakpoint Schedule",
-                "source_path": "evidence/chen/schedule_b.json",
-                "content": {
-                    "household": "Chen Household",
-                    "annual_rate": 0.00875,
-                    "effective_date": "2024-06-01",
-                    "pricing_method": "marginal",
-                    "breakpoints": "Tier 1: $0-$1M @ 1.00% | Tier 2: $1M+ @ 0.75% (Effective blended: 0.875%)",
-                },
-            },
-            {
-                "evidence_id": "chen_custodian_billing",
-                "case_id": "CASE-003",
-                "evidence_type": "billing_configuration",
-                "title": "Custodian Sub-Account Billing Profile",
-                "source_path": "evidence/chen/billing.json",
-                "content": {
-                    "household": "Chen Household",
-                    "annual_rate": 0.0100,
-                    "billable_aum": 2_000_000.0,
-                    "status": "active (billed as standalone flat tiers)",
-                },
-            },
-        ],
-        "CASE-004": [
-            {
-                "evidence_id": "ramirez_exclusion_rider",
-                "case_id": "CASE-004",
-                "evidence_type": "advisory_agreement",
-                "title": "Advisory Agreement Rider - Asset Exclusion Stipulation",
-                "source_path": "evidence/ramirez/rider.json",
-                "content": {
-                    "household": "Ramirez Household",
-                    "annual_rate": 0.0,
-                    "effective_date": "2024-09-01",
-                    "pricing_method": "flat",
-                    "exclusion_note": "Account #529-RAM (College Savings) expressly excluded from billable AUM",
-                },
-            },
-            {
-                "evidence_id": "ramirez_custodian_billing",
-                "case_id": "CASE-004",
-                "evidence_type": "billing_configuration",
-                "title": "Custodian Fee Debit Record",
-                "source_path": "evidence/ramirez/billing.json",
-                "content": {
-                    "household": "Ramirez Household",
-                    "annual_rate": 0.0080,
-                    "billable_aum": 250_000.0,
-                    "status": "active (inappropriately flagged billable)",
-                },
-            },
-        ],
-    }
-    return mock_evidence.get(case_id, [])
+    return engine_get_case_evidence(case_id)
 
 
 # Cases with a live Bedrock investigate_case path (local engine tools).
