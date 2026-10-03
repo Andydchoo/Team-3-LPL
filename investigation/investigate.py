@@ -6,13 +6,12 @@ import json
 import os
 from typing import Any
 
-import boto3
 from botocore.exceptions import BotoCoreError, ClientError
 
-from revenue_engine import get_case_evidence
+from integration.bedrock_runtime import create_bedrock_client
 from revenue_engine.contracts import Investigation
 
-from .tools import dispatch_tool, tool_config_both_tools
+from .tools import dispatch_tool, get_case_evidence, tool_config_both_tools
 from .validate import (
     extract_json_object,
     investigation_error,
@@ -83,7 +82,7 @@ def _tool_uses(content: list[dict[str, Any]]) -> list[dict[str, Any]]:
 
 def _run_converse(case_id: str) -> tuple[str, set[str]]:
     """Run tool-use turns; return final assistant text and tool names called."""
-    client = boto3.client("bedrock-runtime", region_name=_region())
+    client = create_bedrock_client()
     messages: list[dict[str, Any]] = [
         {
             "role": "user",

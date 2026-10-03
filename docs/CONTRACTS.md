@@ -9,10 +9,10 @@ definitions are in `contracts/revenuetwin.schema.json`.
 
 | Interface | Return value | Owner | Current status |
 |---|---|---|---|
-| `get_revenue_case(case_id)` | RevenueCase dictionary | Engine | CASE-001 implemented |
-| `get_case_evidence(case_id)` | Ordered list of Evidence dictionaries | Engine contract; AWS storage adapter | CASE-001 local evidence implemented |
-| `investigate_case(case_id)` | Investigation dictionary | AI / Bedrock | Contract only |
-| `record_review(case_id, decision)` | ReviewRecord dictionary | AWS / integration | Contract only |
+| `get_revenue_case(case_id)` | RevenueCase dictionary | Engine | CASE-001 flat and CASE-005 review-dependent local fixtures implemented |
+| `get_case_evidence(case_id)` | Ordered list of Evidence dictionaries | Engine contract; AWS storage adapter | CASE-001 private S3 reads validated; CASE-005 local evidence available |
+| `investigate_case(case_id)` | Investigation dictionary | AI / Bedrock | Anderson agent and validating AWS adapter passed two live S3-backed investigations |
+| `record_review(case_id, decision)` | ReviewRecord dictionary | AWS / integration | Human-selected decision saved to private S3 and read back successfully |
 
 Import the implemented tools from `revenue_engine`. Case lookups raise `KeyError`
 for unknown IDs. Source read failures raise `OSError`; malformed records or
@@ -23,6 +23,21 @@ mutations cannot alter the files or subsequent calls.
 
 The AI is given only the two read-only tools. The application calls record_review
 after a human action. No AI tool may record reviews or modify financial records.
+
+For live AWS integration, import the two read-only names from
+`integration.case_tools`. The S3-backed case adapter delegates to the existing
+engine using the same source evidence returned by the evidence tool. The schemas
+and one-argument signatures are unchanged. See `AWS_SETUP.md` for configuration
+and the live preflight; no AWS credential values belong in the repository.
+
+`ui.services` selects the backend explicitly with `REVENUE_BACKEND=local` (the
+default) or `aws`. Local mode uses the existing demo fixtures, mock investigation
+and session-only reviews. AWS mode supports CASE-001 only and uses private S3
+for both case evidence and human review writes. Missing services and failed AWS
+requests never fall back to mock success. The live adapter calls the AI owner's
+`investigation.investigate_case`, validates its response shape, case ID and
+evidence references, and returns `investigation_error` on failure. Both registered
+read-only agent tools now delegate to `integration.case_tools` in AWS mode.
 
 ## Financial case semantics
 
@@ -50,8 +65,9 @@ after a human action. No AI tool may record reviews or modify financial records.
 ## Pricing and uncertainty reserved for subsequent cases
 
 `calculation_method` distinguishes flat, volume, marginal and review-dependent
-pricing. CASE-001 implements flat pricing only; declaring another method raises
-ValueError until that method is implemented and tested.
+pricing. CASE-001 implements flat pricing, and the incoming Morgan contribution
+adds a review-dependent path for CASE-005. Other pricing methods still raise
+ValueError until implemented and tested.
 
 Chen requires marginal pricing: $1M at 1.00% plus $1M at 0.75% = $17,500.
 For a multi-tier case, `expected_rate` represents the effective blended rate
@@ -64,10 +80,11 @@ there is no inferred universal account-type policy for the curated engine.
 
 For Morgan, uncertain contractual financial values may be null, with
 `impact_direction` and `calculation_method` set to `review_dependent`. Do not
-invent an AUM or turn a discussion note into an authorization. Final Morgan and
-Ramirez fixture details must be resolved before those cases are implemented.
-CASE-002 through CASE-005 are reserved for Patel, Chen, Ramirez and Morgan;
-they are not yet implemented.
+invent an AUM or turn a discussion note into an authorization. The AI owner's
+merged Morgan fixture declares $1M of synthetic AUM and retains null annual fee
+and impact values. This fixture assumption still needs engine-owner signoff
+before promotion to AWS. CASE-002 through CASE-004 remain reserved for Patel,
+Chen and Ramirez; their curated engine paths are not yet implemented.
 
 ## Evidence contract
 
@@ -92,8 +109,15 @@ references before rendering. No financial arithmetic is delegated to the model.
 Review decisions are `send_for_review`, `investigate_further` and `dismiss`.
 The application supplies the decision and records a unique `review_id`, the case
 ID, `actor: "human"` and a UTC ISO timestamp in `recorded_at`. These are workflow
-decisions; they neither authorize nor execute a fee change. Persistence remains
-the AWS/integration owner's next deliverable.
+decisions; they neither authorize nor execute a fee change. AWS mode writes one
+encrypted JSON record at `reviews/CASE-001/<review_id>.json` in the verified
+private bucket. The UTC timestamp ends in `Z`, as required by the schema.
+Confirmation is returned only after S3 acknowledges the write; failure leaves
+the UI without a confirmed decision and allows retry. Starting another review
+does not delete or revoke a previously persisted record. Live write permissions
+and Streamlit review confirmation passed event-account validation with the
+coordinator's `investigate_further` choice; the read-back matched the UI record
+and validated against ReviewRecord.
 
 ## JSON Schema use
 
