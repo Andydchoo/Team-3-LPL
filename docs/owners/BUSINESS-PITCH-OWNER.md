@@ -224,6 +224,16 @@ The future vision comes AFTER the current value is understandable.
 Do not bury the startup under technical terminology.
 
 ==================================================
+BUSINESS STORY
+==================================================
+
+RevenueTwin is a wealth-management revenue integrity platform that helps advisory firms catch billing problems before they become costly or risky. In a typical practice, the advisory agreement, pricing exceptions, household relationships, and actual billing can drift out of alignment. That creates two kinds of risk: the firm misses legitimate revenue through underbilling, and clients can be overcharged or billed inconsistently.
+
+The story is anchored in a simple fictional example: an Anderson household with $1.2M AUM is supposed to be billed at 1.00%, but the current configuration bills at 0.75% because a temporary pricing exception expired. RevenueTwin detects the discrepancy, uses AI to investigate the supporting evidence, explains the likely cause, and recommends human review rather than automatically changing the client’s fee.
+
+The value is not revenue maximization. It is revenue protection, client protection, operational efficiency, and better governance. In short: RevenueTwin helps wealth-management firms know what they should be earning, what they are actually earning, and why they differ—before the discrepancy becomes a financial or trust problem.
+
+==================================================
 MY COLLABORATION WITH TECHNICAL TEAM
 ==================================================
 
