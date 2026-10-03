@@ -7,9 +7,9 @@ sixth teammate. MASTER.md sets product scope and CONTRACTS.md sets interfaces.
 | Owner | Owned locations / deliverables | Starting dependency |
 |---|---|---|
 | Revenue engine | `revenue_engine/`, `data/demo/cases/`, evidence content, financial tests, shared contracts | CASE-001 foundation available |
-| AI / Bedrock | Planned `investigation/`; investigate_case, two tool integrations, response validation | Use the two local CASE-001 tools immediately |
-| Frontend | Planned `app.py` and `ui/`; dashboard, evidence viewer, human controls | Shared shapes and CASE-001 data; clearly marked mocks for unfinished services |
-| AWS / integration | Planned `integration/`; credentials/config, S3 storage adapter, review persistence, integration tests | Validate Bedrock and private S3 access immediately |
+| AI / Bedrock | `investigation/`; investigate_case, two tool integrations, response validation | Anderson contribution integrated; two live S3-backed investigations passed |
+| Frontend | `app.py` and `ui/`; dashboard, evidence viewer, human controls | Pulled frontend works in local demo mode; services select local or AWS explicitly |
+| AWS / integration | `integration/`, `infra/`; credentials/config, S3 storage adapter, review persistence, integration tests | Anderson live workflow and human review write/read-back passed on the feature branch |
 | Business / pitch | Planned `docs/pitch/`; product story, synthetic impact narrative, acquisition thesis, rehearsal | Agreed financial example and honest capability status |
 
 The engine owns evidence contents; AWS owns storage/access. The frontend calls
@@ -55,8 +55,25 @@ live Bedrock result. Use the first live gate before expanding AWS architecture.
 
 Foundation: implemented in this branch; run the README test command to verify.
 CASE-001 uses a fixed January 1, 2026 evaluation date and three local synthetic
-evidence documents. AI, frontend, S3 and human review persistence are contracts
-and assigned work.
+evidence documents. The frontend contribution is merged into main and pulled into
+this checkout. AWS setup, S3 adapters, review storage and frontend service/error
+connections are implemented locally with offline tests. The first AWS access
+milestone has passed in the event account: identity, us-east-1, private S3 evidence
+and a real Nova Lite response. The AI owner's Anderson investigation package is
+integrated. Two real Streamlit investigations called both S3-backed tools and
+returned validated explanations; the coordinator's `investigate_further` choice
+was saved and read back from S3. The Anderson vertical slice gate passes on
+`codex/aws-integration`; review/merge into stable main and visual rehearsal remain.
+See AWS_SETUP.md and `validation/aws-anderson-2026-10-03.json` for the evidence.
+
+The AWS feature branch retains the authorship of the AI owner's four Anderson
+commits (one-tool smoke, two-tool smoke, structured investigation, and reliability
+checks). AWS changes connect those tools to private S3 and add bounded, paced
+clients. The AI owner's later Morgan fixtures, review-dependent engine path,
+prompt guidance and reliability checks are now retained by merging main. Local
+UI reads use those fixtures, with mock investigations remaining explicitly local.
+Morgan's synthetic $1M AUM assumption still needs engine-owner signoff, and its
+AWS storage/live review flow remains outside the validated Anderson scope.
 
 The legacy dataset and report remain a separate regression demo. Follow-up engine
 work includes volume/marginal pricing, curated secondary cases and corrected

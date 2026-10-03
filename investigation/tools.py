@@ -5,7 +5,27 @@ from __future__ import annotations
 import json
 from typing import Any, Callable
 
-from revenue_engine import get_case_evidence, get_revenue_case
+from revenue_engine import get_case_evidence as local_case_evidence
+from revenue_engine import get_revenue_case as local_revenue_case
+from integration.service_boundary import backend_mode, require_live_case
+
+
+def get_revenue_case(case_id: str):
+    if backend_mode() == "aws":
+        require_live_case(case_id)
+        from integration.case_tools import get_revenue_case as s3_case
+
+        return s3_case(case_id)
+    return local_revenue_case(case_id)
+
+
+def get_case_evidence(case_id: str):
+    if backend_mode() == "aws":
+        require_live_case(case_id)
+        from integration.case_tools import get_case_evidence as s3_evidence
+
+        return s3_evidence(case_id)
+    return local_case_evidence(case_id)
 
 TOOL_HANDLERS: dict[str, Callable[..., Any]] = {
     "get_revenue_case": get_revenue_case,

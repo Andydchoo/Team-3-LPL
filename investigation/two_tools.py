@@ -6,7 +6,7 @@ import json
 import os
 from typing import Any
 
-import boto3
+from integration.bedrock_runtime import create_bedrock_client
 from botocore.exceptions import BotoCoreError, ClientError
 
 from .tools import dispatch_tool, tool_config_both_tools
@@ -56,7 +56,7 @@ def run_two_tool_smoke(case_id: str = "CASE-001") -> dict[str, Any]:
 
     Raises ClientError/BotoCoreError on AWS failures so the caller can see them.
     """
-    client = boto3.client("bedrock-runtime", region_name=_region())
+    client = create_bedrock_client()
     messages: list[dict[str, Any]] = [
         {
             "role": "user",

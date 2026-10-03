@@ -11,9 +11,18 @@ from datetime import datetime, timezone
 from typing import Any
 from uuid import uuid4
 
+from integration.service_boundary import (
+    IntegrationUnavailable, backend_mode, integration_error_message, require_live_case,
+)
+
 
 def get_revenue_case(case_id: str) -> dict[str, Any]:
-    """Load a deterministic case; engine-backed cases are preferred when available."""
+    """Load a deterministic case through the selected storage backend."""
+    if backend_mode() == "aws":
+        require_live_case(case_id)
+        from integration.case_tools import get_revenue_case as aws_get_revenue_case
+
+        return aws_get_revenue_case(case_id)
     if case_id in {"CASE-001", "CASE-005"}:
         from revenue_engine import get_revenue_case as engine_get_revenue_case
 
@@ -58,6 +67,11 @@ def get_revenue_case(case_id: str) -> dict[str, Any]:
 
 def get_case_evidence(case_id: str) -> list[dict[str, Any]]:
     """Return evidence through the engine/storage boundary."""
+    if backend_mode() == "aws":
+        require_live_case(case_id)
+        from integration.case_tools import get_case_evidence as aws_get_case_evidence
+
+        return aws_get_case_evidence(case_id)
     if case_id in {"CASE-001", "CASE-005"}:
         from revenue_engine import get_case_evidence as engine_get_case_evidence
 
@@ -157,18 +171,17 @@ def get_case_evidence(case_id: str) -> list[dict[str, Any]]:
     return mock_evidence.get(case_id, [])
 
 
-# Cases with a live Bedrock investigate_case path (local engine tools).
-_LIVE_INVESTIGATION_CASES = frozenset({"CASE-001", "CASE-005"})
-
-
 def investigate_case(case_id: str) -> dict[str, Any]:
-    """Prefer live Bedrock investigation; fall back to mocks for unfinished cases."""
-    try:
-        from investigation import investigate_case as live_investigate_case
-    except ImportError:
-        live_investigate_case = None
-    if live_investigate_case is not None and case_id in _LIVE_INVESTIGATION_CASES:
+    """Use the explicit backend; AWS errors never become mock explanations."""
+    if backend_mode() == "aws":
+        require_live_case(case_id)
+        from integration.investigation_adapter import investigate_case as live_investigate_case
+
         return live_investigate_case(case_id)
+    return _mock_investigate_case(case_id)
+
+
+def _mock_investigate_case(case_id: str) -> dict[str, Any]:
 
     investigations: dict[str, dict[str, Any]] = {
         "CASE-001": {
@@ -242,6 +255,26 @@ def investigate_case(case_id: str) -> dict[str, Any]:
             "recommended_action": "Toggle custodian asset classification to 'Non-Billable / Excluded' and initiate client fee refund memo.",
             "requires_human_review": True,
         },
+        "CASE-005": {
+            "case_id": "CASE-005",
+            "investigation_status": "conflicting_evidence",
+            "likely_cause": "Preferred pricing discussion lacks finalized authorization",
+            "summary": (
+                "The agreement records 1.00% while billing records 0.75%. The "
+                "advisor note documents a discussion about extending preferred "
+                "pricing, without finalized authorization. Financial impact "
+                "remains review-dependent."
+            ),
+            "evidence_strength": "medium",
+            "evidence_used": [
+                {"evidence_id": "morgan_agreement", "finding": "Agreement records a 1.00% annual rate."},
+                {"evidence_id": "morgan_billing", "finding": "Billing records a 0.75% annual rate."},
+                {"evidence_id": "morgan_internal_note", "finding": "Discussion-only note is not finalized authorization."},
+            ],
+            "uncertainties": ["Finalized authorization for preferred pricing is unavailable."],
+            "recommended_action": "Route the case to authorized human review before any pricing decision.",
+            "requires_human_review": True,
+        },
     }
 
     if case_id in investigations:
@@ -261,15 +294,16 @@ def investigate_case(case_id: str) -> dict[str, Any]:
 
 
 def record_review(case_id: str, decision: str) -> dict[str, Any]:
-    """Return a session-only review until AWS persistence is connected."""
-    try:
+    """Persist in AWS mode; keep the explicitly local demo session-only."""
+    if backend_mode() == "aws":
+        require_live_case(case_id)
         from integration import record_review as live_record_review
-    except ImportError:
-        live_record_review = None
-    if live_record_review is not None:
-        return live_record_review(case_id, decision)
 
-    timestamp = datetime.now(timezone.utc).isoformat(timespec="seconds")
+        return live_record_review(case_id, decision)
+    if decision not in {"send_for_review", "investigate_further", "dismiss"}:
+        raise IntegrationUnavailable("Choose Send for Review, Investigate Further or Dismiss.")
+    get_revenue_case(case_id)
+    timestamp = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
     return {
         "review_id": f"REV-{uuid4().hex[:8].upper()}",
         "case_id": case_id,

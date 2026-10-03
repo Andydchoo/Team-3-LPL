@@ -1,0 +1,66 @@
+{
+  "validated_code_commit": "a7b5a29",
+  "completed_at_utc": "2026-10-03T06:04:59Z",
+  "method": "Streamlit AppTest with real AWS service calls; tool handlers wrapped only to record successful calls",
+  "backend": "aws",
+  "account": "514878621897",
+  "region": "us-east-1",
+  "bucket": "revenuetwin-514878621897-evidence",
+  "model_id": "amazon.nova-lite-v1:0",
+  "case_id": "CASE-001",
+  "passed": true,
+  "live_investigations": [
+    {
+      "run": 1,
+      "passed": true,
+      "tools_called": ["get_revenue_case", "get_case_evidence"],
+      "tool_source": "private_s3",
+      "expected_annual_fee": 12000.0,
+      "actual_annual_fee": 9000.0,
+      "annual_difference": 3000.0,
+      "investigation_status": "supported_explanation",
+      "evidence_used_count": 3,
+      "requires_human_review": true,
+      "anderson_acceptance_failures": []
+    },
+    {
+      "run": 2,
+      "passed": true,
+      "tools_called": ["get_revenue_case", "get_case_evidence"],
+      "tool_source": "private_s3",
+      "expected_annual_fee": 12000.0,
+      "actual_annual_fee": 9000.0,
+      "annual_difference": 3000.0,
+      "investigation_status": "supported_explanation",
+      "evidence_used_count": 3,
+      "requires_human_review": true,
+      "anderson_acceptance_failures": []
+    }
+  ],
+  "evidence_ids": ["anderson_agreement", "anderson_exception", "anderson_billing"],
+  "streamlit_checks": {
+    "finding_rendered": true,
+    "three_source_documents_rendered": true,
+    "application_exceptions": 0,
+    "service_errors": 0,
+    "review_confirmation_rendered": true
+  },
+  "human_review": {
+    "selection_source": "Coordinator selected Investigate further in this chat",
+    "record": {
+      "review_id": "REV-05679EDC5B8C4C27BC6AA749D1CA4127",
+      "case_id": "CASE-001",
+      "decision": "investigate_further",
+      "actor": "human",
+      "recorded_at": "2026-10-03T06:04:59Z"
+    },
+    "object_key": "reviews/CASE-001/REV-05679EDC5B8C4C27BC6AA749D1CA4127.json",
+    "read_back_matches_ui_record": true,
+    "shared_review_schema_valid": true,
+    "server_side_encryption": "AES256"
+  },
+  "offline_tests_passed": 82,
+  "failure_path_validation": "Offline service and Streamlit tests cover Bedrock failure/retry and denied review writes; no live IAM permissions were modified",
+  "iam_status": "Existing event role used; scoped runtime policy prepared but not attached",
+  "release_gate": "Feature branch review, merge into main, and visual demo rehearsal remain"
+}

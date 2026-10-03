@@ -7,13 +7,16 @@ Strictly adheres to docs/CONTRACTS.md and ui/README.md.
 from __future__ import annotations
 
 import textwrap
+from html import escape
 from typing import Any
 import streamlit as st
 
 from ui.services import (
+    backend_mode,
     get_case_evidence,
     get_revenue_case,
     investigate_case,
+    integration_error_message,
     record_review,
 )
 
@@ -1186,6 +1189,13 @@ def render_architecture() -> None:
 def render_case(case: dict[str, Any]) -> None:
     investigation = st.session_state.get("investigation")
     review = st.session_state.get("review")
+    live = backend_mode() == "aws"
+    investigation_source = "AWS" if live else "DEMO MOCK"
+
+    if st.session_state.get("review_error"):
+        st.error("Decision was not confirmed as recorded. " + st.session_state.review_error)
+    if st.session_state.get("investigation_notice"):
+        st.error(st.session_state.investigation_notice)
 
     # Workflow progress stage: 1=Detect, 2=Investigate, 3=Explain, 4=Quantify, 5=Human Review
     stage = 4 if review else (2 if investigation else 1)
@@ -1218,6 +1228,7 @@ def render_case(case: dict[str, Any]) -> None:
 
     # Human workflow confirmation; this does not execute or authorize a fee change.
     if review:
+        st.caption("Saved to private S3." if live else "Recorded in this demo session only.")
         render_html(
             f"""
             <div class="audit-cert">
@@ -1281,13 +1292,24 @@ def render_case(case: dict[str, Any]) -> None:
         )
 
     # Right Column: AI Contextual Investigation
+    with col_left:
+        try:
+            source_evidence = get_case_evidence(case["case_id"])
+        except Exception as error:
+            st.warning("Source evidence is unavailable. " + integration_error_message(error))
+        else:
+            with st.expander("Synthetic source evidence"):
+                for item in source_evidence:
+                    st.write(item["title"])
+                    st.json(item["content"])
+
     with col_right:
         if not investigation and not review:
             render_html(
-                """
+                f"""
                 <div class="ai-card">
                     <div class="ai-header-badge">
-                        <span>◈ RevenueTwin investigation · DEMO MOCK</span>
+                        <span>◈ RevenueTwin investigation · {investigation_source}</span>
                     </div>
                     <div class="ai-cause-title">Uncover the Root Cause</div>
                     <div class="ai-summary">
@@ -1299,12 +1321,14 @@ def render_case(case: dict[str, Any]) -> None:
                 """
             )
             st.write("")
-            if st.button("⚡ Investigate with RevenueTwin · Demo", type="primary", use_container_width=True):
+            button_label = "⚡ Investigate with RevenueTwin · " + ("AWS" if live else "Demo")
+            if st.button(button_label, type="primary", use_container_width=True):
                 with st.spinner("Reviewing contract evidence and billing configuration..."):
+                    st.session_state.investigation_notice = None
                     try:
                         st.session_state.investigation = investigate_case(case["case_id"])
                     except Exception as err:
-                        st.error(f"Investigation service unavailable: {err}")
+                        st.session_state.investigation_notice = integration_error_message(err)
                     st.rerun()
 
         elif investigation:
@@ -1314,10 +1338,11 @@ def render_case(case: dict[str, Any]) -> None:
 def render_investigation_details(investigation: dict[str, Any], case: dict[str, Any]) -> None:
     """Render structured AI investigation conforming to docs/CONTRACTS.md."""
     status = investigation.get("investigation_status", "supported_explanation")
-    cause = investigation.get("likely_cause") or "Root Cause Analysis"
+    cause = escape(investigation.get("likely_cause") or "Root Cause Analysis")
     summary = investigation.get("summary", "Analysis completed.")
     evidence_strength = str(investigation.get("evidence_strength", "low")).upper()
-    recommended = investigation.get("recommended_action", "Send for compliance review.")
+    recommended = escape(investigation.get("recommended_action", "Send for compliance review."))
+    investigation_source = "AWS" if backend_mode() == "aws" else "DEMO MOCK"
 
     # Graceful handling if investigation encountered error or conflicting evidence
     if status == "investigation_error":
@@ -1331,7 +1356,8 @@ def render_investigation_details(investigation: dict[str, Any], case: dict[str, 
     try:
         raw_evidence = get_case_evidence(case["case_id"])
         evidence_lookup = {item["evidence_id"]: item for item in raw_evidence}
-    except Exception:
+    except Exception as error:
+        st.warning("Evidence could not be refreshed. " + integration_error_message(error))
         evidence_lookup = {}
 
     ev_cards: list[tuple[str, str]] = []
@@ -1344,11 +1370,11 @@ def render_investigation_details(investigation: dict[str, Any], case: dict[str, 
             ev_cards.append((eid.replace("_", " ").title(), used.get("finding", "")))
 
     if not ev_cards:
-        ev_cards = [("Custodian Records", "Evidence connected and verified via custody data stream.")]
+        ev_cards = [("Evidence", "No supporting evidence was cited.")]
 
     # Render AI card with clean HTML
     ev_html_rows = "".join(
-        f'<div class="evidence-card"><span class="ev-label">{lbl}</span><span class="ev-val">{v}</span></div>'
+        f'<div class="evidence-card"><span class="ev-label">{escape(lbl)}</span><span class="ev-val">{escape(v)}</span></div>'
         for lbl, v in ev_cards
     )
 
@@ -1356,10 +1382,10 @@ def render_investigation_details(investigation: dict[str, Any], case: dict[str, 
         f"""
         <div class="ai-card">
             <div class="ai-header-badge">
-                <span>◈ RevenueTwin investigation · DEMO MOCK · Evidence strength {evidence_strength}</span>
+                <span>◈ RevenueTwin investigation · {investigation_source} · Evidence strength {evidence_strength}</span>
             </div>
             <div class="ai-cause-title">{cause}</div>
-            <div class="ai-summary">{summary}</div>
+            <div class="ai-summary">{escape(summary)}</div>
             <div style="margin:16px 0 10px;">
                 <div style="font-size:11px;font-family:'JetBrains Mono';font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;">
                     Corroborating Evidence Ledger
@@ -1382,21 +1408,27 @@ def render_investigation_details(investigation: dict[str, Any], case: dict[str, 
         btn_col1, btn_col2, btn_col3 = st.columns(3)
         with btn_col1:
             if st.button("🟢 Send for Review", type="primary", use_container_width=True):
-                st.session_state.review = record_review(case["case_id"], "send_for_review")
-                st.rerun()
+                save_human_review(case["case_id"], "send_for_review")
         with btn_col2:
             if st.button("🟡 Investigate Further", use_container_width=True):
-                st.session_state.review = record_review(case["case_id"], "investigate_further")
-                st.rerun()
+                save_human_review(case["case_id"], "investigate_further")
         with btn_col3:
             if st.button("⚪ Dismiss Finding", use_container_width=True):
-                st.session_state.review = record_review(case["case_id"], "dismiss")
-                st.rerun()
+                save_human_review(case["case_id"], "dismiss")
     else:
         st.write("")
-        if st.button("Re-evaluate Case / Revoke Decision", use_container_width=True):
+        if st.button("Start another review", use_container_width=True):
             st.session_state.review = None
             st.rerun()
+
+
+def save_human_review(case_id: str, decision: str) -> None:
+    try:
+        st.session_state.review = record_review(case_id, decision)
+        st.session_state.review_error = None
+    except Exception as error:
+        st.session_state.review_error = integration_error_message(error)
+    st.rerun()
 
 
 # ---------------------------------------------------------------------------
@@ -1446,13 +1478,17 @@ def render_sidebar() -> None:
 
         st.markdown("---")
         st.markdown("### System Telemetry")
+        live = backend_mode() == "aws"
+        investigation_label = "Bedrock agent · AWS mode" if live else "Demo mock · Bedrock planned"
+        evidence_label = "Private S3 · AWS mode" if live else "Local synthetic fixtures"
+        review_label = "Private S3 · AWS mode" if live else "Session-only demo"
         render_html(
-            """
+            f"""
             <div style="font-size:11px;font-family:'JetBrains Mono';color:#94A3B8;line-height:1.8;">
                 <div>Engine: <span style="color:#34D399;">Local deterministic Python</span></div>
-                <div>Investigation: <span style="color:#FBBF24;">Demo mock · Bedrock planned</span></div>
-                <div>Evidence: <span style="color:#34D399;">Local synthetic fixtures</span></div>
-                <div>Review persistence: <span style="color:#FBBF24;">Session mock · AWS planned</span></div>
+                <div>Investigation: <span style="color:#FBBF24;">{investigation_label}</span></div>
+                <div>Evidence: <span style="color:#34D399;">{evidence_label}</span></div>
+                <div>Review persistence: <span style="color:#FBBF24;">{review_label}</span></div>
             </div>
             """
         )
@@ -1463,6 +1499,8 @@ def render_sidebar() -> None:
             st.session_state.case_id = "CASE-001"
             st.session_state.investigation = None
             st.session_state.review = None
+            st.session_state.review_error = None
+            st.session_state.investigation_notice = None
             st.rerun()
 
 
@@ -1482,6 +1520,20 @@ def main() -> None:
     if "case_id" not in st.session_state:
         st.session_state.case_id = "CASE-001"
 
+    try:
+        mode = backend_mode()
+    except Exception as error:
+        st.error(integration_error_message(error))
+        st.stop()
+    st.caption("AWS mode · Anderson only · Synthetic data" if mode == "aws" else
+               "Offline demo · Mock investigation · Session-only reviews · Synthetic data")
+
+    context = (mode, st.session_state.case_id)
+    if st.session_state.get("service_context") != context:
+        for key in ("investigation", "review", "review_error", "investigation_notice"):
+            st.session_state[key] = None
+        st.session_state.service_context = context
+
     render_sidebar()
 
     if st.session_state.screen == "dashboard":
@@ -1491,7 +1543,9 @@ def main() -> None:
             case = get_revenue_case(st.session_state.case_id)
             render_case(case)
         except Exception as exc:
-            st.error(f"Error loading revenue case {st.session_state.case_id}: {exc}")
+            st.error("Unable to load this case. " + integration_error_message(exc))
+            if st.button("Retry loading case"):
+                st.rerun()
             if st.button("Return to Dashboard"):
                 st.session_state.screen = "dashboard"
                 st.rerun()
