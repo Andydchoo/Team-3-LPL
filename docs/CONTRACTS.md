@@ -11,7 +11,7 @@ definitions are in `contracts/revenuetwin.schema.json`.
 |---|---|---|---|
 | `get_revenue_case(case_id)` | RevenueCase dictionary | Engine | CASE-001 implemented |
 | `get_case_evidence(case_id)` | Ordered list of Evidence dictionaries | Engine contract; AWS storage adapter | CASE-001 local tools and private S3 adapter implemented; live S3 reads validated |
-| `investigate_case(case_id)` | Investigation dictionary | AI / Bedrock | UI mock and validating AWS handoff adapter; live agent pending |
+| `investigate_case(case_id)` | Investigation dictionary | AI / Bedrock | Anderson agent integrated with validating AWS adapter; live tool-use validation pending |
 | `record_review(case_id, decision)` | ReviewRecord dictionary | AWS / integration | Private S3 persistence implemented; live write pending |
 
 Import the implemented tools from `revenue_engine`. Case lookups raise `KeyError`
@@ -34,10 +34,10 @@ and the live preflight; no AWS credential values belong in the repository.
 default) or `aws`. Local mode uses the existing demo fixtures, mock investigation
 and session-only reviews. AWS mode supports CASE-001 only and uses private S3
 for both case evidence and human review writes. Missing services and failed AWS
-requests never fall back to mock success. The live adapter expects the AI owner
-to export `investigation.investigate_case`, validates its response shape, case ID
-and evidence references, and returns `investigation_error` on failure. The AI
-owner must wire both read-only tools to `integration.case_tools`.
+requests never fall back to mock success. The live adapter calls the AI owner's
+`investigation.investigate_case`, validates its response shape, case ID and
+evidence references, and returns `investigation_error` on failure. Both registered
+read-only agent tools now delegate to `integration.case_tools` in AWS mode.
 
 ## Financial case semantics
 

@@ -1,9 +1,10 @@
-# AWS owner: first live integration milestone
+# AWS owner: Anderson integration
 
 This guide follows `owners/AWS-INTEGRATION-OWNER.md`. The current AWS work adds
 credential setup, private S3 evidence storage/access and real service preflight
-checks. The frontend is now pulled into this checkout. Integration connects its
-existing service boundary; the investigation agent remains the AI owner's work.
+checks. The frontend and the AI owner's Anderson agent are integrated on
+`codex/aws-integration`. Integration connects their existing service and tool
+boundaries; the agent's prompt and investigation loop remain the AI owner's work.
 
 ## 1. Prepare the local environment
 
@@ -104,7 +105,8 @@ Only the engine's explicitly synthetic documents are uploaded. Upload is followe
 by authenticated reads. Bucket privacy verification requires inspection permissions;
 an AccessDenied result does not establish that a bucket is public or private.
 Ask the event administrator for the specific missing permission if role changes
-are restricted. Adding this code has not deployed a bucket, policy or evidence.
+are restricted. The event bucket named above has already been created, secured,
+and populated with the three synthetic documents. No IAM policy was deployed.
 
 ## 4. Run the complete access preflight
 
@@ -173,13 +175,26 @@ Changing shell environment variables requires restarting the Streamlit process;
 setting credentials in another terminal does not change the running process's
 environment. The example `.env` file is not loaded automatically.
 
-The AI owner's package must export `investigation.investigate_case(case_id)` and
-register both read-only tools from `integration.case_tools`. The current pulled
-frontend has no investigation package; AWS mode therefore reports a clean
-integration error until that handoff is available. The integration adapter
+The integrated AI package exports `investigation.investigate_case(case_id)`.
+Its two registered read-only tools select the S3 adapters in AWS mode and the
+engine's local tools in local mode. No review-write tool is registered. The integration adapter
 validates the shared JSON Schema, matching case ID, unique evidence references
-and human-review flag before rendering. The AI owner supplies Bedrock tool use,
-request pacing and an optional formatting repair; malformed responses are rejected.
+and human-review flag before rendering. The AI owner supplies Bedrock tool use
+and structured output. Integration supplies bounded SDK clients and shared
+in-process pacing of at least one second between logical Converse calls. Other
+processes do not share this limiter; coordinate concurrent teammate requests.
+Malformed responses are rejected with a clean retry state.
+
+With AWS mode and the profile/resource settings above, run the AI owner's
+repeated acceptance check:
+
+```powershell
+.\.venv\Scripts\python.exe -m investigation.anderson
+```
+
+This makes real Bedrock calls and checks that Anderson's explanation cites
+evidence, identifies the expired exception, and requires human review. It
+does not exercise the Streamlit controls or persist a review decision.
 
 To validate the P0 handoff after the agent is integrated:
 
@@ -220,9 +235,9 @@ Offline service and Streamlit tests cover these handoffs and failure states.
 ## Current validation status
 
 The SDK is installed locally and offline tests use botocore Stubber to validate
-API requests without contacting AWS. The complete suite currently passes 71
+API requests without contacting AWS. The complete suite currently passes 82
 tests, including Streamlit AppTest coverage with stubbed service responses.
-The first live access milestone previously passed with `ready: true`:
+The coordinator's refreshed session passed the access preflight with `ready: true`:
 
 | Check | Verified result |
 |---|---|
@@ -241,7 +256,10 @@ Repeat the access check using the profile/resource settings above:
 ```
 
 Credentials remain outside the repository and must be refreshed when they expire.
-The latest identity diagnostic returned `ExpiredToken` from the saved event
-profile. Refresh the temporary credential set before repeating live checks.
-The agent's two-tool flow, live human-review write and complete UI workflow remain
-pending. Passing this access preflight does not complete the AWS owner task.
+The agent's S3 routing, pacing and required read-only tool registration pass
+offline tests. Live agent validation from the coordinator's automation process
+currently receives `ExpiredToken` from its saved named profile, despite the
+successful terminal preflight. Resolve the credential-source difference before
+the remaining live checks. The live two-tool flow, human-review write/read-back,
+and complete UI workflow remain pending. Passing the access preflight alone
+does not complete the AWS owner task.

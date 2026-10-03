@@ -27,8 +27,8 @@ are in [docs/TEAM_WORKFLOW.md](docs/TEAM_WORKFLOW.md).
 - Incorrect fee breakpoints and householding errors
 - Unbilled accounts and fee waiver errors
 
-The current implementation is the deterministic foundation described below.
-AI investigation and the complete user workflow are the next integration work.
+The deterministic foundation, frontend and Anderson investigation agent are
+connected. Live validation of the complete user workflow remains the next gate.
 
 ## Working foundation
 
@@ -58,8 +58,9 @@ CASE-001 with local storage. The frontend calls its services through
 `ui.services`, which connects the AWS adapters in explicit AWS mode. The pulled Streamlit
 frontend works locally; AWS adapters and review storage are prepared with offline
 tests. Event identity, private S3 evidence and a real Bedrock text response have
-now passed live validation. The AI owner's live investigation package and full
-human-review workflow remain pending. Their interfaces are defined in the shared contract.
+now passed live validation. The AI owner's Anderson package is integrated with
+S3-backed tools and paced Bedrock clients; its live tool loop and full human-review
+workflow still require validation. Their interfaces are defined in the shared contract.
 
 Run the frontend without credentials:
 
@@ -82,6 +83,7 @@ replaces failed requests with mock success.
 | `contracts/revenuetwin.schema.json` | Shared JSON Schema definitions |
 | `app.py`, `ui/` | Streamlit frontend and explicit local/AWS service boundary |
 | `integration/`, `infra/` | AWS configuration, private S3 evidence/reviews, AI handoff validation and IAM templates |
+| `investigation/` | AI owner's Bedrock tool loop, structured investigation and Anderson reliability checks |
 | `data/demo/` | Curated case inputs and synthetic source evidence |
 | `tests/` | Financial, evidence, date and legacy regression checks |
 | `docs/MASTER.md`, `docs/owners/` | Product requirements and owner prompts |

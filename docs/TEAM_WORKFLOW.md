@@ -7,7 +7,7 @@ sixth teammate. MASTER.md sets product scope and CONTRACTS.md sets interfaces.
 | Owner | Owned locations / deliverables | Starting dependency |
 |---|---|---|
 | Revenue engine | `revenue_engine/`, `data/demo/cases/`, evidence content, financial tests, shared contracts | CASE-001 foundation available |
-| AI / Bedrock | Planned `investigation/`; investigate_case, two tool integrations, response validation | Use the two local CASE-001 tools immediately |
+| AI / Bedrock | `investigation/`; investigate_case, two tool integrations, response validation | Anderson contribution integrated with S3 routing; live validation pending |
 | Frontend | `app.py` and `ui/`; dashboard, evidence viewer, human controls | Pulled frontend works in local demo mode; services select local or AWS explicitly |
 | AWS / integration | `integration/`, `infra/`; credentials/config, S3 storage adapter, review persistence, integration tests | Live identity, private S3 evidence and Bedrock text response passed; agent/review workflow pending |
 | Business / pitch | Planned `docs/pitch/`; product story, synthetic impact narrative, acquisition thesis, rehearsal | Agreed financial example and honest capability status |
@@ -59,10 +59,16 @@ evidence documents. The frontend contribution is merged into main and pulled int
 this checkout. AWS setup, S3 adapters, review storage and frontend service/error
 connections are implemented locally with offline tests. The first AWS access
 milestone has passed in the event account: identity, us-east-1, private S3 evidence
-and a real Nova Lite response. The AI owner's full investigation package is not
-yet integrated, and live human-review persistence is pending. The full vertical
+and a real Nova Lite response. The AI owner's Anderson investigation package is
+integrated, and live tool-use and human-review persistence validation are pending. The full vertical
 slice gate remains open. See AWS_SETUP.md for validated resources, handoff
 commands and the remaining live checks.
+
+The AWS feature branch retains the authorship of the AI owner's four Anderson
+commits (one-tool smoke, two-tool smoke, structured investigation, and reliability
+checks). AWS changes connect those tools to private S3 and add bounded, paced
+clients. Later Morgan fixtures and engine changes from the AI branch are deferred
+until their assumptions are coordinated with the engine owner and shared scope.
 
 The legacy dataset and report remain a separate regression demo. Follow-up engine
 work includes volume/marginal pricing, curated secondary cases and corrected
