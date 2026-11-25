@@ -2,6 +2,8 @@
 
 > **See the revenue you're missing before you miss it.**
 
+**Live demo:** [revenuetwin.streamlit.app](https://revenuetwin.streamlit.app/). It runs in offline demo mode with synthetic data and pre-written AI investigation samples, so no AWS account is needed. If the app has been idle, click the wake-up button and give it about 30 seconds.
+
 RevenueTwin checks whether advisory agreements and actual billing remain aligned,
 protecting the practice from potential underbilling and clients from potential
 overbilling. Deterministic code calculates financial findings; AI investigates
