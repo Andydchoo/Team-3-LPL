@@ -58,7 +58,7 @@ ISSUES = [
         "name": "Ramirez Household",
         "amount": "$2,000",
         "raw_amount": 2000.0,
-        "aum": "$250,000",
+        "aum": "$1,000,000",
         "accounts": 1,
         "custodian": "LPL Financial",
         "label": "Potential overbilling",
@@ -86,26 +86,26 @@ ISSUES = [
         "name": "Morgan Household",
         "amount": "Review Req.",
         "raw_amount": 0.0,
-        "aum": "$3,450,000",
+        "aum": "$1,000,000",
         "accounts": 4,
         "custodian": "Multi-Custodian (LPL/Schwab)",
         "label": "Manual review required",
-        "cause": "Multi-custodian tax-ID conflict",
+        "cause": "Unfinalized pricing discussion",
         "direction": "review",
-        "severity": "Data Discrepancy",
-        "description": "Conflicting trust account records between LPL and Schwab feeds show unlinked tax identifiers preventing automated reconciliation.",
+        "severity": "Conflicting Evidence",
+        "description": "Agreement specifies 1.00% but billing runs at 0.75%; an advisor note discusses preferred pricing that was never finalized.",
     },
 ]
 
 
 def money(value: float | None) -> str:
     """Format monetary numbers, handling None gracefully."""
-    return "Review Dependent" if value is None else f"${value:,.0f}"
+    return "Pending review" if value is None else f"${value:,.0f}"
 
 
 def rate(value: float | None) -> str:
     """Format rate percentages, handling None gracefully."""
-    return "Review Dependent" if value is None else f"{value:.2%}"
+    return "Pending review" if value is None else f"{value:.2%}"
 
 
 def render_html(content: str) -> None:
@@ -785,6 +785,22 @@ def inject_css() -> None:
             color: #FFFFFF !important;
             border-color: #334155 !important;
         }
+
+        /* Narrower screens: keep cards readable instead of squeezing them */
+        @media (max-width: 1100px) {
+            .kpi-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (max-width: 640px) {
+            .block-container { padding: 1rem 1rem 3rem; }
+            .kpi-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+            .brand-container { flex-direction: column; align-items: flex-start; gap: 12px; padding: 14px 16px; }
+            .hero-banner { flex-direction: column; align-items: flex-start; gap: 14px; padding: 20px; }
+            .stepper { overflow-x: auto; }
+            .queue-item { flex-direction: column; align-items: flex-start; gap: 10px; margin-bottom: 0; }
+            /* Keep each case card and its Inspect button visually grouped */
+            [data-testid="stHorizontalBlock"]:has(.queue-item) { gap: 0.5rem; margin-bottom: 1.25rem; }
+            .queue-right { text-align: left; }
+        }
         </style>
         """,
         unsafe_allow_html=True,
@@ -796,8 +812,13 @@ def inject_css() -> None:
 # ---------------------------------------------------------------------------
 
 def render_brand() -> None:
+    try:
+        live = backend_mode() == "aws"
+    except Exception:
+        live = False
+    sync_label = "CUSTODY SYNC: LPL + SCHWAB LIVE" if live else "DEMO · SYNTHETIC DATA"
     render_html(
-        """
+        f"""
         <div class="brand-container">
             <div class="brand-left">
                 <div class="brand-mark">◈</div>
@@ -812,7 +833,7 @@ def render_brand() -> None:
             <div class="brand-right">
                 <div class="live-status">
                     <span class="pulse-dot"></span>
-                    <span>CUSTODY SYNC: LPL + SCHWAB LIVE</span>
+                    <span>{sync_label}</span>
                 </div>
             </div>
         </div>
@@ -869,10 +890,10 @@ def render_dashboard() -> None:
     )
 
     tab1, tab2, tab3, tab4 = st.tabs([
-        "⚡ Revenue Integrity Command Center",
-        "📊 Risk & Revenue Leakage Analytics",
-        "💎 $100M Enterprise Valuation Simulator",
-        "🧬 Digital Twin Architecture & SEC Governance",
+        "⚡ Command Center",
+        "📊 Leakage Analytics",
+        "💎 Value Simulator",
+        "🧬 Architecture & Governance",
     ])
 
     with tab1:
@@ -888,7 +909,30 @@ def render_dashboard() -> None:
         render_architecture()
 
 
+def render_demo_guide() -> None:
+    """Short tour for first-time visitors to the hosted offline demo."""
+    if backend_mode() == "aws":
+        return
+    render_html(
+        """
+        <div style="background:#ECFDF5;border:1px solid #A7F3D0;border-radius:14px;padding:16px 20px;margin-bottom:18px;">
+            <strong style="color:#065F46;font-size:15px;display:block;margin-bottom:6px;">👋 Try the 60-second tour</strong>
+            <ol style="margin:0 0 8px 18px;padding:0;color:#064E3B;font-size:14px;line-height:1.7;">
+                <li>Click <strong>Inspect Case →</strong> on <strong>Anderson Household</strong> below.</li>
+                <li>Press <strong>⚡ Investigate with RevenueTwin</strong> to see the evidence-backed explanation.</li>
+                <li>Choose a human decision, then use <strong>← Return to Command Center</strong> to try another case.</li>
+            </ol>
+            <span style="color:#047857;font-size:12px;">
+                All data is synthetic. Dollar findings come from deterministic Python. In this public demo the AI
+                investigation shows pre-written sample results; the live version runs an AWS Bedrock agent.
+            </span>
+        </div>
+        """
+    )
+
+
 def render_command_center() -> None:
+    render_demo_guide()
     render_stepper(0)
 
     render_html(
@@ -950,7 +994,7 @@ def render_command_center() -> None:
     for issue in filtered_issues:
         tag_class = f"tag-{issue['direction']}"
         with st.container():
-            col_info, col_act = st.columns([3.8, 1.2], gap="medium")
+            col_info, col_act = st.columns([3.8, 1.2], gap="medium", vertical_alignment="center")
             with col_info:
                 sub_label = "annual impact" if issue['raw_amount'] > 0 else "action needed"
                 render_html(
@@ -983,8 +1027,6 @@ def render_command_center() -> None:
                     """
                 )
             with col_act:
-                st.write("")
-                st.write("")
                 is_primary = issue["direction"] == "under"
                 if st.button("Inspect Case →", key=f"open_{issue['case_id']}", use_container_width=True, type="primary" if is_primary else "secondary"):
                     st.session_state.case_id = issue["case_id"]
@@ -1208,7 +1250,7 @@ def render_case(case: dict[str, Any]) -> None:
 
     # Case metadata
     is_underbilling = case.get("impact_direction") == "potential_underbilling"
-    pricing_name = str(case.get("calculation_method", "flat")).title()
+    pricing_name = str(case.get("calculation_method", "flat")).replace("_", " ").title()
     as_of = case.get("as_of_date", "2026-01-01")
 
     render_html(
@@ -1252,11 +1294,16 @@ def render_case(case: dict[str, Any]) -> None:
     with col_left:
         diff_class = "diff-amount-under" if is_underbilling else "diff-amount-over"
         impact_word = "underbilling" if is_underbilling else "overbilling"
+        if case.get("annual_difference") is None:
+            diff_headline = "Pending human review"
+            diff_caption = "Impact depends on which evidence is authoritative"
+        else:
+            diff_headline = f"{money(case.get('annual_difference'))} / year"
+            diff_caption = f"Potential annual {impact_word}"
         expected_fee_str = money(case.get("expected_annual_fee"))
         expected_rate_str = rate(case.get("expected_rate"))
         actual_fee_str = money(case.get("actual_annual_fee"))
         actual_rate_str = rate(case.get("actual_rate"))
-        diff_str = money(case.get("annual_difference"))
 
         render_html(
             f"""
@@ -1280,8 +1327,8 @@ def render_case(case: dict[str, Any]) -> None:
                     <span class="f-val">{money(case.get('aum'))}</span>
                 </div>
                 <div class="diff-card">
-                    <div class="{diff_class}">{diff_str} / year</div>
-                    <div class="diff-caption">Potential Annual {impact_word}</div>
+                    <div class="{diff_class}">{diff_headline}</div>
+                    <div class="diff-caption">{diff_caption}</div>
                 </div>
                 <div style="margin-top:20px;padding:12px 14px;background:#F8FAFC;border-radius:10px;border:1px solid #E2E8F0;font-size:11px;color:var(--muted);font-family:'JetBrains Mono';">
                     Verification: SHA256:{case['case_id']}:VERIFIED_DETERMINISTIC<br>
@@ -1405,18 +1452,16 @@ def render_investigation_details(investigation: dict[str, Any], case: dict[str, 
         st.write("")
         st.caption("Human-in-the-loop governance: choose a workflow decision. This demo records the decision only; it does not change billing or submit a custodial action.")
 
-        btn_col1, btn_col2, btn_col3 = st.columns(3)
-        with btn_col1:
-            if st.button("🟢 Send for Review", type="primary", use_container_width=True):
-                save_human_review(case["case_id"], "send_for_review")
-        with btn_col2:
-            if st.button("🟡 Investigate Further", use_container_width=True):
-                save_human_review(case["case_id"], "investigate_further")
-        with btn_col3:
-            if st.button("⚪ Dismiss Finding", use_container_width=True):
-                save_human_review(case["case_id"], "dismiss")
+        if st.button("🟢 Send for Review", type="primary", use_container_width=True):
+            save_human_review(case["case_id"], "send_for_review")
+        if st.button("🟡 Investigate Further", use_container_width=True):
+            save_human_review(case["case_id"], "investigate_further")
+        if st.button("⚪ Dismiss Finding", use_container_width=True):
+            save_human_review(case["case_id"], "dismiss")
     else:
         st.write("")
+        decision = st.session_state.review["decision"].replace("_", " ").title()
+        st.success(f"✓ Decision recorded: {decision}. Details are at the top of this case.")
         if st.button("Start another review", use_container_width=True):
             st.session_state.review = None
             st.rerun()
@@ -1509,7 +1554,7 @@ def main() -> None:
         page_title="RevenueTwin — Enterprise Revenue Integrity",
         page_icon="◈",
         layout="wide",
-        initial_sidebar_state="expanded",
+        initial_sidebar_state="auto",
     )
 
     inject_css()

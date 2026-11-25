@@ -1,0 +1,8 @@
+# The app's custom CSS is designed for a light page. Pin Streamlit's widget
+# theme to light so buttons stay readable when a visitor's OS is in dark mode.
+[theme]
+base = "light"
+
+# Hide developer-only menu items (Deploy, rerun settings) from visitors.
+[client]
+toolbarMode = "viewer"
